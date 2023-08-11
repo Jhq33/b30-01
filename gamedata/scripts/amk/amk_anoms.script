@@ -887,6 +887,7 @@ function init()
 end
 
 function randomize_arts()
+<<<<<<< Updated upstream
 	if timers.check_timer( "bron_safe_rel" ) then return end
 	local rnd_chanse = 0.77
 	local bino       = db.actor:item_in_slot( 4 )
@@ -915,6 +916,36 @@ function randomize_arts()
 			end
 		end
 	end
+=======
+    if timers.check_timer( "bron_safe_rel" ) then return end
+    -- local rnd_chanse = 0.77
+    -- local bino       = db.actor:item_in_slot( 4 )
+    -- if bino ~= nil then
+    --     local sc = bino:section()
+    --     if sc and sc == "wpn_binoc" then rnd_chanse = 0.67 end
+    -- end
+    -- здесь будет цикл по телепорту существующих артов
+    -- if dsh.get_next_random( "amk_anoms.randomize_arts" ) < rnd_chanse then
+        local ids = registry.level_objects( "af_*", true )
+        local obj = registry.convert_ids( ids, server_obj )
+        for id, sobj in pairs( obj ) do
+            if
+                sobj.parent_id
+                and ( sobj.parent_id == nil or sobj.parent_id == BAD_OBJ_ID )
+                and not str_in_tab( sobj:section_name(), {
+                    "unknown",
+                    "_full_akkum",
+                    "dummy_green"
+                })
+                and not test.is_protected_art( sobj )
+            then
+                wprintf( "@----------------------- OH NOES!!  released: %s", sobj:name() )
+                misc.release_obj( sobj )
+                break
+            end
+        end
+    -- end
+>>>>>>> Stashed changes
 end
 
 function get_all_anoms( filter )
@@ -954,6 +985,7 @@ function check_is_anom( sobj )
 	end
 end
 
+<<<<<<< Updated upstream
 function update_anoms_cache() -- ������������ ��������� �������, ��������� ��� �������� � ����
 	anoms_cache = {}
 	wprintf( "[~T/~B]. #PERF: update_anoms_cache() #1" )
@@ -988,6 +1020,42 @@ function foreach_anom( func, parms, in_level, no_excl )
 			end
 		end
 	end
+=======
+function update_anoms_cache() -- сравнительно медленная функция, сканирует все аномалии в игре
+    anoms_cache = {}
+    wprintf( "[~T/~B]. #PERF: update_anoms_cache() #1" )
+    local ids  = get_all_anoms( 15 )
+    local objl = registry.convert_ids( ids, server_obj )
+    wprintf( "[~T/~B]. #PERF: update_anoms_cache() #2, count =~C0D %d~C07", #ids )
+    for id, sobj in pairs( objl ) do
+        if check_is_anom( sobj ) then
+            anoms_cache [ id ] = sobj
+        end
+    end
+    wprintf( "[~T/~B]. #PERF: update_anoms_cache() #3" )
+end
+
+function foreach_anom( func, parms, in_level, no_excl )
+    if anoms_cache_actual ~= bind_stalker.binder_ticks then
+        update_anoms_cache()
+        anoms_cache_actual = bind_stalker.binder_ticks
+    end
+    local lname    = level.name()
+    local gv_range = const.game_vertices[ lname ]
+    for id, sobj in pairs( anoms_cache ) do
+        local gv = sobj.m_game_vertex_id -- проверка по геймвертексам быстрее
+        if
+            in_level
+            and ( gv < gv_range[ 1 ] or gv > gv_range[ 2 ] )
+        then
+        else
+            local map = sobj.level_name
+            if no_excl or not check_exclusion( sobj, map ) then
+                func( sobj, parms, map )
+            end
+        end
+    end
+>>>>>>> Stashed changes
 end
 
 function collect_info()
@@ -1230,6 +1298,7 @@ function spawn_rand_arts( pos, gv, lv, lname )
 end
 
 function spawn_art( section, pos, gv, lv )
+<<<<<<< Updated upstream
 	local sobj = amk.spawn_item( section, pos, gv, lv )
 	if sobj then
 		--amk.add_spot_on_map( sobj.id, 'red_location', section )
@@ -1237,6 +1306,15 @@ function spawn_art( section, pos, gv, lv )
 		test.add_art_to_vars( sobj.id )
 		return sobj
 	end
+=======
+    local sobj = amk.spawn_item( section, pos, gv, lv )
+    if sobj then
+        --amk.add_spot_on_map( sobj.id, 'red_location', section )
+        -- занесём для статистики id артов в nlc_vars, во время выброса будем чистить...
+        test.add_art_to_vars( sobj.id )
+        return sobj
+    end
+>>>>>>> Stashed changes
 end
 
 function spawn_anomaly( section, pos, gv, lv, shape, status, offs )
@@ -1395,6 +1473,7 @@ end
 function pre_blow_off() turn_off_all() end
 
 function after_blow_on()
+<<<<<<< Updated upstream
 	--ODS("[~T/~B]. #DBG: 64K enum 3, ��������� ��������.")
 	SetVerbosity( 1 )
 	local func = 	function( sobj, parms, map )
@@ -1406,6 +1485,19 @@ function after_blow_on()
 	SetVerbosity( 4 )
 	move_mgr.invalidate_pp_accessibility()
 	--ODS("[~T/~B]. #DBG: 64K enum 3, ok.")
+=======
+    --ODS("[~T/~B]. #DBG: 64K enum 3, включение аномалий.")
+    SetVerbosity( 1 )
+    local func =    function( sobj, parms, map )
+                        local status = get_anomaly_status( sobj )
+                        if ( status == "off" ) --and not test_around(sobj.position, 3)
+                        then set_anomaly_status( sobj, "on" ) end
+                    end --function
+    foreach_anom( func, {} )
+    SetVerbosity( 4 )
+    move_mgr.invalidate_pp_accessibility()
+    --ODS("[~T/~B]. #DBG: 64K enum 3, ok.")
+>>>>>>> Stashed changes
 end
 
 function check_exclusion( obj, map )
@@ -1506,6 +1598,7 @@ end
 --local max_dynamic_restrictors_count=0
 
 function amk_anoms.synchronize( npc )
+<<<<<<< Updated upstream
 	--get_console():execute("load ~~~ syncronize__"..npc:name())
 	local nid = npc:id()
 	--local cnt=0
@@ -1550,6 +1643,52 @@ function amk_anoms.synchronize( npc )
 		npc:add_restrictions( "", add )
 	end
 	npc_restrictors_need_update[ nid ] = false
+=======
+    --get_console():execute("load ~~~ syncronize__"..npc:name())
+    local nid = npc:id()
+    --local cnt=0
+    local anoms,actual = init_if_needed( nid ) -- выбор аномалий, в т.ч. актуальных
+    local add, rem = "", ""
+    local first    = true
+    for id,name in pairs( actual ) do
+        if anoms[ id ] == nil then
+            if first then
+                first = false
+                rem   = name
+            else
+                rem   = name .. "," .. rem
+            end
+            if npcs_for_anom[ id ] then
+                npcs_for_anom[ id ][ nid ] = nil
+            end
+            actual[ id ] = nil
+        end
+    end
+    first = true
+    for id, name in pairs( anoms ) do
+        if not actual[id] then
+            if first then
+                first = false
+                add   = name
+            else
+                add   = name .. "," .. add
+            end
+            if npcs_for_anom[ id ] == nil then
+                npcs_for_anom[ id ] = {}
+            end
+            npcs_for_anom[ id ][ nid ] = true
+            actual[ id ] = name
+        end
+    end
+    if rem ~= "" then
+        npc:remove_restrictions( "", rem )
+    end
+    if add ~= "" then
+        -- wprintf("[~T]. #DBG: for npc~C0A %s~C07 adding in-restrictions~C0F{ %s }~C07 ", npc:name(), add)
+        npc:add_restrictions( "", add )
+    end
+    npc_restrictors_need_update[ nid ] = false
+>>>>>>> Stashed changes
 end
 
 function unreg_in_anom_manager( npc )
@@ -1566,6 +1705,7 @@ function unreg_in_anom_manager( npc )
 end
 
 function register_anomaly( sobj )
+<<<<<<< Updated upstream
 	local status = get_anomaly_status( sobj )
 	if status == "del" or status == "off" then
 		return false
@@ -1573,6 +1713,15 @@ function register_anomaly( sobj )
 		add_anomaly( sobj.id, sobj.position, 5 ) --������ �������
 		return true
 	end
+=======
+    local status = get_anomaly_status( sobj )
+    if status == "del" or status == "off" then
+        return false
+    else
+        add_anomaly( sobj.id, sobj.position, 5 ) --ввести радиусы
+        return true
+    end
+>>>>>>> Stashed changes
 end
 
 function bind( obj )
@@ -1615,8 +1764,13 @@ end
 -----------------------------------------------------------------------------------
 
 function add_anomaly( id, pos, radius )
+<<<<<<< Updated upstream
 	--ODS("[~T]. #DBG: ������� ������008 ~C0A"..id.."  name=  "..client_obj(id):name().." x= "..pos.x.." y= "..pos.y.." z= "..pos.z.."~C07")
 	anom_list[ id ] = { pos = pos, radius = 5 }
+=======
+    --ODS("[~T]. #DBG: удаляем объект008 ~C0A"..id.."  name=  "..client_obj(id):name().." x= "..pos.x.." y= "..pos.y.." z= "..pos.z.."~C07")
+    anom_list[ id ] = { pos = pos, radius = 5 }
+>>>>>>> Stashed changes
 end
 
 function remove_anomaly( id )

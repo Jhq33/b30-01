@@ -1,6 +1,6 @@
 --[[
 File:  amk_mod .script
-copyright © AMK TEAM 2007-2008
+copyright В© AMK TEAM 2007-2008
 --]]
 
 in_hide       = false
@@ -100,14 +100,14 @@ function spawn_star( actor, npc, p1, p2 )
             "l01_escape", vector():set( a.position.x, a.position.y, a.position.z )
         )
     else
-        m_where = "Здесь, на Кордоне"
+        m_where = "Р—РґРµСЃСЊ, РЅР° РљРѕСЂРґРѕРЅРµ"
     end
     -- db.actor:give_talk_message(
-    --     " скорее всего поискать стоит. Где-то там он, точно говорю.\\nПомнишь, как контейнер-то выглядит? Вот так:",
+    --     " СЃРєРѕСЂРµРµ РІСЃРµРіРѕ РїРѕРёСЃРєР°С‚СЊ СЃС‚РѕРёС‚. Р“РґРµ-С‚Рѕ С‚Р°Рј РѕРЅ, С‚РѕС‡РЅРѕ РіРѕРІРѕСЂСЋ.\\nРџРѕРјРЅРёС€СЊ, РєР°Рє РєРѕРЅС‚РµР№РЅРµСЂ-С‚Рѕ РІС‹РіР»СЏРґРёС‚? Р’РѕС‚ С‚Р°Рє:",
     --     "ui\\ui_iconstotal", Frect():set( 0, 0, 10, 10 ), "simple_answer_item"
     -- )
     db.actor:give_talk_message(
-        "Помнишь, как контейнер-то выглядит? Вот так:",
+        "РџРѕРјРЅРёС€СЊ, РєР°Рє РєРѕРЅС‚РµР№РЅРµСЂ-С‚Рѕ РІС‹РіР»СЏРґРёС‚? Р’РѕС‚ С‚Р°Рє:",
         "ui\\ui_iconstotal", Frect():set( 0, 0, 10, 10 ), "simple_answer_item"
     )
     db.actor:give_talk_message(
@@ -536,7 +536,7 @@ function show_news()
     end
 end
 
-function test_for_need_sleep() end -- заглушка от сбоев из-за хранимых таймеров
+function test_for_need_sleep() end -- Р·Р°РіР»СѓС€РєР° РѕС‚ СЃР±РѕРµРІ РёР·-Р·Р° С…СЂР°РЅРёРјС‹С… С‚Р°Р№РјРµСЂРѕРІ
 
 function used_item( obj )
     local sect = obj:section()
@@ -562,7 +562,7 @@ function test_for_need_sleep_matras( oid )
     local enemy = false
     local self  = level.main_input_receiver()
     if self then self:GetHolder():start_stop_menu( self, true ) end
-    -- одетый рюкзак мешает залезть в мешок
+    -- РѕРґРµС‚С‹Р№ СЂСЋРєР·Р°Рє РјРµС€Р°РµС‚ Р·Р°Р»РµР·С‚СЊ РІ РјРµС€РѕРє
     local act = db.actor
     local equ = false
     if get_shadow_inv():update_storage() then equ = true end
@@ -606,10 +606,10 @@ function test_for_need_sleep_matras( oid )
             if sleep_manager.get_sleepiness( 108 ) > 10 then
                 if oid:section() == "sleeping_bag" then
                     vergas_lib.s_play( [[device\sleeping_bag\sleep_bag_down]] )
-                    sleep_manager.sleep_in_sleeping_bag = 2 -- в спальнике голод во сне растёт в 2 раза медленнее
+                    sleep_manager.sleep_in_sleeping_bag = 2 -- РІ СЃРїР°Р»СЊРЅРёРєРµ РіРѕР»РѕРґ РІРѕ СЃРЅРµ СЂР°СЃС‚С‘С‚ РІ 2 СЂР°Р·Р° РјРµРґР»РµРЅРЅРµРµ
                 end
                 used_items.sleep_management()
-            else --Меченный не хочет спать
+            else --РњРµС‡РµРЅРЅС‹Р№ РЅРµ С…РѕС‡РµС‚ СЃРїР°С‚СЊ
                 flag_bag = true
                 wprintf(
                     "[~T]. #SLEEP_REJECT: actor sleepiness =~C0D %.3f~C07",
@@ -617,7 +617,7 @@ function test_for_need_sleep_matras( oid )
                 )
                 amk.send_tip( game.translate_string( "not_need_sleep" ), nil, nil, 5 )
             end
-        else     --действует энергетик
+        else     --РґРµР№СЃС‚РІСѓРµС‚ СЌРЅРµСЂРіРµС‚РёРє
             flag_bag = true
             amk.send_tip( game.translate_string( "not_need_sleep_nrg" ), nil, nil, 5 )
         end
@@ -632,7 +632,7 @@ function esc_sleep_matras()
     if ( amk_vars.blowout or 0 ) > 0 and ( amk_vars.blowout or 0 ) < 5 then
         amk.send_tip( game.translate_string( "blowout_not_sleep" ), nil, nil, 5 )
     elseif ( nlc_vars.block_sleep_menu or 0 ) == 0 then
-        if sleep_manager.get_sleepiness( 108 ) > 10 then --было >10
+        if sleep_manager.get_sleepiness( 108 ) > 10 then --Р±С‹Р»Рѕ >10
             used_items.sleep_management()
         else
             amk.send_tip( game.translate_string( "not_need_sleep" ), nil, nil, 5 )
@@ -662,7 +662,7 @@ function check_radar_off()
     if level.name() == "l10_radar" then
         if
                 not has_alife_info( "bar_deactivate_radar_done" )
-            and not has_alife_info( "time_morning" )  -- с 
+            and not has_alife_info( "time_morning" )  -- СЃ 
         then
             local pos = db.actor:position()
             if pos.z > 65 and pos.x > 350 and pos.x < 410 then
@@ -750,7 +750,7 @@ function enough_arts( source )
     for i, sc in ipairs( t ) do
         for n, ss in ipairs( arts_added ) do
             if not good_source( ss, sc ) then
-                wprintf( "[~T]. #DBG: для варки не хватает~C0F %s~C07", sc )
+                wprintf( "[~T]. #DBG: РґР»СЏ РІР°СЂРєРё РЅРµ С…РІР°С‚Р°РµС‚~C0F %s~C07", sc )
                 return false
             end
         end
@@ -758,7 +758,7 @@ function enough_arts( source )
     return true
 end
 
-function check_af_drop( af_id ) -- варка артефактов?
+function check_af_drop( af_id ) -- РІР°СЂРєР° Р°СЂС‚РµС„Р°РєС‚РѕРІ?
     if not af_id then
         wprintf(
             "[~T].~C0C #ERROR: invalid param specified for check_af_drop.\n~C0A %s~C07",
@@ -777,7 +777,7 @@ function check_af_drop( af_id ) -- варка артефактов?
         local u_tbl = xray_vars.load_table( nlc_vars, "used_anomz", {} )
         if u_tbl[ id ] then
             wprintf( "[amk_mod.script]: anomaly # " .. id .. " is depleted, sorry. Try other anomaly. Sincerely yours, THE MONOLITH." )
-            return end -- чтобы не варилось в аномалии больше 1 раза
+            return end -- С‡С‚РѕР±С‹ РЅРµ РІР°СЂРёР»РѕСЃСЊ РІ Р°РЅРѕРјР°Р»РёРё Р±РѕР»СЊС€Рµ 1 СЂР°Р·Р°
         if id and radius - dist > 1 then
             local anom_sect = client_obj( id ):section()
             check_af_transform( obj, id, anom_sect )
@@ -851,7 +851,7 @@ function check_af_transform( af, anom_id, anom_sect )
     local ini        = ini_file( fname )
     local time_index = 'time'
     if not add_timer then add_timer = misc.game_timer() end
-    -- через 4 минуты сбрасывается набор артефактов!
+    -- С‡РµСЂРµР· 4 РјРёРЅСѓС‚С‹ СЃР±СЂР°СЃС‹РІР°РµС‚СЃСЏ РЅР°Р±РѕСЂ Р°СЂС‚РµС„Р°РєС‚РѕРІ!
     if add_timer:elapsed( true ) > 240 then arts_added = {} end
     SetDbgVar( 'af_sect', af_sect )
     local ba = base_art( af_sect )
@@ -879,7 +879,7 @@ function check_af_transform( af, anom_id, anom_sect )
                     arts_added     = {}
                     local p1, p2   = split_pair( sc.probability or "80,10", "," )
                     local hh, mm   = split_pair( sc[ time_index ], ":" )
-                    local new_sect = scn:gsub( "cook.", "" ) -- секция создаваемого артефакта
+                    local new_sect = scn:gsub( "cook.", "" ) -- СЃРµРєС†РёСЏ СЃРѕР·РґР°РІР°РµРјРѕРіРѕ Р°СЂС‚РµС„Р°РєС‚Р°
                     local tr       = af_start_transform(
                                         tonumber( p1 ), tonumber( p2 ), af_sect, new_sect
                                      )
@@ -1091,7 +1091,11 @@ function Run_Blowout_pp()
     start_blow_timer()
 end
 
+<<<<<<< Updated upstream
 function start_blow_timer()     -- (36ч +/- 0..12ч) + 30мин в день.  К 100 дню +50 часов
+=======
+function start_blow_timer()     -- (36С‡ +/- 0..12С‡) + 40РјРёРЅ РІ РґРµРЅСЊ.  Рљ 100 РґРЅСЋ +68 С‡Р°СЃРѕРІ
+>>>>>>> Stashed changes
     if lua_random() > 0.15 then
         amk_vars.blow_on = true
     else
@@ -1109,12 +1113,12 @@ function Blowout_pp( num )
     --' TimeFactor           = 5
     --' GameMin              = 12 RealSec
     --' TimeBlowout          = 184 RealSec
-    --' Начало(Timer         = 36 sec)
-    --' Первая Фаза(Timer    = 36 sec)
-    --' Вторая Фаза(Timer    = 36 sec)
-    --' Третья Фаза(Timer    = 36 sec)
-    --' Четвертая Фаза(Timer = 60 sec)
-    --' Конечнвя Фаза(Timer  = 0 sec)
+    --' РќР°С‡Р°Р»Рѕ(Timer         = 36 sec)
+    --' РџРµСЂРІР°СЏ Р¤Р°Р·Р°(Timer    = 36 sec)
+    --' Р’С‚РѕСЂР°СЏ Р¤Р°Р·Р°(Timer    = 36 sec)
+    --' РўСЂРµС‚СЊСЏ Р¤Р°Р·Р°(Timer    = 36 sec)
+    --' Р§РµС‚РІРµСЂС‚Р°СЏ Р¤Р°Р·Р°(Timer = 60 sec)
+    --' РљРѕРЅРµС‡РЅРІСЏ Р¤Р°Р·Р°(Timer  = 0 sec)
     ---------------------------------------------------
     local phase   = tonumber( num )
     local lname   = level.name() or "l01_escape"
@@ -1153,9 +1157,9 @@ function Blowout_pp( num )
     elseif phase == 3 then
         amk_anoms.after_blow_on()
         sak.off_testobj()
-        -- обновление таблицы id природных артов для статистики
+        -- РѕР±РЅРѕРІР»РµРЅРёРµ С‚Р°Р±Р»РёС†С‹ id РїСЂРёСЂРѕРґРЅС‹С… Р°СЂС‚РѕРІ РґР»СЏ СЃС‚Р°С‚РёСЃС‚РёРєРё
         if nlc_vars.tbl_bio_art then nlc_vars.tbl_bio_art = nil end
-        -- обновление таблицы id использованных для варок аномалий
+        -- РѕР±РЅРѕРІР»РµРЅРёРµ С‚Р°Р±Р»РёС†С‹ id РёСЃРїРѕР»СЊР·РѕРІР°РЅРЅС‹С… РґР»СЏ РІР°СЂРѕРє Р°РЅРѕРјР°Р»РёР№
         if nlc_vars.used_anomz then misc.dump_table( nlc_vars.used_anomz ) end
         if nlc_vars.used_anomz then nlc_vars.used_anomz = nil end
         amk_vars.blowout = 3
@@ -1199,7 +1203,7 @@ function Blowout_pp( num )
         amk_vars.blowout  = nil
         db.blowout_active = false
         db.actor:give_info_portion( "groza_info" )
-        -- для статистики:
+        -- РґР»СЏ СЃС‚Р°С‚РёСЃС‚РёРєРё:
         xr_statistic.add_pts(
             "stalkerkills", game.translate_string( "st_pda_blowouts_num" ), 1, 0
         )
@@ -1211,7 +1215,7 @@ function Blowout_pp( num )
             timers.start_timer( "fuckup_batt_torch_all", 0, 0, 32, "test.fuckup_gg_batteries(true)" )
         end
         test.update_r_treas_items()
-        -- sleep_manager.change_sleepiness(25, true) -- увеличить сонливость, зачем?
+        -- sleep_manager.change_sleepiness(25, true) -- СѓРІРµР»РёС‡РёС‚СЊ СЃРѕРЅР»РёРІРѕСЃС‚СЊ, Р·Р°С‡РµРј?
     end
 end
 
@@ -1388,9 +1392,9 @@ function check_usable_item( obj )
     end
     if section == "amk_zapiska" then
         if     lname == "l01_escape" then
-            info = test.rnd_rec_art_info( test.tbl_recipt, 5 ) --блок на кордоне?
+            info = test.rnd_rec_art_info( test.tbl_recipt, 5 ) --Р±Р»РѕРє РЅР° РєРѕСЂРґРѕРЅРµ?
         elseif lname == "l08u_brainlab" then
-            info = test.rnd_rec_art_info( test.tbl_recipt, 7 ) --в х16?
+            info = test.rnd_rec_art_info( test.tbl_recipt, 7 ) --РІ С…16?
         else
             return
         end
@@ -1656,7 +1660,7 @@ function respawned( obj, respawner )
     local conds = {}
     conds[ "none" ] = xr_logic.parse_condlist( obj, "smart_terrains", "none", "true" )
     obj.smart_terrain_conditions = conds
-    --ODS("[~T/~B]. #DBG: монстр = "..obj:name().."  респавнер  "..respawner.amk_name.."   конфиг    "..cfg_name)
+    --ODS("[~T/~B]. #DBG: РјРѕРЅСЃС‚СЂ = "..obj:name().."  СЂРµСЃРїР°РІРЅРµСЂ  "..respawner.amk_name.."   РєРѕРЅС„РёРі    "..cfg_name)
     end
 end
 
@@ -1852,7 +1856,7 @@ function firebated( obj, amount, local_direction, who, bone_index )
                 obj:hit( h )
             end
         end
-        -- добавить жару из огнемета:
+        -- РґРѕР±Р°РІРёС‚СЊ Р¶Р°СЂСѓ РёР· РѕРіРЅРµРјРµС‚Р°:
         flamethrower.set_fire( obj )
     end
 end
@@ -1877,7 +1881,7 @@ function zomby_blow( obj )
             h.impulse   = 0
             h.draftsman = db.actor
             h.direction = vector():set( 0, 0, 0 )
-            h:bone( "bip01_spine" ) -- чтобы учитывалась броня
+            h:bone( "bip01_spine" ) -- С‡С‚РѕР±С‹ СѓС‡РёС‚С‹РІР°Р»Р°СЃСЊ Р±СЂРѕРЅСЏ
             h.power     = 1 / dist
             h.type      = hit.strike --chemical_burn
             db.actor:hit( h )
@@ -1922,7 +1926,7 @@ function zomby_blow( obj )
         dump_table( t, "  " )
         pk:set( t )
         LuaSafeCall( "misc.process_spawn", "#func:^dbg" )
-        obj:set_position( vector():set( 0, -500, 0 ) ) -- скрыть с глаз долой
+        obj:set_position( vector():set( 0, -500, 0 ) ) -- СЃРєСЂС‹С‚СЊ СЃ РіР»Р°Р· РґРѕР»РѕР№
         misc.release_obj( obj, "remove_zombie_body", false )
         ODS( "[~T/~B]. #DBG: zomby_blow complete" )
     end

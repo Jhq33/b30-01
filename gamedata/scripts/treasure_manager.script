@@ -108,11 +108,11 @@ local rare_list = {
         "wpn_spas12",
         "wpn_rpk74",
         "wpn_groza",
-        "wpn_winchester_m1",                    -- обрез мп133
+        "wpn_winchester_m1",                    -- РѕР±СЂРµР· РјРї133
         "wpn_addon_grenade_launcher",
         "wpn_addon_grenade_launcher_m203",
         "wpn_akm",
-        "wpn_eagle_m1",                         -- револьвер
+        "wpn_eagle_m1",                         -- СЂРµРІРѕР»СЊРІРµСЂ
         "grenade_f1",
 
         "ammo_vog-25",
@@ -125,16 +125,16 @@ local rare_list = {
         "ammo_9x39_sp5",
         "ammo_9x39_ap",
 
-        "af_electra_moonlight_new",             -- псевдоцвет
-        "af_ice",                               -- мороженное
-        "af_electra_sparkler_new",              -- электробенгал
-        "af_flower_new",                        -- пицца
-        "af_crist_new",                         -- призрачный кристалл
-        "af_star_new",                          -- одуванчик
-        "af_electra_flash_new",                 -- блик
-        "af_medus_new",                         -- горгона
-        "af_glass_new",                         -- звездочка
-        "af_dummy_fire",                        -- пузырёк
+        "af_electra_moonlight_new",             -- РїСЃРµРІРґРѕС†РІРµС‚
+        "af_ice",                               -- РјРѕСЂРѕР¶РµРЅРЅРѕРµ
+        "af_electra_sparkler_new",              -- СЌР»РµРєС‚СЂРѕР±РµРЅРіР°Р»
+        "af_flower_new",                        -- РїРёС†С†Р°
+        "af_crist_new",                         -- РїСЂРёР·СЂР°С‡РЅС‹Р№ РєСЂРёСЃС‚Р°Р»Р»
+        "af_star_new",                          -- РѕРґСѓРІР°РЅС‡РёРє
+        "af_electra_flash_new",                 -- Р±Р»РёРє
+        "af_medus_new",                         -- РіРѕСЂРіРѕРЅР°
+        "af_glass_new",                         -- Р·РІРµР·РґРѕС‡РєР°
+        "af_dummy_fire",                        -- РїСѓР·С‹СЂС‘Рє
 
         "capsule",
 
@@ -190,8 +190,8 @@ local rare_list = {
         "wpn_val",
         "wpn_svu",
         --"wpn_gm94",
-        "wpn_mp153_m1",                         -- обрез мп153
-        --"wpn_winchester_m1",                    -- обрез мп133
+        "wpn_mp153_m1",                         -- РѕР±СЂРµР· РјРї153
+        --"wpn_winchester_m1",                    -- РѕР±СЂРµР· РјРї133
 
         "ammo_vog-25",
         "ammo_m209",
@@ -227,6 +227,7 @@ local rare_list = {
         "af_red_dummy_spring",
         "af_red_dummy_battery",
         "af_red_dummy_pellicle",
+<<<<<<< Updated upstream
         "af_sul_new",                           -- дирижабль
         "af_eye",                               -- глаз
         "af_compass",                           -- компасс
@@ -235,6 +236,16 @@ local rare_list = {
         "af_dummy_buliz",                       -- булыжник
         "af_dummy_fire",                        -- пузырёк
         "af_flower_new",                        -- пицца
+=======
+        --"af_sul_new",                           -- РґРёСЂРёР¶Р°Р±Р»СЊ
+        "af_eye",                               -- РіР»Р°Р·
+        --"af_compass",                           -- РєРѕРјРїР°СЃСЃ
+        --"af_dummy_dummy_new",                   -- РёР·РѕР»СЏС‚РѕСЂ
+        --"af_baloon",                            -- Р±Р°Р»РѕРЅС‡РёРє
+        "af_dummy_buliz",                       -- Р±СѓР»С‹Р¶РЅРёРє
+        "af_dummy_fire",                        -- РїСѓР·С‹СЂС‘Рє
+        "af_flower_new",                        -- РїРёС†С†Р°
+>>>>>>> Stashed changes
 
         "af_armor_1",
         "af_babka_1",
@@ -423,7 +434,7 @@ function CTreasure:give_treasure( k, from_pda )
             --             "%c[default]" .. game.translate_string( v.description )
             local spot = lua_random( 1, 3 )
             level.map_add_object_spot_ser(
-                obj.id, "crlc_big_treasure" .. spot, "Получил наводку на схрон в этом районе."
+                obj.id, "crlc_big_treasure" .. spot, "РџРѕР»СѓС‡РёР» РЅР°РІРѕРґРєСѓ РЅР° СЃС…СЂРѕРЅ РІ СЌС‚РѕРј СЂР°Р№РѕРЅРµ."
             )
         else
             sak.send_treasure( "pda_secret" )
@@ -434,11 +445,11 @@ function CTreasure:give_treasure( k, from_pda )
                 vergas_lib.add_record_in_klava( msg_id )
             end
         end
-        -- проверка, какой тип тайника выбран
-        -- если тайник не именной, то заменим содержимое
+        -- РїСЂРѕРІРµСЂРєР°, РєР°РєРѕР№ С‚РёРї С‚Р°Р№РЅРёРєР° РІС‹Р±СЂР°РЅ
+        -- РµСЃР»Рё С‚Р°Р№РЅРёРє РЅРµ РёРјРµРЅРЅРѕР№, С‚Рѕ Р·Р°РјРµРЅРёРј СЃРѕРґРµСЂР¶РёРјРѕРµ
         local t_items = {}
         if self:named_treasure( self.treasure_info[ k ] ) == false then
-            -- передадим уровень схрона, чтобы по нему забить наполнение
+            -- РїРµСЂРµРґР°РґРёРј СѓСЂРѕРІРµРЅСЊ СЃС…СЂРѕРЅР°, С‡С‚РѕР±С‹ РїРѕ РЅРµРјСѓ Р·Р°Р±РёС‚СЊ РЅР°РїРѕР»РЅРµРЅРёРµ
             t_items = self:give_item_list( skip_onetime_items, obj.level_name )
         else
             t_items = v.items
@@ -497,7 +508,7 @@ function CTreasure:give_treasure( k, from_pda )
         end
         self.treasure_info[ k ].active = true
         self.treasure_info[ k ].done   = true
-        -- для статистики:
+        -- РґР»СЏ СЃС‚Р°С‚РёСЃС‚РёРєРё:
         xr_statistic.add_pts(
             "stalkerkills", game.translate_string( "st_pda_treas_found" ), 1, 0
         )
@@ -535,9 +546,9 @@ function CTreasure:give_item_list( skip_onetime_items, level_name )
     }
     local rank  = -1
     local tabla = {}
-    -- сколько наименований предметов будет в тайнике
+    -- СЃРєРѕР»СЊРєРѕ РЅР°РёРјРµРЅРѕРІР°РЅРёР№ РїСЂРµРґРјРµС‚РѕРІ Р±СѓРґРµС‚ РІ С‚Р°Р№РЅРёРєРµ
     local i = dsh.get_next_random( "treasure_manager.rnd", 1, 4 )
-    -- определим ранг непися
+    -- РѕРїСЂРµРґРµР»РёРј СЂР°РЅРі РЅРµРїРёСЃСЏ
     if n_rank == nil then
         n_rank = dsh.get_next_random( "treasure_manager.rnd", 1, 12 ) * 100
     end
@@ -546,13 +557,13 @@ function CTreasure:give_item_list( skip_onetime_items, level_name )
             if v[ vv ] == level_name then rank = k end
         end
     end
-    -- небольшой шанс того, что на уровне будет тайник уровнем выше
+    -- РЅРµР±РѕР»СЊС€РѕР№ С€Р°РЅСЃ С‚РѕРіРѕ, С‡С‚Рѕ РЅР° СѓСЂРѕРІРЅРµ Р±СѓРґРµС‚ С‚Р°Р№РЅРёРє СѓСЂРѕРІРЅРµРј РІС‹С€Рµ
     if dsh.get_next_random( "treasure_manager.rnd" ) > 0.8 then
         rank = rank + 1
     end
-    -- если не нашли уровень в таблице, то тайник "мастерский"
+    -- РµСЃР»Рё РЅРµ РЅР°С€Р»Рё СѓСЂРѕРІРµРЅСЊ РІ С‚Р°Р±Р»РёС†Рµ, С‚Рѕ С‚Р°Р№РЅРёРє "РјР°СЃС‚РµСЂСЃРєРёР№"
     if rank == -1 then rank = 4 end
-    -- определим, из какой секции брать предметы, и какие именно
+    -- РѕРїСЂРµРґРµР»РёРј, РёР· РєР°РєРѕР№ СЃРµРєС†РёРё Р±СЂР°С‚СЊ РїСЂРµРґРјРµС‚С‹, Рё РєР°РєРёРµ РёРјРµРЅРЅРѕ
     local sect
     if rank     == 1 then sect = rare_list.novice_section
     elseif rank == 2 then sect = rare_list.experienced_section
@@ -580,7 +591,7 @@ function CTreasure:give_item_list( skip_onetime_items, level_name )
         t_used        = t_used + 1
         ind_          = dsh.get_next_random( "treasure_manager.rnd", t_used, table.getn( items ) )
         spawn.section = items[ ind_ ]
-        -- установка кол-ва предметов в зависимости от секции
+        -- СѓСЃС‚Р°РЅРѕРІРєР° РєРѕР»-РІР° РїСЂРµРґРјРµС‚РѕРІ РІ Р·Р°РІРёСЃРёРјРѕСЃС‚Рё РѕС‚ СЃРµРєС†РёРё
         local s   = tostring( spawn.section )
         if
                strposx( s, "ammo_"  )
@@ -588,7 +599,7 @@ function CTreasure:give_item_list( skip_onetime_items, level_name )
             or s == "medkit_scientic"
         then 
             j = j + 1
-            cnt = dsh.get_next_random( "treasure_manager.rnd", 1, 3 )   -- патроны, сухпайки, научные аптеки
+            cnt = dsh.get_next_random( "treasure_manager.rnd", 1, 3 )   -- РїР°С‚СЂРѕРЅС‹, СЃСѓС…РїР°Р№РєРё, РЅР°СѓС‡РЅС‹Рµ Р°РїС‚РµРєРё
         elseif strposx( s, "wpn_" ) then
             if not wpn_have then
                 j = j + 1
@@ -605,22 +616,22 @@ function CTreasure:give_item_list( skip_onetime_items, level_name )
             or strposx( s, "capsule" )
         then
             j = j + 1
-            cnt = 1                                                     -- броники, оружие
+            cnt = 1                                                     -- Р±СЂРѕРЅРёРєРё, РѕСЂСѓР¶РёРµ
         elseif strposx( s, "af_" ) then
             j = j + 1
-            cnt = 1                                                     -- артефакты
+            cnt = 1                                                     -- Р°СЂС‚РµС„Р°РєС‚С‹
         elseif
                strposx( s, "playboy" )
             or strposx( s, "flesh_leather" )
             or s == "flask_army"
         then
             j = j + 1
-            cnt = dsh.get_next_random( "treasure_manager.rnd", 1, 2 )   -- шкуры, плейбои, фляги
+            cnt = dsh.get_next_random( "treasure_manager.rnd", 1, 2 )   -- С€РєСѓСЂС‹, РїР»РµР№Р±РѕРё, С„Р»СЏРіРё
         else
             j = j + 1
-            cnt = dsh.get_next_random( "treasure_manager.rnd", 1, 5 )   -- остальное
+            cnt = dsh.get_next_random( "treasure_manager.rnd", 1, 5 )   -- РѕСЃС‚Р°Р»СЊРЅРѕРµ
         end
-        -- сохраняем инфу о текущем предмете
+        -- СЃРѕС…СЂР°РЅСЏРµРј РёРЅС„Сѓ Рѕ С‚РµРєСѓС‰РµРј РїСЂРµРґРјРµС‚Рµ
         spawn.prob = cnt
         table.insert( tabla, spawn )
         t_ = table.remove( items, ind_ )

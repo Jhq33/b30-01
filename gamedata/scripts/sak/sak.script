@@ -1,5 +1,5 @@
 ---------------------------------------------------------------------
--- Привет от Сяка
+-- РџСЂРёРІРµС‚ РѕС‚ РЎСЏРєР°
 ---------------------------------------------------------------------
 af_count             = 0
 arts_operate         = false
@@ -128,7 +128,7 @@ local trs_sid_sound = {
     [ 5863 ] = "5",  [ 5864 ] = "2"
 }
 
-local lev_prot = {                      -- id платных нычек
+local lev_prot = {                      -- id РїР»Р°С‚РЅС‹С… РЅС‹С‡РµРє
     [ "l01_escape"     ] = 9140,
     [ "l04_darkvalley" ] = 9141,
     [ "l05_bar"        ] = 9142,
@@ -136,7 +136,7 @@ local lev_prot = {                      -- id платных нычек
     [ "l10_radar "     ] = 9144
 }
 
-level_difficulty = {                    -- коэффициенты общей сложности игры на каждой локации
+level_difficulty = {                    -- РєРѕСЌС„С„РёС†РёРµРЅС‚С‹ РѕР±С‰РµР№ СЃР»РѕР¶РЅРѕСЃС‚Рё РёРіСЂС‹ РЅР° РєР°Р¶РґРѕР№ Р»РѕРєР°С†РёРё
     [ "l01_escape"            ] = 0.9,
     [ "l02_garbage"           ] = 1.0,
     [ "l03_agroprom"          ] = 1.5,
@@ -253,64 +253,64 @@ local game_difficulty_by_num = {
     [ 3 ] = "gd_master"
 }
 
-function add_new_escape_100()     add_new_lc( 9100, 0,   "На Забытый хутор",        "info_way100a" ) end
-function add_new_agroprom_101()   add_new_lc( 9101, 1,   "На Забытый хутор",        "info_way101a" ) end
-function add_new_yantar_102()     add_new_lc( 9102, 2,   "На Янтарь",               "info_way102a" ) end
-function add_new_agroprom_103()   add_new_lc( 9103, 3,   "На Агропром",             "info_way103a" ) end
-function add_new_ros_red_104()    add_new_lc( 9104, 4,   "В Рыжий лес",             "info_way104a" ) end
-function add_new_rostok_105()     add_new_lc( 9105, 5,   "В Рыжий лес",             "info_way105a" ) end
-function add_new_radar_106()      add_new_lc( 9106, 6,   "В Рыжий лес",             "info_way106a" ) end
-function add_new_darkvalley_107() add_new_lc( 9107, 7,   "В Тёмную долину",         "info_way107a" ) end
-function add_new_yantar_108()     add_new_lc( 9108, 8,   "В зону \"Тесла\"",        "info_way108a" ) end
-function add_new_radar_109()      add_new_lc( 9109, 9,   "В подземную лабораторию", "info_way109a" ) end
-function add_new_mil_110()        add_new_lc( 9110, 10,  "В Туманную чащу",         "info_way110a" ) end
-function add_new_darkvalley_111() add_new_lc( 9111, 11,  "В Туманную чащу",         "info_way111a" ) end
-function add_new_esc_dar_112()    add_new_lc( 9112, 12,  "В Кишку",                 "info_way112a" ) end
-function add_new_military()       add_new_lc( 592,  67,  "На Склады",               "info_way113a" ) end
-function add_new_rostok()         add_new_lc( 594,  70,  "На Дикую территорию",     "info_way114a" ) end
-function add_new_garbage_116()    add_new_lc( 9116, 16,  "На Свалку",               "info_way116a" ) end
-function add_new_darkvalley_117() add_new_lc( 9117, 17,  "В Тёмную долину",         "info_way117a" ) end
-function add_new_x18_x16_118()    add_new_lc( 9118, 31,  "В лабораторию Х-16"                      ) end
-function add_new_x16_x18_119()    add_new_lc( 9119, 31,  "В лабораторию Х-18"                      ) end
-function add_new_x10_130()        add_new_lc( 9130, 30,  "В лабораторию Х-12",      "info_way130a" ) end
-function add_new_x16_131()        add_new_lc( 9131, 31,  "В лабораторию Х-16",      "info_way131a" ) end
-function add_new_aver_gar_135()   add_new_lc( 9135, 35,  "На свалку",               "info_way135a" ) end
-function add_new_aver_td_136()    add_new_lc( 9136, 36,  "В Тёмную долину",         "info_way136a" ) end
-function add_new_aver_mil_137()   add_new_lc( 9137, 37,  "На Склады",               "info_way137a" ) end
-function add_new_gar_aver_151()   add_new_lc( 9151, 51,  "В туманную чащу",         "info_way151a" ) end
-function add_new_mil_gen_154()    add_new_lc( 9154, 54,  "В зону \"Тесла\"",        "info_way154a" ) end
-function add_new_gen_mil_191()    add_new_lc( 9191, 91,  "На Склады",               "info_way191a" ) end
-function add_new_lim_gen_165()    add_new_lc( 9165, 65,  "В зону \"Тесла\"",        "info_way165a" ) end
-function add_new_gen_lim_190()    add_new_lc( 9190, 90,  "В Лиманск",               "info_way190a" ) end
-function add_new_lost_marsh_166() add_new_lc( 9166, 66,  "На Болота",               "info_way166a" ) end
-function add_new_dead_bun_167()   add_new_lc( 9167, 67,  "В лабораторию Х-12"                      ) end
-function add_new_bun_dead_170()   add_new_lc( 9170, 70,  "В Иваньковский райцентр"                 ) end
-function add_new_red_ros_172()    add_new_lc( 9172, 72,  "На Дикую территорию",     "info_way172a" ) end
-function add_new_red_yan_173()    add_new_lc( 9173, 73,  "На Янтарь",               "info_way173a" ) end
-function add_new_red_mil_174()    add_new_lc( 9174, 74,  "На Склады",               "info_way174a" ) end
-function add_new_lost_agr_176()   add_new_lc( 9176, 76,  "На Агропром",             "info_way176a" ) end
-function add_new_esc_marsh_178()  add_new_lc( 9178, 78,  "На Болота",               "info_way178a" ) end
-function add_new_marsh_esc_179()  add_new_lc( 9179, 79,  "На Кордон",               "info_way179a" ) end
-function add_new_marsh_lost_180() add_new_lc( 9180, 80,  "На Забытый хутор",        "info_way180a" ) end
-function add_new_marsh_agr_181()  add_new_lc( 9181, 81,  "На Агропром",             "info_way181b" ) end
-function add_new_lost_esc_182()   add_new_lc( 9182, 82,  "На Кордон",               "info_way182a" ) end
-function add_new_agr_marsh_183()  add_new_lc( 9183, 83,  "На Болота",               "info_way183a" ) end
-function add_new_gar_lv_184()     add_new_lc( 9184, 84,  "На Забытый хутор",        "info_way184a" ) end
-function add_new_lv_gar_185()     add_new_lc( 9185, 85,  "На Свалку",               "info_way185a" ) end
-function add_new_warlab_186()     add_new_lc( 9186, 86,  "В лабораторию Х6",        "info_way186a" ) end
-function add_new_x8_187()         add_new_lc( 9187, 87,  "В лабораторию X8"                        ) end
-function add_new_x8_192()         add_new_lc( 9192, 92,  "В лабораторию Х6"                        ) end
-function add_new_red_196()        add_new_lc( 9196, 137, "В Рыжий лес"                             ) end
-function add_new_lim_197()        add_new_lc( 9197, 138, "В Лиманск"                               ) end
-function add_new_hos_dsc_256()    add_new_lc( 9256, 878, "В Кишку"                                 ) end
+function add_new_escape_100()     add_new_lc( 9100, 0,   "РќР° Р—Р°Р±С‹С‚С‹Р№ С…СѓС‚РѕСЂ",        "info_way100a" ) end
+function add_new_agroprom_101()   add_new_lc( 9101, 1,   "РќР° Р—Р°Р±С‹С‚С‹Р№ С…СѓС‚РѕСЂ",        "info_way101a" ) end
+function add_new_yantar_102()     add_new_lc( 9102, 2,   "РќР° РЇРЅС‚Р°СЂСЊ",               "info_way102a" ) end
+function add_new_agroprom_103()   add_new_lc( 9103, 3,   "РќР° РђРіСЂРѕРїСЂРѕРј",             "info_way103a" ) end
+function add_new_ros_red_104()    add_new_lc( 9104, 4,   "Р’ Р С‹Р¶РёР№ Р»РµСЃ",             "info_way104a" ) end
+function add_new_rostok_105()     add_new_lc( 9105, 5,   "Р’ Р С‹Р¶РёР№ Р»РµСЃ",             "info_way105a" ) end
+function add_new_radar_106()      add_new_lc( 9106, 6,   "Р’ Р С‹Р¶РёР№ Р»РµСЃ",             "info_way106a" ) end
+function add_new_darkvalley_107() add_new_lc( 9107, 7,   "Р’ РўС‘РјРЅСѓСЋ РґРѕР»РёРЅСѓ",         "info_way107a" ) end
+function add_new_yantar_108()     add_new_lc( 9108, 8,   "Р’ Р·РѕРЅСѓ \"РўРµСЃР»Р°\"",        "info_way108a" ) end
+function add_new_radar_109()      add_new_lc( 9109, 9,   "Р’ РїРѕРґР·РµРјРЅСѓСЋ Р»Р°Р±РѕСЂР°С‚РѕСЂРёСЋ", "info_way109a" ) end
+function add_new_mil_110()        add_new_lc( 9110, 10,  "Р’ РўСѓРјР°РЅРЅСѓСЋ С‡Р°С‰Сѓ",         "info_way110a" ) end
+function add_new_darkvalley_111() add_new_lc( 9111, 11,  "Р’ РўСѓРјР°РЅРЅСѓСЋ С‡Р°С‰Сѓ",         "info_way111a" ) end
+function add_new_esc_dar_112()    add_new_lc( 9112, 12,  "Р’ РљРёС€РєСѓ",                 "info_way112a" ) end
+function add_new_military()       add_new_lc( 592,  67,  "РќР° РЎРєР»Р°РґС‹",               "info_way113a" ) end
+function add_new_rostok()         add_new_lc( 594,  70,  "РќР° Р”РёРєСѓСЋ С‚РµСЂСЂРёС‚РѕСЂРёСЋ",     "info_way114a" ) end
+function add_new_garbage_116()    add_new_lc( 9116, 16,  "РќР° РЎРІР°Р»РєСѓ",               "info_way116a" ) end
+function add_new_darkvalley_117() add_new_lc( 9117, 17,  "Р’ РўС‘РјРЅСѓСЋ РґРѕР»РёРЅСѓ",         "info_way117a" ) end
+function add_new_x18_x16_118()    add_new_lc( 9118, 31,  "Р’ Р»Р°Р±РѕСЂР°С‚РѕСЂРёСЋ РҐ-16"                      ) end
+function add_new_x16_x18_119()    add_new_lc( 9119, 31,  "Р’ Р»Р°Р±РѕСЂР°С‚РѕСЂРёСЋ РҐ-18"                      ) end
+function add_new_x10_130()        add_new_lc( 9130, 30,  "Р’ Р»Р°Р±РѕСЂР°С‚РѕСЂРёСЋ РҐ-12",      "info_way130a" ) end
+function add_new_x16_131()        add_new_lc( 9131, 31,  "Р’ Р»Р°Р±РѕСЂР°С‚РѕСЂРёСЋ РҐ-16",      "info_way131a" ) end
+function add_new_aver_gar_135()   add_new_lc( 9135, 35,  "РќР° СЃРІР°Р»РєСѓ",               "info_way135a" ) end
+function add_new_aver_td_136()    add_new_lc( 9136, 36,  "Р’ РўС‘РјРЅСѓСЋ РґРѕР»РёРЅСѓ",         "info_way136a" ) end
+function add_new_aver_mil_137()   add_new_lc( 9137, 37,  "РќР° РЎРєР»Р°РґС‹",               "info_way137a" ) end
+function add_new_gar_aver_151()   add_new_lc( 9151, 51,  "Р’ С‚СѓРјР°РЅРЅСѓСЋ С‡Р°С‰Сѓ",         "info_way151a" ) end
+function add_new_mil_gen_154()    add_new_lc( 9154, 54,  "Р’ Р·РѕРЅСѓ \"РўРµСЃР»Р°\"",        "info_way154a" ) end
+function add_new_gen_mil_191()    add_new_lc( 9191, 91,  "РќР° РЎРєР»Р°РґС‹",               "info_way191a" ) end
+function add_new_lim_gen_165()    add_new_lc( 9165, 65,  "Р’ Р·РѕРЅСѓ \"РўРµСЃР»Р°\"",        "info_way165a" ) end
+function add_new_gen_lim_190()    add_new_lc( 9190, 90,  "Р’ Р›РёРјР°РЅСЃРє",               "info_way190a" ) end
+function add_new_lost_marsh_166() add_new_lc( 9166, 66,  "РќР° Р‘РѕР»РѕС‚Р°",               "info_way166a" ) end
+function add_new_dead_bun_167()   add_new_lc( 9167, 67,  "Р’ Р»Р°Р±РѕСЂР°С‚РѕСЂРёСЋ РҐ-12"                      ) end
+function add_new_bun_dead_170()   add_new_lc( 9170, 70,  "Р’ РРІР°РЅСЊРєРѕРІСЃРєРёР№ СЂР°Р№С†РµРЅС‚СЂ"                 ) end
+function add_new_red_ros_172()    add_new_lc( 9172, 72,  "РќР° Р”РёРєСѓСЋ С‚РµСЂСЂРёС‚РѕСЂРёСЋ",     "info_way172a" ) end
+function add_new_red_yan_173()    add_new_lc( 9173, 73,  "РќР° РЇРЅС‚Р°СЂСЊ",               "info_way173a" ) end
+function add_new_red_mil_174()    add_new_lc( 9174, 74,  "РќР° РЎРєР»Р°РґС‹",               "info_way174a" ) end
+function add_new_lost_agr_176()   add_new_lc( 9176, 76,  "РќР° РђРіСЂРѕРїСЂРѕРј",             "info_way176a" ) end
+function add_new_esc_marsh_178()  add_new_lc( 9178, 78,  "РќР° Р‘РѕР»РѕС‚Р°",               "info_way178a" ) end
+function add_new_marsh_esc_179()  add_new_lc( 9179, 79,  "РќР° РљРѕСЂРґРѕРЅ",               "info_way179a" ) end
+function add_new_marsh_lost_180() add_new_lc( 9180, 80,  "РќР° Р—Р°Р±С‹С‚С‹Р№ С…СѓС‚РѕСЂ",        "info_way180a" ) end
+function add_new_marsh_agr_181()  add_new_lc( 9181, 81,  "РќР° РђРіСЂРѕРїСЂРѕРј",             "info_way181b" ) end
+function add_new_lost_esc_182()   add_new_lc( 9182, 82,  "РќР° РљРѕСЂРґРѕРЅ",               "info_way182a" ) end
+function add_new_agr_marsh_183()  add_new_lc( 9183, 83,  "РќР° Р‘РѕР»РѕС‚Р°",               "info_way183a" ) end
+function add_new_gar_lv_184()     add_new_lc( 9184, 84,  "РќР° Р—Р°Р±С‹С‚С‹Р№ С…СѓС‚РѕСЂ",        "info_way184a" ) end
+function add_new_lv_gar_185()     add_new_lc( 9185, 85,  "РќР° РЎРІР°Р»РєСѓ",               "info_way185a" ) end
+function add_new_warlab_186()     add_new_lc( 9186, 86,  "Р’ Р»Р°Р±РѕСЂР°С‚РѕСЂРёСЋ РҐ6",        "info_way186a" ) end
+function add_new_x8_187()         add_new_lc( 9187, 87,  "Р’ Р»Р°Р±РѕСЂР°С‚РѕСЂРёСЋ X8"                        ) end
+function add_new_x8_192()         add_new_lc( 9192, 92,  "Р’ Р»Р°Р±РѕСЂР°С‚РѕСЂРёСЋ РҐ6"                        ) end
+function add_new_red_196()        add_new_lc( 9196, 137, "Р’ Р С‹Р¶РёР№ Р»РµСЃ"                             ) end
+function add_new_lim_197()        add_new_lc( 9197, 138, "Р’ Р›РёРјР°РЅСЃРє"                               ) end
+function add_new_hos_dsc_256()    add_new_lc( 9256, 878, "Р’ РљРёС€РєСѓ"                                 ) end
 
 function add_new_military_01()
-    add_new_lc( 1008, 68, "На Склады" )
+    add_new_lc( 1008, 68, "РќР° РЎРєР»Р°РґС‹" )
     mike.add_spots_bar_mil()
 end
 
 function add_new_dsc_199()
-    add_new_lc( 9199, 141, "В Тёмную долину", "info_way199a" )
+    add_new_lc( 9199, 141, "Р’ РўС‘РјРЅСѓСЋ РґРѕР»РёРЅСѓ", "info_way199a" )
     mike.add_spots_dv_k()
 end
 
@@ -379,7 +379,7 @@ function add_new_item_in( item, sidlh )
     amk.spawn_item_in_inv( item, nps )
 end
 
--- спавн всякого при НИ
+-- СЃРїР°РІРЅ РІСЃСЏРєРѕРіРѕ РїСЂРё РќР
 function add_new_lcitem()
     create_vasilev_suit()
     local rand1 = lua_random( 1, 5 )
@@ -399,9 +399,9 @@ function add_new_lcitem()
     amk.spawn_item( "lab_x16_documents",       v3f( -129.70, 20.78, -23.21  ), 1529, 18  )
     amk.spawn_item( "rad_document6", v3f(  621.95, -42.64,  187.38 ), 1910, 224619 )
     amk.spawn_item( "amk_zapiska",   v3f( -132.93,  11.04, -203.2  ), 629,  105467 )
-    amk.spawn_item( "rad_document6", v3f( -28.4,   -0.26,  -173.55 ), 676,  211656 ) -- дело в вагончике Агропрома
-    amk.spawn_item( "rad_document6", v3f(  357.98,  15.1,  -30.96  ), 0,    591849 ) -- дело на кордоне
-    amk.spawn_item( "sak_book4",     v3f( -3.77,   -4.25,   191.19 ), 2195, 97948  ) -- книга доктора
+    amk.spawn_item( "rad_document6", v3f( -28.4,   -0.26,  -173.55 ), 676,  211656 ) -- РґРµР»Рѕ РІ РІР°РіРѕРЅС‡РёРєРµ РђРіСЂРѕРїСЂРѕРјР°
+    amk.spawn_item( "rad_document6", v3f(  357.98,  15.1,  -30.96  ), 0,    591849 ) -- РґРµР»Рѕ РЅР° РєРѕСЂРґРѕРЅРµ
+    amk.spawn_item( "sak_book4",     v3f( -3.77,   -4.25,   191.19 ), 2195, 97948  ) -- РєРЅРёРіР° РґРѕРєС‚РѕСЂР°
     amk.spawn_item( "playboy3",      v3f( -212.99, -22.51, -126.06 ), 59,   40605  )
     amk.spawn_item( "matches",       v3f( -212.99, -22.45, -126.06 ), 59,   40605  )
     amk.spawn_item( "playboy2",      v3f(  111.71, -2.30,   2.80   ), 117,  413897 )
@@ -418,9 +418,9 @@ function add_new_lcitem()
     amk.spawn_item( "amk_kanistra",  v3f( -8.58,    3.34,   10.1   ), 3414, 135078 )
     amk.spawn_item( "amk_kanistra",  v3f( -8.18,    4.34,   10.8   ), 3414, 135078 )
     amk.spawn_item( "amk_zapiska",   v3f( -126.96, -28.41, -379.12 ), 27,   125181 )
-    --amk.spawn_item( "garbage_pda", v3f( -226, -7.37, -132.36 ), 252, 208345 ) -- ПДА в лагере бандитов на свалке
+    --amk.spawn_item( "garbage_pda", v3f( -226, -7.37, -132.36 ), 252, 208345 ) -- РџР”Рђ РІ Р»Р°РіРµСЂРµ Р±Р°РЅРґРёС‚РѕРІ РЅР° СЃРІР°Р»РєРµ
     --amk.spawn_item( "sak_document", v3f( 350, -51.74, -24.45 ), 2031, 93051 )
-    --amk.spawn_item( "rad_pda", v3f( 530.7, -49.41, -241.61 ), 2061, 180657 ) -- ПДА в вагончике на Радаре
+    --amk.spawn_item( "rad_pda", v3f( 530.7, -49.41, -241.61 ), 2061, 180657 ) -- РџР”Рђ РІ РІР°РіРѕРЅС‡РёРєРµ РЅР° Р Р°РґР°СЂРµ
     --amk.spawn_item( "yan_pda", v3f( -34.08, -12.5, -265.35 ), 1452, 27157 )
     --amk.spawn_item( "vasiljev_letter", v3f( -32.75, -12.5, -262.48 ), 1452, 26759 )
     --amk.spawn_item( "m_inventory_seif", v3f( 306.47, -39.39, -26.22 ), 1930, 69058 ) --seif_radar
@@ -1186,7 +1186,7 @@ function add_docs_X18()
         { 28.75732421875, -6.6202926635742, -16.3909435272, 6813, 1140 }
     }
     local i, count = true, 0
-    ------------------------------------  картина для Ворона --------------------------------------
+    ------------------------------------  РєР°СЂС‚РёРЅР° РґР»СЏ Р’РѕСЂРѕРЅР° --------------------------------------
     if dsh.get_next_random( "test.make_shron_voron" ) < 0.7 then
         local u_obj = amk.spawn_item( "kartina04", v3f( 3.45075, -14.1260, 44.69874 ), 1160, 3329 )
         if u_obj then
@@ -1198,7 +1198,7 @@ function add_docs_X18()
     end
     -----------------------------------------------------------------------------------------------
     for n = 1, #war_docs do
-        if lua_random() > 0.5 then           -- как на релизе
+        if lua_random() > 0.5 then           -- РєР°Рє РЅР° СЂРµР»РёР·Рµ
             local rand = lua_random( 2, 9 )
             local obj  = amk.spawn_item( "x18_document",
                 v3f( war_docs[ n ][ 1 ], war_docs[ n ][ 2 ], war_docs[ n ][ 3 ] ),
@@ -1208,7 +1208,7 @@ function add_docs_X18()
                 pk               = get_netpk( obj, 1 )
                 data             = pk:get()
                 data.visual_name = "new_item\\documents_" .. rand
-                data.physic_type = 3  -- чтобы полтеры не швырялись??????????
+                data.physic_type = 3  -- С‡С‚РѕР±С‹ РїРѕР»С‚РµСЂС‹ РЅРµ С€РІС‹СЂСЏР»РёСЃСЊ??????????
                 pk:set( data )
                 count = count + 1
             end
@@ -1233,7 +1233,7 @@ function add_docs_X18()
     nlc_vars.x18_docs_spawned = count
 end
 
--- кольчужная куртка для Шустрого
+-- РєРѕР»СЊС‡СѓР¶РЅР°СЏ РєСѓСЂС‚РєР° РґР»СЏ РЁСѓСЃС‚СЂРѕРіРѕ
 function add_outfit_bandit_m1()
     local war_docs = {
         { 344.457, 16.801, 244.435, 250, 586532 },
@@ -1261,8 +1261,8 @@ function add_kont_leshyi()
     if not has_alife_info( "leshyi_umer2" ) then
         sak_dialog.spawn_m_cont( 2 )
         send_tip(
-            "Напали твари, еле убежал! Пришлось бросить контейнер. Не доходя до свинофермы, справа от дороги, возле пня",
-            "Записка Лешего", 11, 20, "death", "sak", "red"
+            "РќР°РїР°Р»Рё С‚РІР°СЂРё, РµР»Рµ СѓР±РµР¶Р°Р»! РџСЂРёС€Р»РѕСЃСЊ Р±СЂРѕСЃРёС‚СЊ РєРѕРЅС‚РµР№РЅРµСЂ. РќРµ РґРѕС…РѕРґСЏ РґРѕ СЃРІРёРЅРѕС„РµСЂРјС‹, СЃРїСЂР°РІР° РѕС‚ РґРѕСЂРѕРіРё, РІРѕР·Р»Рµ РїРЅСЏ",
+            "Р—Р°РїРёСЃРєР° Р›РµС€РµРіРѕ", 11, 20, "death", "sak", "red"
         )
         db.actor:give_info_portion( "leshyi_umer2" )
     end
@@ -1270,8 +1270,8 @@ end
 
 function add_garmonika_letter()
     send_tip(
-        "Под кожухом губной гармошки находится листок с непонятным текстом!",
-        "Записка в гармошке", 5, 15, "g_g", "sak", "yellow"
+        "РџРѕРґ РєРѕР¶СѓС…РѕРј РіСѓР±РЅРѕР№ РіР°СЂРјРѕС€РєРё РЅР°С…РѕРґРёС‚СЃСЏ Р»РёСЃС‚РѕРє СЃ РЅРµРїРѕРЅСЏС‚РЅС‹Рј С‚РµРєСЃС‚РѕРј!",
+        "Р—Р°РїРёСЃРєР° РІ РіР°СЂРјРѕС€РєРµ", 5, 15, "g_g", "sak", "yellow"
     )
     local a = lua_random( 1, 10 )
     db.actor:give_info_portion( "garmonika_letter" .. a )
@@ -1279,8 +1279,8 @@ end
 
 function info_gen_mil_group()
     send_tip(
-        "Так-с... Вояки, скелеты, один в ботанском скафандре... Наверно та самая группа, что вышла с Кордона с Призраком...",
-        "Группа военных и учёных", 5, 15, "g_g", "sak", "yellow"
+        "РўР°Рє-СЃ... Р’РѕСЏРєРё, СЃРєРµР»РµС‚С‹, РѕРґРёРЅ РІ Р±РѕС‚Р°РЅСЃРєРѕРј СЃРєР°С„Р°РЅРґСЂРµ... РќР°РІРµСЂРЅРѕ С‚Р° СЃР°РјР°СЏ РіСЂСѓРїРїР°, С‡С‚Рѕ РІС‹С€Р»Р° СЃ РљРѕСЂРґРѕРЅР° СЃ РџСЂРёР·СЂР°РєРѕРј...",
+        "Р“СЂСѓРїРїР° РІРѕРµРЅРЅС‹С… Рё СѓС‡С‘РЅС‹С…", 5, 15, "g_g", "sak", "yellow"
     )
     db.actor:give_info_portion( "gen_mil_group_info" )
     add_gen_mil_items()
@@ -1288,15 +1288,15 @@ end
 
 function info_korovan()
     send_tip(
-        "Так так... Ящички военные, видимо с оружием... Посмотрим...",
-        "Ящики каравана", 5, 15, "g_g", "sak", "yellow"
+        "РўР°Рє С‚Р°Рє... РЇС‰РёС‡РєРё РІРѕРµРЅРЅС‹Рµ, РІРёРґРёРјРѕ СЃ РѕСЂСѓР¶РёРµРј... РџРѕСЃРјРѕС‚СЂРёРј...",
+        "РЇС‰РёРєРё РєР°СЂР°РІР°РЅР°", 5, 15, "g_g", "sak", "yellow"
     )
 end
 
 function info_val_zaval()
     send_tip(
-        "Так! Тут же не пролезть! Хотя... Если пару, а ещё лучше, четырех, мужиков попросить подсобить. Вроде раскидать можно.",
-        "Вход завален!", 5, 15, "g_g", "sak", "yellow"
+        "РўР°Рє! РўСѓС‚ Р¶Рµ РЅРµ РїСЂРѕР»РµР·С‚СЊ! РҐРѕС‚СЏ... Р•СЃР»Рё РїР°СЂСѓ, Р° РµС‰С‘ Р»СѓС‡С€Рµ, С‡РµС‚С‹СЂРµС…, РјСѓР¶РёРєРѕРІ РїРѕРїСЂРѕСЃРёС‚СЊ РїРѕРґСЃРѕР±РёС‚СЊ. Р’СЂРѕРґРµ СЂР°СЃРєРёРґР°С‚СЊ РјРѕР¶РЅРѕ.",
+        "Р’С…РѕРґ Р·Р°РІР°Р»РµРЅ!", 5, 15, "g_g", "sak", "yellow"
     )
 end
 
@@ -1344,7 +1344,7 @@ function add_dsc_gigant()
     misc.spawn_to( "mutant_psevdogigant_hand", obj )
 end
 
---спавним контейнер в Кишке
+--СЃРїР°РІРЅРёРј РєРѕРЅС‚РµР№РЅРµСЂ РІ РљРёС€РєРµ
 function add_dsc_container()
     local sobj = alife():create( "arc_art_box_basic",
         v3f( -111.465446, 0.213115, -301.207489 ), 267329, 3998
@@ -1362,9 +1362,9 @@ end
 
 function add_scarman_pda()
     local points = {
-         62.94,  11.36,  52.87, 3336,  32520,  "на Забытом хуторе, сарай там ещё какой-то прямо над оврагом.",
-        -94.02, -2.18, -230.80,  271, 115646,  "где-то на свалке заброшенной техники.",
-        -12.10,  0.63,  297.45,  187, 265404,  "на Кордоне, где-то на фермах."
+         62.94,  11.36,  52.87, 3336,  32520,  "РЅР° Р—Р°Р±С‹С‚РѕРј С…СѓС‚РѕСЂРµ, СЃР°СЂР°Р№ С‚Р°Рј РµС‰С‘ РєР°РєРѕР№-С‚Рѕ РїСЂСЏРјРѕ РЅР°Рґ РѕРІСЂР°РіРѕРј.",
+        -94.02, -2.18, -230.80,  271, 115646,  "РіРґРµ-С‚Рѕ РЅР° СЃРІР°Р»РєРµ Р·Р°Р±СЂРѕС€РµРЅРЅРѕР№ С‚РµС…РЅРёРєРё.",
+        -12.10,  0.63,  297.45,  187, 265404,  "РЅР° РљРѕСЂРґРѕРЅРµ, РіРґРµ-С‚Рѕ РЅР° С„РµСЂРјР°С…."
     }
     local rand = ( amk_vars.r_treas_items or 1 )
     amk.spawn_item( "scarman_pda",
@@ -1422,7 +1422,7 @@ function add_decoder()
         v3f( points[ rand - 4 ], points[ rand - 3 ], points[ rand - 2 ] ),
         points[ rand ], points[ rand - 1 ]
     )
-    ---------------------------- вечный вентилятор Ворону в х16 -------------------------------------
+    ---------------------------- РІРµС‡РЅС‹Р№ РІРµРЅС‚РёР»СЏС‚РѕСЂ Р’РѕСЂРѕРЅСѓ РІ С…16 -------------------------------------
     if dsh.get_next_random( "test.make_shron_voron" ) < 0.8 then
         local u_obj = amk.spawn_item( "ventilator_01", v3f( 74.9509, 10.17636, -9.08724 ), 1544, 5773 )
         if u_obj then
@@ -1435,7 +1435,7 @@ function add_decoder()
     --------------------------------------------------------------------------------------------------
 end
 
---функцию спавна гаусс - пистолета смотреть в sak_dialog.script
+--С„СѓРЅРєС†РёСЋ СЃРїР°РІРЅР° РіР°СѓСЃСЃ - РїРёСЃС‚РѕР»РµС‚Р° СЃРјРѕС‚СЂРµС‚СЊ РІ sak_dialog.script
 function add_gauss() amk.spawn_item( "wpn_gungauss", v3f( -126.11, 0.91, -533.55 ), 836, 31356 ) end
 
 function add_pellicle_red() amk.spawn_item( "af_red_dummy_pellicle", v3f( -239.99, 4.85,  99.93  ), 1362, 13956  ) end
@@ -1535,14 +1535,14 @@ end
 function yan_ghost_pda()
     db.actor:give_info_portion( "yan_provodnik_spawn" )
     db.actor:give_info_portion( "pseudo_ghost" )
-    sak.send_tip( "Это не Призрак!", "Воспоминание", 0, 20, "g_g", "rememb", "yellow" )
+    sak.send_tip( "Р­С‚Рѕ РЅРµ РџСЂРёР·СЂР°Рє!", "Р’РѕСЃРїРѕРјРёРЅР°РЅРёРµ", 0, 20, "g_g", "rememb", "yellow" )
     local self = level.main_input_receiver()
     if self then
     self:GetHolder():start_stop_menu( self, true )
     end
 end
 
-function create_corpse( section, pos, gvid, lvid, story_id, custom_data ) -- создает объект с нулевым здоровьем
+function create_corpse( section, pos, gvid, lvid, story_id, custom_data ) -- СЃРѕР·РґР°РµС‚ РѕР±СЉРµРєС‚ СЃ РЅСѓР»РµРІС‹Рј Р·РґРѕСЂРѕРІСЊРµРј
     local obj       = amk.spawn_item( section, pos, gvid, lvid )
     local pk        = get_netpk( obj )
     local data      = pk:get()
@@ -1658,7 +1658,7 @@ function docent_x10docs_time_start()
 end
 
 function time_docent_x10docs()
-    send_tip( "Меченный, подходи, есть мысли.", "Сообщение от Доцента", 11, 20, "ecolog", "sak", "green" )
+    send_tip( "РњРµС‡РµРЅРЅС‹Р№, РїРѕРґС…РѕРґРё, РµСЃС‚СЊ РјС‹СЃР»Рё.", "РЎРѕРѕР±С‰РµРЅРёРµ РѕС‚ Р”РѕС†РµРЅС‚Р°", 11, 20, "ecolog", "sak", "green" )
     db.actor:give_info_portion( "docent_x10docs_1_1faze" )
 end
 
@@ -1667,7 +1667,7 @@ function docent_x10harddisc_time_start()
 end
 
 function time_docent_x10harddisc()
-    send_tip( "Меченный, подходи, есть мысли.", "Сообщение от Доцента", 11, 20, "ecolog", "sak", "green" )
+    send_tip( "РњРµС‡РµРЅРЅС‹Р№, РїРѕРґС…РѕРґРё, РµСЃС‚СЊ РјС‹СЃР»Рё.", "РЎРѕРѕР±С‰РµРЅРёРµ РѕС‚ Р”РѕС†РµРЅС‚Р°", 11, 20, "ecolog", "sak", "green" )
     db.actor:give_info_portion( "docent_x10docs_4faze" )
 end
 
@@ -1755,6 +1755,7 @@ function add_resiver()     amk.spawn_item( "sak_resiver", v3f( -185.57, -3.58, 9
 function add_drug()        amk.spawn_item( "dogfrend",    v3f( -6.71,   0.41,  247.19 ), 258,  170000 ) end
 function add_strelok_pda() amk.spawn_item( "strelok_pda", v3f( 42.95,   61.56, -26.25 ), 2417, 6406   ) end
 
+<<<<<<< Updated upstream
 function info_received()     send_tip( "Найдена информация о новом пути!", "Новый путь", 2, 10, "nlc", "pda_news", "sky_blue" ) end
 function info_amk_received() send_tip( "Найден новый рецепт!", "Найдена информация", 2, 10, "artmod", "pda_news", "sky_blue" ) end
 function info_strelok_pda()  send_tip( "В ПДА Стрелка предупреждение о фальшивости МОНОЛИТА", "Остановись", 2, 20, "g_g", "pda_news", "red" ) end
@@ -1772,6 +1773,135 @@ function rad_outfit_in_tip() send_tip( "Зафиксировано аномальное воздействие..."
 function rad_outfit_out_tip()send_tip( "Защитное покрытие нормализовано...", "Датчик костюма", 3, 5, "pribor", "pda_news", "green" ) end
 function info_not_ready()    send_tip( "Идёт обработка данных, ждите...", "Измеритель", 0, 5, "pribor", "pda_news", "red" ) end
 function info_rep_box()      send_tip( "Нечем ремонтировать! Нет подготовленных ремкомплектов", "Ремонт", 0, 5, "g_g", "pda_news", "red" ) end
+=======
+function add_drug()
+    amk.spawn_item( "dogfrend", v3f( -6.71, 0.41, 247.19 ), 258, 170000 )
+end
+
+function add_strelok_pda()
+    amk.spawn_item( "strelok_pda", v3f( 42.95, 61.56, -26.25 ), 2417, 6406 )
+end
+
+function info_received()
+    send_tip(
+        "РќР°Р№РґРµРЅР° РёРЅС„РѕСЂРјР°С†РёСЏ Рѕ РЅРѕРІРѕРј РїСѓС‚Рё!", "РќРѕРІС‹Р№ РїСѓС‚СЊ",
+        2, 10, "nlc", "pda_news", "sky_blue"
+    )
+end
+
+function info_amk_received()
+    send_tip(
+        "РќР°Р№РґРµРЅ РЅРѕРІС‹Р№ СЂРµС†РµРїС‚!", "РќР°Р№РґРµРЅР° РёРЅС„РѕСЂРјР°С†РёСЏ",
+        2, 10, "artmod", "pda_news", "sky_blue"
+    )
+end
+
+function info_strelok_pda()
+    send_tip(
+        "Р’ РџР”Рђ РЎС‚СЂРµР»РєР° РїСЂРµРґСѓРїСЂРµР¶РґРµРЅРёРµ Рѕ С„Р°Р»СЊС€РёРІРѕСЃС‚Рё РњРћРќРћР›РРўРђ", "РћСЃС‚Р°РЅРѕРІРёСЃСЊ",
+        2, 20, "g_g", "pda_news", "red"
+    )
+end
+
+function info_artmod()
+    send_tip(
+        "РќР°Р№РґРµРЅ СЂРµС†РµРїС‚ РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёСЏ Р°СЂС‚РµС„Р°РєС‚Р°!", "РќРѕРІС‹Р№ Р°СЂС‚РјРѕРґ",
+        5, 10, "artmod", "pda_news", "pink"
+    )
+end
+
+function info_code()
+    send_tip(
+        "РћР±РЅР°СЂСѓР¶РµРЅР° РєРѕРґРѕРІР°СЏ РєРѕРјР±РёРЅР°С†РёСЏ Р±Р»РѕРєРёСЂРѕРІР°РЅРЅРѕР№ РґРІРµСЂРё!", "РџРѕР»СѓС‡РµРЅ РєРѕРґ",
+        2, 10, "code", "pda_news", "pink"
+    )
+end
+
+function info_doktor()
+    send_tip(
+        "РЎС‚СЂР°РЅРЅС‹Рµ Р·Р°РїРёСЃРё, СЃС‚СЂР°РЅРЅРѕРіРѕ С‡РµР»РѕРІРµРєР°. РҐР°СЂРѕРЅ. РљС‚Рѕ СЌС‚Рѕ?",
+        "Р—Р°РїРёСЃРЅР°СЏ РєРЅРёР¶РєР° РҐР°СЂРѕРЅР°",
+        0, 10, "teleport", "pda_news", "sky_blue"
+    )
+end
+
+function info_teleport()
+    send_tip(
+        "РўРµР»РµРїРѕСЂС‚ РЅР°СЃС‚СЂРѕРµРЅ Рё Р°РєС‚РёРІРёСЂРѕРІР°РЅ!", "РўРµР»РµРїРѕСЂС‚ РіРѕС‚РѕРІ",
+        2, 10, "teleport", "sak", "sky_blue"
+    )
+end
+
+function mar_zone_tips()
+    send_tip(
+        "РЎС‚Р°Р»РєРµСЂ! РЎС‚РѕР№ Рё РЅРµ РґРІРёРіР°Р№СЃСЏ! РЎРµР№С‡Р°СЃ Рє С‚РµР±Рµ РїРѕРґРѕР№РґСѓС‚...", "Р’РЅРёРјР°РЅРёРµ!",
+        0, 10, "default", "sak", "red"
+    )
+end
+
+function gar_zone_tips()
+    send_tip(
+        "Р­! РџРѕРґРѕР№РґРё Рє Р·РЅР°РєСѓ Рё РЅРµ РјР°С…Р°Р№ СЃС‚РІРѕР»РѕРј, РїРѕР±Р°Р·Р°СЂРёРј...", "Р’РЅРёРјР°РЅРёРµ!",
+        0, 10, "default", "sak", "red"
+    )
+end
+
+function gar_zone_2tips()
+    send_tip(
+        "РўС‹ С‡С‘, РЅРµ РІРєСѓСЂРёР»?! Рљ Р·РЅР°РєСѓ РёРґРё Рё СЃС‚РѕР№! Р—Р°РІР°Р»РёРј, РІ РЅР°С‚СѓСЂРµ...", "Р’РЅРёРјР°РЅРёРµ!",
+        0, 10, "default", "sak", "red"
+    )
+end
+
+function info_no_matches()
+    send_tip(
+        "РЎРїРёС‡РµРє-С‚Рѕ РЅРµС‚! Р Р°Р·РІРµСЃС‚Рё РѕРіРѕРЅСЊ РЅРµ СѓРґР°Р»РѕСЃСЊ", "РџР»Р°РјСЏ",
+        0, 5, "g_g", "pda_news", "red"
+    )
+end
+
+function info_no_battery()
+    send_tip(
+        "РџСЂРёР±РѕСЂ РЅРµ СЂР°Р±РѕС‚Р°С‚. РќРµС‚ РїРёС‚Р°РЅРёСЏ. РќСѓР¶РµРЅ Р·Р°СЂСЏР¶РµРЅРЅС‹Р№ Р°РєРєСѓРјСѓР»СЏС‚РѕСЂ.", "РР·РјРµСЂРёС‚РµР»СЊ",
+        0, 5, "g_g", "pda_news", "red"
+    )
+end
+
+function info_no_module()
+    send_tip(
+        "Р§С‚Рѕ РјРµРЅСЏС‚СЊ-С‚Рѕ? Р›РѕРјР°С‚СЊ РЅРµ СЃС‚РѕРёС‚, РјР°Р»Рѕ Р»Рё...", "Р“Р°СЂРјРѕРЅРёР·Р°С‚РѕСЂ РёР·Р»СѓС‡Р°С‚РµР»СЏ",
+        0, 5, "g_g", "pda_news", "red"
+    )
+end
+
+function rad_outfit_in_tip()
+    send_tip(
+        "Р—Р°С„РёРєСЃРёСЂРѕРІР°РЅРѕ Р°РЅРѕРјР°Р»СЊРЅРѕРµ РІРѕР·РґРµР№СЃС‚РІРёРµ...", "Р”Р°С‚С‡РёРє РєРѕСЃС‚СЋРјР°",
+        3, 5, "pribor", "pda_news", "red"
+    )
+end
+
+function rad_outfit_out_tip()
+    send_tip(
+        "Р—Р°С‰РёС‚РЅРѕРµ РїРѕРєСЂС‹С‚РёРµ РЅРѕСЂРјР°Р»РёР·РѕРІР°РЅРѕ...", "Р”Р°С‚С‡РёРє РєРѕСЃС‚СЋРјР°",
+        3, 5, "pribor", "pda_news", "green"
+    )
+end
+
+function info_not_ready()
+    send_tip(
+        "РРґС‘С‚ РѕР±СЂР°Р±РѕС‚РєР° РґР°РЅРЅС‹С…, Р¶РґРёС‚Рµ...", "РР·РјРµСЂРёС‚РµР»СЊ",
+        0, 5, "pribor", "pda_news", "red"
+    )
+end
+
+function info_rep_box()
+    send_tip(
+        "РќРµС‡РµРј СЂРµРјРѕРЅС‚РёСЂРѕРІР°С‚СЊ! РќРµС‚ РїРѕРґРіРѕС‚РѕРІР»РµРЅРЅС‹С… СЂРµРјРєРѕРјРїР»РµРєС‚РѕРІ", "Р РµРјРѕРЅС‚",
+        0, 5, "g_g", "pda_news", "red"
+    )
+end
+>>>>>>> Stashed changes
 
 function info_klava()
     if
@@ -1779,8 +1909,8 @@ function info_klava()
         and not has_alife_info( "klava_feik_found1" )
     then
         send_tip(
-            "Странная вещица. Похожа на ПДА, только не работает, сзади на корпусе гравировка - {Вергас-08}",
-            "Сломанная клавиатура", 2, 10, "g_g", "pda_news", "sky_blue"
+            "РЎС‚СЂР°РЅРЅР°СЏ РІРµС‰РёС†Р°. РџРѕС…РѕР¶Р° РЅР° РџР”Рђ, С‚РѕР»СЊРєРѕ РЅРµ СЂР°Р±РѕС‚Р°РµС‚, СЃР·Р°РґРё РЅР° РєРѕСЂРїСѓСЃРµ РіСЂР°РІРёСЂРѕРІРєР° - {Р’РµСЂРіР°СЃ-08}",
+            "РЎР»РѕРјР°РЅРЅР°СЏ РєР»Р°РІРёР°С‚СѓСЂР°", 2, 10, "g_g", "pda_news", "sky_blue"
         )
         db.actor:give_info_portion( "klava_feik_found1" )
         db.actor:disable_info_portion( "klava_feik_found" )
@@ -1806,7 +1936,7 @@ function calc_items_count( section, flt )
 end
 
 function have_items_count( itm, items_count, af_flag, capsule_flag )
-    if type( itm ) == "table" then -- проверка группы элементов, синтаксис: have_items_count({ bread = 3, conserva = 3})
+    if type( itm ) == "table" then -- РїСЂРѕРІРµСЂРєР° РіСЂСѓРїРїС‹ СЌР»РµРјРµРЅС‚РѕРІ, СЃРёРЅС‚Р°РєСЃРёСЃ: have_items_count({ bread = 3, conserva = 3})
         for sect, count in pairs( itm ) do
             if not have_items_count ( sect, count ) then return false end
         end
@@ -1819,11 +1949,11 @@ function have_items_count( itm, items_count, af_flag, capsule_flag )
     if capsule_flag then
         flt =   function ( section )
                     return not strposx( section, "_capsule" )
-                end -- простой колбек фильтра
+                end -- РїСЂРѕСЃС‚РѕР№ РєРѕР»Р±РµРє С„РёР»СЊС‚СЂР°
     end
     local have = calc_items_count( itm, flt )
     if have < items_count then
-        --wprintf( "[~T]. #DBG: в наличии ~C0D %d~C07 предметов~C0A %-35s~C07 из~C0A %d~C07 требуемых", have, itm, items_count )
+        --wprintf( "[~T]. #DBG: РІ РЅР°Р»РёС‡РёРё ~C0D %d~C07 РїСЂРµРґРјРµС‚РѕРІ~C0A %-35s~C07 РёР·~C0A %d~C07 С‚СЂРµР±СѓРµРјС‹С…", have, itm, items_count )
         return false
     else
         return true
@@ -1867,7 +1997,7 @@ function artmodscheck( anom, af, anom_sect )
     local af_sect = af:section()
     local aid     = "artmod_"
     local at      = sak_artmods.artmod_resiepts
-    -------------------- из жарки ---------------------
+    -------------------- РёР· Р¶Р°СЂРєРё ---------------------
     if strpos( anom_sect, "_zharka", 1, true ) then
         for i = 1, 6 do
             artmod(
@@ -1879,7 +2009,7 @@ function artmodscheck( anom, af, anom_sect )
             )
         end
     end
-    ------------------- из электры -------------------
+    ------------------- РёР· СЌР»РµРєС‚СЂС‹ -------------------
     if strpos( anom_sect, "_galant", 1, true ) then
         if af_sect == "af_red_dummy_battery" then af_zone_off( af ) end
         for i = 1, 7 do
@@ -1894,7 +2024,7 @@ function artmodscheck( anom, af, anom_sect )
         if level.name() ~= "generators" then return end
         artmod01( af, "af_dummy_dummy_new", "af_dummy_buliz", "akk_is_ready", 0, 1, 10, anom )
     end
-    ------------------- из холодца --------------------
+    ------------------- РёР· С…РѕР»РѕРґС†Р° --------------------
     if strpos( anom_sect, "_buzz", 1, true ) then
         for i = 1, 8 do
             artmod(
@@ -1910,7 +2040,7 @@ function artmodscheck( anom, af, anom_sect )
         artmod01( af, "af_medusa_dyn5d", "af_dummy_green_medusa", "info_green_medusa", 1, 0, 50, anom )
         artmod01( af, "af_vyvert_dyn5d", "af_dummy_green_vyvert", "info_green_vyvert", 1, 2, 50, anom )
     end
-    ------------------- из карусели -------------------
+    ------------------- РёР· РєР°СЂСѓСЃРµР»Рё -------------------
     if strpos( anom_sect, "_mincer", 1, true ) then
         for i = 1, 6 do
             artmod(
@@ -1923,7 +2053,7 @@ function artmodscheck( anom, af, anom_sect )
         end
         if af_sect == "af_red_dummy_spring" then af_zone_off( af ) end
     end
-    -------------------- из воронки --------------------
+    -------------------- РёР· РІРѕСЂРѕРЅРєРё --------------------
     if strpos( anom_sect, "_mosquito_bald", 1, true ) then
         for i = 1, 6 do
             artmod(
@@ -1937,7 +2067,7 @@ function artmodscheck( anom, af, anom_sect )
         artmod01( af, "af_dummy_battery", "af_battery", "actor_jump_info", 1, 1, 50, anom )
         if af_sect == "af_red_dummy_pellicle" then af_zone_off( af ) end
     end
-    -------------------- из трамплина --------------------
+    -------------------- РёР· С‚СЂР°РјРїР»РёРЅР° --------------------
     if strpos( anom_sect, "_gravi_zone", 1, true ) then
         if af_sect == "af_red_dummy_battery" then af_zone_off( af )  end
         for i = 1, 6 do
@@ -1950,7 +2080,7 @@ function artmodscheck( anom, af, anom_sect )
             )
         end
     end
-    --------------------- из снежки ---------------------
+    --------------------- РёР· СЃРЅРµР¶РєРё ---------------------
     if strpos( anom_sect, "_ice", 1, true ) then
         for i = 1, 6 do
             artmod(
@@ -1967,7 +2097,7 @@ function artmodscheck( anom, af, anom_sect )
         artmod01( af, "af_electra_sparkler_dyn5d", "af_dummy_sparkler", "info_artmod_activ_anom", 0, 0, 20, anom )
         artmod01( af, "af_dummy_dummy", "af_dummy_dummy_new", "info_dummy_dummy_new", 0, 2, 0, anom )
     end
-    -------------------- из киселя? ---------------------
+    -------------------- РёР· РєРёСЃРµР»СЏ? ---------------------
     if strpos( anom_sect, "_sakbuzz", 1, true ) then
         artmod(
             anom, af,
@@ -2042,15 +2172,15 @@ function artmod( nearest_anomaly, af, item1, item2, item3, item4, info_artmod, i
             misc.release_obj( s.i3t, 'sak.script:831' )
             misc.release_obj( s.i4t, 'sak.script:832' )
             level.add_pp_effector( "teleport.ppe", 1530, false )
-            -- Варим арт определенного уровня, в зависимости от сложности и опыта гг
-            local dgc   = 1 + ( 3 - level.get_game_difficulty() ) / 5 -- коэффициент в зависимости от сложности игры
+            -- Р’Р°СЂРёРј Р°СЂС‚ РѕРїСЂРµРґРµР»РµРЅРЅРѕРіРѕ СѓСЂРѕРІРЅСЏ, РІ Р·Р°РІРёСЃРёРјРѕСЃС‚Рё РѕС‚ СЃР»РѕР¶РЅРѕСЃС‚Рё Рё РѕРїС‹С‚Р° РіРі
+            local dgc   = 1 + ( 3 - level.get_game_difficulty() ) / 5 -- РєРѕСЌС„С„РёС†РёРµРЅС‚ РІ Р·Р°РІРёСЃРёРјРѕСЃС‚Рё РѕС‚ СЃР»РѕР¶РЅРѕСЃС‚Рё РёРіСЂС‹
             local goods = nlc_vars.artmod_goods or 1
             if not str_in_tab( item_targ, { "af_dummy_", "af_dummy_simbion", "_new" } ) then
                 local rand_goods = math.floor( math.log( goods * dgc ) ) + 1
                 if rand_goods > 5 then rand_goods = 5 end
-                -- переделаем на dsh-рандомы, чтобы не было соблазна время подгонять под зелень
+                -- РїРµСЂРµРґРµР»Р°РµРј РЅР° dsh-СЂР°РЅРґРѕРјС‹, С‡С‚РѕР±С‹ РЅРµ Р±С‹Р»Рѕ СЃРѕР±Р»Р°Р·РЅР° РІСЂРµРјСЏ РїРѕРґРіРѕРЅСЏС‚СЊ РїРѕРґ Р·РµР»РµРЅСЊ
                 local rand_dyn = dsh.get_next_random( "sak.artmod", rand_goods )
-                -- из ХБМ: зелень можно сварить только в аномалии strong ---
+                -- РёР· РҐР‘Рњ: Р·РµР»РµРЅСЊ РјРѕР¶РЅРѕ СЃРІР°СЂРёС‚СЊ С‚РѕР»СЊРєРѕ РІ Р°РЅРѕРјР°Р»РёРё strong ---
                 if strpos( anom_sect, "_strong", 1, true ) then
                     rand_dyn = math.min( rand_dyn, 5 )
                 elseif strpos( anom_sect, "_average", 1, true ) then
@@ -2062,7 +2192,7 @@ function artmod( nearest_anomaly, af, item1, item2, item3, item4, info_artmod, i
                 xr_statistic.addCookingPoints( item_targ )
                 item_targ = ( item_targ .. "_dyn" .. rand_dyn .. "d" )
             end
-            -- варим 7-13 минут
+            -- РІР°СЂРёРј 7-13 РјРёРЅСѓС‚
             amk_mod.af_start_transform_timer(
                 amk_mod.af_start_transform( 100, 0, "af_dummy_buliz", item_targ ),
                 pos, 0, 0, 7 + math.random( 0, 6 )
@@ -2075,7 +2205,7 @@ function artmod( nearest_anomaly, af, item1, item2, item3, item4, info_artmod, i
     end
 end
 
-function store_anom_id( id ) -- запоминаем id аномалии, чтобы 2 раза не варилось в ней
+function store_anom_id( id ) -- Р·Р°РїРѕРјРёРЅР°РµРј id Р°РЅРѕРјР°Р»РёРё, С‡С‚РѕР±С‹ 2 СЂР°Р·Р° РЅРµ РІР°СЂРёР»РѕСЃСЊ РІ РЅРµР№
     local u_tbl         = xray_vars.load_table( nlc_vars, "used_anomz", {} )
     u_tbl[ id ]         = true 
     nlc_vars.used_anomz = u_tbl
@@ -2149,31 +2279,31 @@ function check_used_item( obj )
     --------------------------------------------------------------------------------------------------
     elseif sect == "soldier_letter_bandit" then info = "bandit_pda_trading"
     --------------------------------------------------------------------------------------------------
-    elseif sect == "drunk_dolg_letter"  and not test.gg_have_this_bamazhka( sect ) then -- Бром?
+    elseif sect == "drunk_dolg_letter"  and not test.gg_have_this_bamazhka( sect ) then -- Р‘СЂРѕРј?
         test.add_bamazhka_to_vars( sect )
         info = test.rnd_rec_art_info( test.tbl_recipt, 5 )
     --------------------------------------------------------------------------------------------------
-    elseif sect == "sak_document2"      and not test.gg_have_this_bamazhka( sect ) then -- тоннель с электрами
+    elseif sect == "sak_document2"      and not test.gg_have_this_bamazhka( sect ) then -- С‚РѕРЅРЅРµР»СЊ СЃ СЌР»РµРєС‚СЂР°РјРё
         test.add_bamazhka_to_vars( sect )
         info = test.rnd_rec_art_info( test.tbl_recipt, 2 )
     --------------------------------------------------------------------------------------------------
-    elseif sect == "sak_document3"      and not test.gg_have_this_bamazhka( sect ) then -- Радар, Сахар, учёные??
+    elseif sect == "sak_document3"      and not test.gg_have_this_bamazhka( sect ) then -- Р Р°РґР°СЂ, РЎР°С…Р°СЂ, СѓС‡С‘РЅС‹Рµ??
         test.add_bamazhka_to_vars( sect )
         info = test.rnd_rec_art_info( test.tbl_recipt, 5 )
     --------------------------------------------------------------------------------------------------
-    elseif sect == "sak_document4"      and not test.gg_have_this_bamazhka( sect ) then -- Танк в РЛ?
+    elseif sect == "sak_document4"      and not test.gg_have_this_bamazhka( sect ) then -- РўР°РЅРє РІ Р Р›?
         test.add_bamazhka_to_vars( sect )
         info = test.rnd_rec_art_info( test.tbl_recipt, 8 )
     --------------------------------------------------------------------------------------------------
-    elseif sect == "aver_bandit_letter" and not test.gg_have_this_bamazhka( sect ) then -- труп в ТЧ
+    elseif sect == "aver_bandit_letter" and not test.gg_have_this_bamazhka( sect ) then -- С‚СЂСѓРї РІ РўР§
         test.add_bamazhka_to_vars( sect )
         info = test.rnd_rec_art_info( test.tbl_recipt, 3 )
     --------------------------------------------------------------------------------------------------
-    elseif sect == "volkodav_pda"       and not test.gg_have_this_bamazhka( sect ) then -- с трупа Волкодава?
+    elseif sect == "volkodav_pda"       and not test.gg_have_this_bamazhka( sect ) then -- СЃ С‚СЂСѓРїР° Р’РѕР»РєРѕРґР°РІР°?
         test.add_bamazhka_to_vars( sect )
         info = test.rnd_rec_art_info( test.tbl_recipt, 2 )
     --------------------------------------------------------------------------------------------------
-    elseif sect == "gar_bandit_letter"  and not test.gg_have_this_bamazhka( sect ) then -- у Кабана на Свалке
+    elseif sect == "gar_bandit_letter"  and not test.gg_have_this_bamazhka( sect ) then -- Сѓ РљР°Р±Р°РЅР° РЅР° РЎРІР°Р»РєРµ
         test.add_bamazhka_to_vars( sect )
         info = test.rnd_rec_art_info( test.tbl_recipt, 1 )
     --------------------------------------------------------------------------------------------------
@@ -2303,8 +2433,8 @@ function check_used_item( obj )
             end
             if act:has_info( "have_tools_in" ) and ( nlc_vars.tools == nil or nlc_vars.tools ~= 1 ) then
                 sak.send_tip(
-                    "Значит инструмент не работает... \\nИли дело вовсе не в этом? \\nОшиблись наёмники, не для оружия он предназначен. Я теперь знаю для чего...",
-                    "Как же так?!", 5, 15, "g_g", "sak", "yellow"
+                    "Р—РЅР°С‡РёС‚ РёРЅСЃС‚СЂСѓРјРµРЅС‚ РЅРµ СЂР°Р±РѕС‚Р°РµС‚... \\nРР»Рё РґРµР»Рѕ РІРѕРІСЃРµ РЅРµ РІ СЌС‚РѕРј? \\nРћС€РёР±Р»РёСЃСЊ РЅР°С‘РјРЅРёРєРё, РЅРµ РґР»СЏ РѕСЂСѓР¶РёСЏ РѕРЅ РїСЂРµРґРЅР°Р·РЅР°С‡РµРЅ. РЇ С‚РµРїРµСЂСЊ Р·РЅР°СЋ РґР»СЏ С‡РµРіРѕ...",
+                    "РљР°Рє Р¶Рµ С‚Р°Рє?!", 5, 15, "g_g", "sak", "yellow"
                 )
                 nlc_vars.tools = 1
             end
@@ -2316,8 +2446,8 @@ function check_used_item( obj )
             end
             if nlc_vars.tools_in == nil or nlc_vars.tools_in ~= 1 then
                 sak.send_tip(
-                    "У меня же нет инструмента... \\nНо почему я могу взять оружие без него?! \\nЗначит, что-то всё-таки не так со мной. И не нужен мне никакой инструмент...",
-                    "Как же так?!", 8, 15, "g_g", "sak", "yellow"
+                    "РЈ РјРµРЅСЏ Р¶Рµ РЅРµС‚ РёРЅСЃС‚СЂСѓРјРµРЅС‚Р°... \\nРќРѕ РїРѕС‡РµРјСѓ СЏ РјРѕРіСѓ РІР·СЏС‚СЊ РѕСЂСѓР¶РёРµ Р±РµР· РЅРµРіРѕ?! \\nР—РЅР°С‡РёС‚, С‡С‚Рѕ-С‚Рѕ РІСЃС‘-С‚Р°РєРё РЅРµ С‚Р°Рє СЃРѕ РјРЅРѕР№. Р РЅРµ РЅСѓР¶РµРЅ РјРЅРµ РЅРёРєР°РєРѕР№ РёРЅСЃС‚СЂСѓРјРµРЅС‚...",
+                    "РљР°Рє Р¶Рµ С‚Р°Рє?!", 8, 15, "g_g", "sak", "yellow"
                 )
                 nlc_vars.tools_in = 1
             end
@@ -2342,8 +2472,8 @@ function check_used_item( obj )
     then
         statys_psy = 0
         send_tip(
-            "Цикл измерения прерван! Повторите измерение!",
-            "Статус измерителя", 1, 10, "pribor", "pda_news", "red"
+            "Р¦РёРєР» РёР·РјРµСЂРµРЅРёСЏ РїСЂРµСЂРІР°РЅ! РџРѕРІС‚РѕСЂРёС‚Рµ РёР·РјРµСЂРµРЅРёРµ!",
+            "РЎС‚Р°С‚СѓСЃ РёР·РјРµСЂРёС‚РµР»СЏ", 1, 10, "pribor", "pda_news", "red"
         )
     --------------------------------------------------------------------------------------------------
     elseif lvl == "l07_military" then
@@ -2376,8 +2506,8 @@ function check_used_item( obj )
         if sect == "letter_for_borov" then
             info = "info_letter_for_borov"
             send_tip(
-                "Мой заместитель, Иванцов, что-то пронюхал.", 
-                "Письмо Борову", 1, 10, "dolg", "pda_news", "sky_blue"
+                "РњРѕР№ Р·Р°РјРµСЃС‚РёС‚РµР»СЊ, РРІР°РЅС†РѕРІ, С‡С‚Рѕ-С‚Рѕ РїСЂРѕРЅСЋС…Р°Р».", 
+                "РџРёСЃСЊРјРѕ Р‘РѕСЂРѕРІСѓ", 1, 10, "dolg", "pda_news", "sky_blue"
             )
             misc.release_obj( obj, 'sak.script:check_used_item_release')
         elseif sect == "wpn_vintorez_m1" and not act:has_info( "agr_vintorez_sherstyk_done" ) then
@@ -2387,13 +2517,13 @@ function check_used_item( obj )
             add_new_lost_agr_176()
             misc.release_obj( obj, 'sak.script:check_used_item_release' )
         elseif sect == "rad_document6" then
-            info = test.rnd_rec_art_info( test.tbl_recipt, 1 )     -- рандомный рецепт 1 уровня в вагончике у базы вояк
+            info = test.rnd_rec_art_info( test.tbl_recipt, 1 )     -- СЂР°РЅРґРѕРјРЅС‹Р№ СЂРµС†РµРїС‚ 1 СѓСЂРѕРІРЅСЏ РІ РІР°РіРѕРЅС‡РёРєРµ Сѓ Р±Р°Р·С‹ РІРѕСЏРє
             misc.release_obj( obj, 'sak.script:check_used_item_release' )
         end
     --------------------------------------------------------------------------------------------------
     elseif lvl == "l01_escape" then
         if sect == "rad_document6" then
-            info = test.rnd_rec_art_info( test.tbl_recipt, 2 )     -- переход Кордон-Кишка
+            info = test.rnd_rec_art_info( test.tbl_recipt, 2 )     -- РїРµСЂРµС…РѕРґ РљРѕСЂРґРѕРЅ-РљРёС€РєР°
             misc.release_obj( obj, 'sak.script:check_used_item_release' )
         elseif sect == "dead_novice_letter" then
             info = "esc_tutorial_dead_novice"
@@ -2420,7 +2550,7 @@ function check_used_item( obj )
         and not act:has_info( "labx10_docs1" .. rand .. "_info" )
     then
         info = "labx10_docs1" .. rand .. "_info"
-        send_tip( "Приказы, хм... Какие-то коды... Посмотрим.", "Документы", 2, 10, "g_g", "no", "sky_blue" )
+        send_tip( "РџСЂРёРєР°Р·С‹, С…Рј... РљР°РєРёРµ-С‚Рѕ РєРѕРґС‹... РџРѕСЃРјРѕС‚СЂРёРј.", "Р”РѕРєСѓРјРµРЅС‚С‹", 2, 10, "g_g", "no", "sky_blue" )
     end
     --------------------------------------------------------------------------------------------------
     if act == nil or info == nil or act:has_info( info ) then return end
@@ -2448,8 +2578,8 @@ function marsh_zapiska()
             r = r - 1
             if r == 0 then
                 send_tip(
-                    "Клочки бумаги, исписанные листочки, может, что-то интересное?",
-                    "Записки", 2, 10, "g_g", "no", "sky_blue"
+                    "РљР»РѕС‡РєРё Р±СѓРјР°РіРё, РёСЃРїРёСЃР°РЅРЅС‹Рµ Р»РёСЃС‚РѕС‡РєРё, РјРѕР¶РµС‚, С‡С‚Рѕ-С‚Рѕ РёРЅС‚РµСЂРµСЃРЅРѕРµ?",
+                    "Р—Р°РїРёСЃРєРё", 2, 10, "g_g", "no", "sky_blue"
                 )
                 db.actor:give_info_portion( "marsh_zapiska_" .. i )
             end
@@ -2500,18 +2630,18 @@ local point_drop = {
     { x = 393,  y = 2,    z = 65   }, --10
     { x = -74,  y = -6,   z = -75  }, --11
     { x = -75,  y = -7,   z = -76  }, --12
-    -- { x = -11,  y = 15,   z = 192  }, --13  -- Агро Клык 1
-    -- { x = -14,  y = 20,   z = 196  }, --14  -- Агро Клык 1
-    -- { x = -138, y = 10,   z = 44   }, --15  -- Агро Клык 2
-    -- { x = -142, y = 15,   z = 49   }, --16  -- Агро Клык 2
-    -- { x = -2,   y = -5,   z = -72  }, --17  -- Агро Клык 3
-    -- { x = 2,    y = 5,    z = -77  }, --18  -- Агро Клык 3
-    { x = -9,   y = 14,   z = 190  }, --13  -- Агро Клык 1
-    { x = -16,  y = 21,   z = 198  }, --14  -- Агро Клык 1
-    { x = -136, y =  9,   z = 42   }, --15  -- Агро Клык 2
-    { x = -144, y = 16,   z = 51   }, --16  -- Агро Клык 2
-    { x = -4,   y = -6,   z = -70  }, --17  -- Агро Клык 3
-    { x = 4,    y = 6,    z = -79  }, --18  -- Агро Клык 3    
+    -- { x = -11,  y = 15,   z = 192  }, --13  -- РђРіСЂРѕ РљР»С‹Рє 1
+    -- { x = -14,  y = 20,   z = 196  }, --14  -- РђРіСЂРѕ РљР»С‹Рє 1
+    -- { x = -138, y = 10,   z = 44   }, --15  -- РђРіСЂРѕ РљР»С‹Рє 2
+    -- { x = -142, y = 15,   z = 49   }, --16  -- РђРіСЂРѕ РљР»С‹Рє 2
+    -- { x = -2,   y = -5,   z = -72  }, --17  -- РђРіСЂРѕ РљР»С‹Рє 3
+    -- { x = 2,    y = 5,    z = -77  }, --18  -- РђРіСЂРѕ РљР»С‹Рє 3
+    { x = -9,   y = 14,   z = 190  }, --13  -- РђРіСЂРѕ РљР»С‹Рє 1
+    { x = -16,  y = 21,   z = 198  }, --14  -- РђРіСЂРѕ РљР»С‹Рє 1
+    { x = -136, y =  9,   z = 42   }, --15  -- РђРіСЂРѕ РљР»С‹Рє 2
+    { x = -144, y = 16,   z = 51   }, --16  -- РђРіСЂРѕ РљР»С‹Рє 2
+    { x = -4,   y = -6,   z = -70  }, --17  -- РђРіСЂРѕ РљР»С‹Рє 3
+    { x = 4,    y = 6,    z = -79  }, --18  -- РђРіСЂРѕ РљР»С‹Рє 3    
     { x = 92,   y = 0,    z = -67  }, --19
     { x = 93,   y = 5,    z = -69  }, --20
     { x = -10,  y = 3,    z = 12   }, --21
@@ -2524,18 +2654,18 @@ local point_drop = {
     { x = -194, y = 50,   z = -405 }, --28
     { x = 530,  y = -45,  z = -143 }, --29
     { x = 534,  y = -50,  z = -147 }, --30
-    -- { x = -96,  y = -12,  z = -224 }, --31  -- Янтарь 1
-    -- { x = -102, y = -11,  z = -230 }, --32  -- Янтарь 1
-    -- { x = 182,  y = -7,   z = -94  }, --33  -- Янтарь 2
-    -- { x = 188,  y = -8,   z = -100 }, --34  -- Янтарь 2
-    -- { x = 141,  y = -1,   z = 52   }, --35  -- Янтарь 3
-    -- { x = 147,  y = -2,   z = 57   }, --36  -- Янтарь 3
-    { x = -94,  y = -12,  z = -222 }, --31  -- Янтарь 1
-    { x = -104, y = -11,  z = -232 }, --32  -- Янтарь 1
-    { x = 180,  y = -7,   z = -92  }, --33  -- Янтарь 2
-    { x = 190,  y = -8,   z = -102 }, --34  -- Янтарь 2
-    { x = 139,  y = -1,   z = 50   }, --35  -- Янтарь 3
-    { x = 149,  y = -2,   z = 59   }, --36  -- Янтарь 3
+    -- { x = -96,  y = -12,  z = -224 }, --31  -- РЇРЅС‚Р°СЂСЊ 1
+    -- { x = -102, y = -11,  z = -230 }, --32  -- РЇРЅС‚Р°СЂСЊ 1
+    -- { x = 182,  y = -7,   z = -94  }, --33  -- РЇРЅС‚Р°СЂСЊ 2
+    -- { x = 188,  y = -8,   z = -100 }, --34  -- РЇРЅС‚Р°СЂСЊ 2
+    -- { x = 141,  y = -1,   z = 52   }, --35  -- РЇРЅС‚Р°СЂСЊ 3
+    -- { x = 147,  y = -2,   z = 57   }, --36  -- РЇРЅС‚Р°СЂСЊ 3
+    { x = -94,  y = -12,  z = -222 }, --31  -- РЇРЅС‚Р°СЂСЊ 1
+    { x = -104, y = -11,  z = -232 }, --32  -- РЇРЅС‚Р°СЂСЊ 1
+    { x = 180,  y = -7,   z = -92  }, --33  -- РЇРЅС‚Р°СЂСЊ 2
+    { x = 190,  y = -8,   z = -102 }, --34  -- РЇРЅС‚Р°СЂСЊ 2
+    { x = 139,  y = -1,   z = 50   }, --35  -- РЇРЅС‚Р°СЂСЊ 3
+    { x = 149,  y = -2,   z = 59   }, --36  -- РЇРЅС‚Р°СЂСЊ 3
     { x = -96,  y = -12,  z = -224 }, --37
     { x = -102, y = -11,  z = -230 }, --38
     { x = 182,  y = -7,   z = -94  }, --39
@@ -2786,8 +2916,8 @@ function add_scanner_artefact()
     if has_alife_info( "mar_military_post_ecolog_have" ) then
         if gvid == 3003 then
             sak.send_tip(
-                "Начато сканирование по программе.",
-                "Прибор установлен правильно", 3, 20, "ecolog", "sak", "green"
+                "РќР°С‡Р°С‚Рѕ СЃРєР°РЅРёСЂРѕРІР°РЅРёРµ РїРѕ РїСЂРѕРіСЂР°РјРјРµ.",
+                "РџСЂРёР±РѕСЂ СѓСЃС‚Р°РЅРѕРІР»РµРЅ РїСЂР°РІРёР»СЊРЅРѕ", 3, 20, "ecolog", "sak", "green"
             )
             mike.timer_lim_scaner()
         end
@@ -2812,8 +2942,8 @@ end
 
 function info_pribor()
     send_tip(
-        "Блок мониторинга установлен и функционирует.",
-        "Прибор", 2, 10, "g_g", "no", "sky_blue"
+        "Р‘Р»РѕРє РјРѕРЅРёС‚РѕСЂРёРЅРіР° СѓСЃС‚Р°РЅРѕРІР»РµРЅ Рё С„СѓРЅРєС†РёРѕРЅРёСЂСѓРµС‚.",
+        "РџСЂРёР±РѕСЂ", 2, 10, "g_g", "no", "sky_blue"
     )
 end
 
@@ -2917,8 +3047,8 @@ end
 
 function upgrade_start_end()
     send_tip(
-        "Меченный, подходи, вроде получилось.",
-        "Сообщение от Демьяна", 11, 20, "ecolog", "sak", "green"
+        "РњРµС‡РµРЅРЅС‹Р№, РїРѕРґС…РѕРґРё, РІСЂРѕРґРµ РїРѕР»СѓС‡РёР»РѕСЃСЊ.",
+        "РЎРѕРѕР±С‰РµРЅРёРµ РѕС‚ Р”РµРјСЊСЏРЅР°", 11, 20, "ecolog", "sak", "green"
     )
     db.actor:give_info_portion( "upgrade_start_done" )
 end
@@ -2936,8 +3066,8 @@ function yan_izm_psy1_start( obj_id )
     if obj == nil or obj:parent() ~= nil then return end
     timers.start_timer( "yan_izm_psy1", lua_random( 60, 120 ), "sak.yan_izm_psy1_end()" )
     send_tip(
-        "Начато измерение напряженности пси-поля, до завершения цикла прибор не поднимать!",
-        "Статус измерителя", 2, 10, "pribor", "pda_news", "green"
+        "РќР°С‡Р°С‚Рѕ РёР·РјРµСЂРµРЅРёРµ РЅР°РїСЂСЏР¶РµРЅРЅРѕСЃС‚Рё РїСЃРё-РїРѕР»СЏ, РґРѕ Р·Р°РІРµСЂС€РµРЅРёСЏ С†РёРєР»Р° РїСЂРёР±РѕСЂ РЅРµ РїРѕРґРЅРёРјР°С‚СЊ!",
+        "РЎС‚Р°С‚СѓСЃ РёР·РјРµСЂРёС‚РµР»СЏ", 2, 10, "pribor", "pda_news", "green"
     )
     statys_psy = 1
     sak_spawn.add_yan_izm1_monsters()
@@ -2945,7 +3075,7 @@ end
 
 function yan_izm_psy1_end()
     if statys_psy == 1 then
-        send_tip( "Цикл измерения завершён", "Статус измерителя", 2, 10, "pribor", "pda_news", "green" )
+        send_tip( "Р¦РёРєР» РёР·РјРµСЂРµРЅРёСЏ Р·Р°РІРµСЂС€С‘РЅ", "РЎС‚Р°С‚СѓСЃ РёР·РјРµСЂРёС‚РµР»СЏ", 2, 10, "pribor", "pda_news", "green" )
         db.actor:give_info_portion( "yan_izm_1faze" )
         db.actor:give_info_portion( "remove_yan_izm_spot1" )
         statys_psy = 0
@@ -2961,8 +3091,8 @@ function yan_izm_psy2_start( obj_id )
     if obj == nil or obj:parent() ~= nil then return end
     timers.start_timer( "yan_izm_psy2", lua_random( 60, 120 ), "sak.yan_izm_psy2_end()" )
     send_tip(
-        "Начато измерение напряжённости пси-поля, до завершения цикла прибор не поднимать!",
-        "Статус измерителя", 2, 10, "pribor", "pda_news", "green"
+        "РќР°С‡Р°С‚Рѕ РёР·РјРµСЂРµРЅРёРµ РЅР°РїСЂСЏР¶С‘РЅРЅРѕСЃС‚Рё РїСЃРё-РїРѕР»СЏ, РґРѕ Р·Р°РІРµСЂС€РµРЅРёСЏ С†РёРєР»Р° РїСЂРёР±РѕСЂ РЅРµ РїРѕРґРЅРёРјР°С‚СЊ!",
+        "РЎС‚Р°С‚СѓСЃ РёР·РјРµСЂРёС‚РµР»СЏ", 2, 10, "pribor", "pda_news", "green"
     )
     statys_psy = 1
     sak_spawn.add_yan_izm2_monsters()
@@ -2970,7 +3100,7 @@ end
 
 function yan_izm_psy2_end()
     if statys_psy == 1 then
-        send_tip( "Цикл измерения завершён", "Статус измерителя", 2, 10, "pribor", "pda_news", "green" )
+        send_tip( "Р¦РёРєР» РёР·РјРµСЂРµРЅРёСЏ Р·Р°РІРµСЂС€С‘РЅ", "РЎС‚Р°С‚СѓСЃ РёР·РјРµСЂРёС‚РµР»СЏ", 2, 10, "pribor", "pda_news", "green" )
         db.actor:give_info_portion( "yan_izm_2faze" )
         db.actor:give_info_portion( "remove_yan_izm_spot2" )
         statys_psy = 0
@@ -2986,8 +3116,8 @@ function yan_izm_psy3_start( obj_id )
     if obj == nil or obj:parent() ~= nil then return end
     timers.start_timer( "yan_izm_psy3", lua_random( 60, 120 ), "sak.yan_izm_psy3_end()" )
     send_tip(
-        "Начато измерение напряжённости пси-поля, до завершения цикла прибор не поднимать!",
-        "Статус измерителя", 2, 10, "pribor", "pda_news", "green"
+        "РќР°С‡Р°С‚Рѕ РёР·РјРµСЂРµРЅРёРµ РЅР°РїСЂСЏР¶С‘РЅРЅРѕСЃС‚Рё РїСЃРё-РїРѕР»СЏ, РґРѕ Р·Р°РІРµСЂС€РµРЅРёСЏ С†РёРєР»Р° РїСЂРёР±РѕСЂ РЅРµ РїРѕРґРЅРёРјР°С‚СЊ!",
+        "РЎС‚Р°С‚СѓСЃ РёР·РјРµСЂРёС‚РµР»СЏ", 2, 10, "pribor", "pda_news", "green"
     )
     statys_psy = 1
     --add_yan_izm3_monsters()
@@ -2995,7 +3125,7 @@ end
 
 function yan_izm_psy3_end()
     if statys_psy == 1 then
-        send_tip( "Цикл измерения завершён", "Статус измерителя", 2, 10, "pribor", "pda_news", "green" )
+        send_tip( "Р¦РёРєР» РёР·РјРµСЂРµРЅРёСЏ Р·Р°РІРµСЂС€С‘РЅ", "РЎС‚Р°С‚СѓСЃ РёР·РјРµСЂРёС‚РµР»СЏ", 2, 10, "pribor", "pda_news", "green" )
         db.actor:give_info_portion( "yan_izm_3faze" )
         db.actor:give_info_portion( "remove_yan_izm_spot3" )
         statys_psy = 0
@@ -3005,8 +3135,8 @@ end
 function rad_izm_psy1()
     timers.start_timer( "rad_izm_psy1", lua_random( 60, 120 ), "sak.rad_izm_psy1_end()" )
     send_tip(
-        "Начато измерение напряжённости пси-поля, до завершения цикла прибор не поднимать!",
-        "Статус измерителя", 2, 10, "pribor", "pda_news", "green"
+        "РќР°С‡Р°С‚Рѕ РёР·РјРµСЂРµРЅРёРµ РЅР°РїСЂСЏР¶С‘РЅРЅРѕСЃС‚Рё РїСЃРё-РїРѕР»СЏ, РґРѕ Р·Р°РІРµСЂС€РµРЅРёСЏ С†РёРєР»Р° РїСЂРёР±РѕСЂ РЅРµ РїРѕРґРЅРёРјР°С‚СЊ!",
+        "РЎС‚Р°С‚СѓСЃ РёР·РјРµСЂРёС‚РµР»СЏ", 2, 10, "pribor", "pda_news", "green"
     )
     statys_psy = 1
     --add_rad_izm1_monsters()
@@ -3014,7 +3144,7 @@ end
 
 function rad_izm_psy1_end()
     if statys_psy == 1 then
-        send_tip( "Цикл измерения завершён", "Статус измерителя", 2, 10, "pribor", "pda_news", "green" )
+        send_tip( "Р¦РёРєР» РёР·РјРµСЂРµРЅРёСЏ Р·Р°РІРµСЂС€С‘РЅ", "РЎС‚Р°С‚СѓСЃ РёР·РјРµСЂРёС‚РµР»СЏ", 2, 10, "pribor", "pda_news", "green" )
         db.actor:give_info_portion( "rad_izm_1faze" )
         db.actor:give_info_portion( "remove_rad_izm_spot1" )
         statys_psy = 0
@@ -3024,8 +3154,8 @@ end
 function rad_izm_psy2()
     timers.start_timer( "rad_izm_psy2", lua_random( 60, 120 ), "sak.rad_izm_psy2_end()" )
     send_tip(
-        "Начато измерение напряжённости пси-поля, до завершения цикла прибор не поднимать!",
-        "Статус измерителя", 2, 10, "pribor", "pda_news", "green"
+        "РќР°С‡Р°С‚Рѕ РёР·РјРµСЂРµРЅРёРµ РЅР°РїСЂСЏР¶С‘РЅРЅРѕСЃС‚Рё РїСЃРё-РїРѕР»СЏ, РґРѕ Р·Р°РІРµСЂС€РµРЅРёСЏ С†РёРєР»Р° РїСЂРёР±РѕСЂ РЅРµ РїРѕРґРЅРёРјР°С‚СЊ!",
+        "РЎС‚Р°С‚СѓСЃ РёР·РјРµСЂРёС‚РµР»СЏ", 2, 10, "pribor", "pda_news", "green"
     )
     statys_psy = 1
     --add_rad_izm2_monsters()
@@ -3033,7 +3163,7 @@ end
 
 function rad_izm_psy2_end()
     if statys_psy == 1 then
-        send_tip( "Цикл измерения завершён", "Статус измерителя", 2, 10, "pribor", "pda_news", "green" )
+        send_tip( "Р¦РёРєР» РёР·РјРµСЂРµРЅРёСЏ Р·Р°РІРµСЂС€С‘РЅ", "РЎС‚Р°С‚СѓСЃ РёР·РјРµСЂРёС‚РµР»СЏ", 2, 10, "pribor", "pda_news", "green" )
         db.actor:give_info_portion( "rad_izm_2faze" )
         db.actor:give_info_portion( "remove_rad_izm_spot2" )
         statys_psy = 0
@@ -3043,8 +3173,8 @@ end
 function rad_izm_psy3()
     timers.start_timer( "rad_izm_psy3", lua_random( 60, 120 ), "sak.rad_izm_psy3_end()" )
     send_tip(
-        "Начато измерение напряжённости пси-поля, до завершения цикла прибор не поднимать!",
-        "Статус измерителя", 2, 10, "pribor", "pda_news", "green"
+        "РќР°С‡Р°С‚Рѕ РёР·РјРµСЂРµРЅРёРµ РЅР°РїСЂСЏР¶С‘РЅРЅРѕСЃС‚Рё РїСЃРё-РїРѕР»СЏ, РґРѕ Р·Р°РІРµСЂС€РµРЅРёСЏ С†РёРєР»Р° РїСЂРёР±РѕСЂ РЅРµ РїРѕРґРЅРёРјР°С‚СЊ!",
+        "РЎС‚Р°С‚СѓСЃ РёР·РјРµСЂРёС‚РµР»СЏ", 2, 10, "pribor", "pda_news", "green"
     )
     statys_psy = 1
     --add_rad_izm3_monsters()
@@ -3052,7 +3182,7 @@ end
 
 function rad_izm_psy3_end()
     if statys_psy == 1 then
-        send_tip( "Цикл измерения завершён", "Статус измерителя", 2, 10, "pribor", "pda_news", "green" )
+        send_tip( "Р¦РёРєР» РёР·РјРµСЂРµРЅРёСЏ Р·Р°РІРµСЂС€С‘РЅ", "РЎС‚Р°С‚СѓСЃ РёР·РјРµСЂРёС‚РµР»СЏ", 2, 10, "pribor", "pda_news", "green" )
         db.actor:give_info_portion( "rad_izm_3faze" )
         db.actor:give_info_portion( "remove_rad_izm_spot3" )
         statys_psy = 0
@@ -3131,7 +3261,7 @@ function get_accum() return db.actor:item_in_slot( 11 ) end
 function sak.discharge_accum( flag, quiet )
     local obj = get_accum()
     if obj == nil then
-        tmr_discharge_akb:elapsed( true ) -- чтобы время разряда не копилось
+        tmr_discharge_akb:elapsed( true ) -- С‡С‚РѕР±С‹ РІСЂРµРјСЏ СЂР°Р·СЂСЏРґР° РЅРµ РєРѕРїРёР»РѕСЃСЊ
         nvd_params.disable_NVD()
         arts_operate = false
         return
@@ -3142,19 +3272,19 @@ function sak.discharge_accum( flag, quiet )
     if accum then
         local diff_t = tmr_discharge_akb:elapsed( true )
         local coef   = loka_on * balance.devices.accum_discharge / 100.0 or 0.001
-        diff_t       = math.abs ( diff_t ) / 60.0  -- сколько прошло времени в игровых минутах
-        nv_on        = 0                           -- потребление ПНВ
+        diff_t       = math.abs ( diff_t ) / 60.0  -- СЃРєРѕР»СЊРєРѕ РїСЂРѕС€Р»Рѕ РІСЂРµРјРµРЅРё РІ РёРіСЂРѕРІС‹С… РјРёРЅСѓС‚Р°С…
+        nv_on        = 0                           -- РїРѕС‚СЂРµР±Р»РµРЅРёРµ РџРќР’
         if nvd_params.get_NVD_powered () then nv_on = 1 end
-        -- если одна минута прошла ( diff_t = 1.0 ), потребление составит coef * число потребителей
-        -- ПНВ эквивалентен одному артефакту по потреблению
+        -- РµСЃР»Рё РѕРґРЅР° РјРёРЅСѓС‚Р° РїСЂРѕС€Р»Р° ( diff_t = 1.0 ), РїРѕС‚СЂРµР±Р»РµРЅРёРµ СЃРѕСЃС‚Р°РІРёС‚ coef * С‡РёСЃР»Рѕ РїРѕС‚СЂРµР±РёС‚РµР»РµР№
+        -- РџРќР’ СЌРєРІРёРІР°Р»РµРЅС‚РµРЅ РѕРґРЅРѕРјСѓ Р°СЂС‚РµС„Р°РєС‚Сѓ РїРѕ РїРѕС‚СЂРµР±Р»РµРЅРёСЋ
         local consumption = ( af_count + nv_on ) * coef
-        consumption       = consumption * diff_t   -- с учетом текущей скорости времени
-        -- CHEAT: наэлектризованная локация, там разряд меньше       -- 18.11.2018
-        if level.name() == "generators" then    -- UPD: никто за 4 года про это не узнал, и как-то особо погоды оно
-            consumption = consumption * 2       -- не делает, потому сделаем лучше наоборот, в 2 раза больше разряд
+        consumption       = consumption * diff_t   -- СЃ СѓС‡РµС‚РѕРј С‚РµРєСѓС‰РµР№ СЃРєРѕСЂРѕСЃС‚Рё РІСЂРµРјРµРЅРё
+        -- CHEAT: РЅР°СЌР»РµРєС‚СЂРёР·РѕРІР°РЅРЅР°СЏ Р»РѕРєР°С†РёСЏ, С‚Р°Рј СЂР°Р·СЂСЏРґ РјРµРЅСЊС€Рµ       -- 18.11.2018
+        if level.name() == "generators" then    -- UPD: РЅРёРєС‚Рѕ Р·Р° 4 РіРѕРґР° РїСЂРѕ СЌС‚Рѕ РЅРµ СѓР·РЅР°Р», Рё РєР°Рє-С‚Рѕ РѕСЃРѕР±Рѕ РїРѕРіРѕРґС‹ РѕРЅРѕ
+            consumption = consumption * 2       -- РЅРµ РґРµР»Р°РµС‚, РїРѕС‚РѕРјСѓ СЃРґРµР»Р°РµРј Р»СѓС‡С€Рµ РЅР°РѕР±РѕСЂРѕС‚, РІ 2 СЂР°Р·Р° Р±РѕР»СЊС€Рµ СЂР°Р·СЂСЏРґ
         end
-        consumption = consumption + coef * diff_t * 0.01   -- плюс разряд светодиодами пояса
-        local cond  = params.get_condition( accum_id, 0.9999 ) + ( 0.5 - lua_random() ) * coef * diff_t -- погрешность
+        consumption = consumption + coef * diff_t * 0.01   -- РїР»СЋСЃ СЂР°Р·СЂСЏРґ СЃРІРµС‚РѕРґРёРѕРґР°РјРё РїРѕСЏСЃР°
+        local cond  = params.get_condition( accum_id, 0.9999 ) + ( 0.5 - lua_random() ) * coef * diff_t -- РїРѕРіСЂРµС€РЅРѕСЃС‚СЊ
         -- wprintf( "[~T].C0F #DBG: accum power =~C0D %.5f~C07, consumption =~C0D %.5f~C0F, diff_t =~C0D %.3f~C0F, nvd power =~C0F %d~C07~C07", cond, consumption, diff_t, nv_on )
         -- wprintf( "~C0A %s~C07", lua_traceback('    '));
         if cond <= 0.13 and diff_t >= 1.0 then
@@ -3164,15 +3294,15 @@ function sak.discharge_accum( flag, quiet )
         end
         if cond >= 0.07 then
             arts_operate   = true
-            local new_cond = cond - consumption                       -- разряд батареи текущим током
+            local new_cond = cond - consumption                       -- СЂР°Р·СЂСЏРґ Р±Р°С‚Р°СЂРµРё С‚РµРєСѓС‰РёРј С‚РѕРєРѕРј
             params.upd_condition( accum_id, new_cond )
             arts_operate   = true
-            nvd_params.enable_NVD() -- есть заряд, можно включать
+            nvd_params.enable_NVD() -- РµСЃС‚СЊ Р·Р°СЂСЏРґ, РјРѕР¶РЅРѕ РІРєР»СЋС‡Р°С‚СЊ
         else
             if arts_operate == true then
                 send_tip(
-                    "Аккумуляторная батарея разряжена",
-                    "Аккумулятор", 2, 10, "pribor", "pda_news", "red"
+                    "РђРєРєСѓРјСѓР»СЏС‚РѕСЂРЅР°СЏ Р±Р°С‚Р°СЂРµСЏ СЂР°Р·СЂСЏР¶РµРЅР°",
+                    "РђРєРєСѓРјСѓР»СЏС‚РѕСЂ", 2, 10, "pribor", "pda_news", "red"
                 )
                 nvd_params.disable_NVD()
                 arts_operate               = false
@@ -3194,8 +3324,8 @@ local tmr_art_discharge = misc.game_timer()
 function discharge_tasks()
     if db.init_stage < 500 then return end
     discharge_accum()
-    local coef = balance.artefacts.time_damage_coef * tmr_art_discharge:elapsed( true ) / 60.0 -- коэффициент зависимости от времени
-    if coef < 0.00001 then return end -- не зачем и ЦП мучать
+    local coef = balance.artefacts.time_damage_coef * tmr_art_discharge:elapsed( true ) / 60.0 -- РєРѕСЌС„С„РёС†РёРµРЅС‚ Р·Р°РІРёСЃРёРјРѕСЃС‚Рё РѕС‚ РІСЂРµРјРµРЅРё
+    if coef < 0.00001 then return end -- РЅРµ Р·Р°С‡РµРј Рё Р¦Рџ РјСѓС‡Р°С‚СЊ
     if get_accum() then
         arc_arts.discharge_artefacts( coef )
     else
@@ -3426,8 +3556,8 @@ function klyk_med_psy1_start( obj_id )
     if obj == nil or obj:parent() ~= nil then return end
     timers.start_timer( "klyk_med_psy1", lua_random( 60, 120 ), "sak.klyk_med_psy1_end()" )
     send_tip(
-        "Начато измерение напряжённости пси-поля, до завершения цикла прибор не поднимать!",
-        "Статус измерителя", 2, 10, "pribor", "pda_news", "green"
+        "РќР°С‡Р°С‚Рѕ РёР·РјРµСЂРµРЅРёРµ РЅР°РїСЂСЏР¶С‘РЅРЅРѕСЃС‚Рё РїСЃРё-РїРѕР»СЏ, РґРѕ Р·Р°РІРµСЂС€РµРЅРёСЏ С†РёРєР»Р° РїСЂРёР±РѕСЂ РЅРµ РїРѕРґРЅРёРјР°С‚СЊ!",
+        "РЎС‚Р°С‚СѓСЃ РёР·РјРµСЂРёС‚РµР»СЏ", 2, 10, "pribor", "pda_news", "green"
     )
     statys_psy = 1
     sak_spawn.add_klyk_med1_monsters()
@@ -3435,7 +3565,7 @@ end
 
 function klyk_med_psy1_end()
     if statys_psy == 1 then
-        send_tip( "Цикл измерения завершён", "Статус измерителя", 2, 10, "pribor", "pda_news", "green" )
+        send_tip( "Р¦РёРєР» РёР·РјРµСЂРµРЅРёСЏ Р·Р°РІРµСЂС€С‘РЅ", "РЎС‚Р°С‚СѓСЃ РёР·РјРµСЂРёС‚РµР»СЏ", 2, 10, "pribor", "pda_news", "green" )
         db.actor:give_info_portion( "agr_klyk_1faze" )
         db.actor:give_info_portion( "agr_remove_klyk_med_spot1" )
         statys_psy = 0
@@ -3451,8 +3581,8 @@ function klyk_med_psy2_start( obj_id )
     if obj == nil or obj:parent() ~= nil then return end
     timers.start_timer( "klyk_med_psy2", lua_random( 60, 120 ), "sak.klyk_med_psy2_end()" )
     send_tip(
-        "Начато измерение напряжённости пси-поля, до завершения цикла прибор не поднимать!",
-        "Статус измерителя", 2, 10, "pribor", "pda_news", "green"
+        "РќР°С‡Р°С‚Рѕ РёР·РјРµСЂРµРЅРёРµ РЅР°РїСЂСЏР¶С‘РЅРЅРѕСЃС‚Рё РїСЃРё-РїРѕР»СЏ, РґРѕ Р·Р°РІРµСЂС€РµРЅРёСЏ С†РёРєР»Р° РїСЂРёР±РѕСЂ РЅРµ РїРѕРґРЅРёРјР°С‚СЊ!",
+        "РЎС‚Р°С‚СѓСЃ РёР·РјРµСЂРёС‚РµР»СЏ", 2, 10, "pribor", "pda_news", "green"
     )
     statys_psy = 1
     sak_spawn.add_klyk_med2_monsters()
@@ -3460,7 +3590,7 @@ end
 
 function klyk_med_psy2_end()
     if statys_psy == 1 then
-        send_tip( "Цикл измерения завершён", "Статус измерителя", 2, 10, "pribor", "pda_news", "green" )
+        send_tip( "Р¦РёРєР» РёР·РјРµСЂРµРЅРёСЏ Р·Р°РІРµСЂС€С‘РЅ", "РЎС‚Р°С‚СѓСЃ РёР·РјРµСЂРёС‚РµР»СЏ", 2, 10, "pribor", "pda_news", "green" )
         db.actor:give_info_portion( "agr_klyk_2faze" )
         db.actor:give_info_portion( "agr_remove_klyk_med_spot2" )
         statys_psy = 0
@@ -3476,8 +3606,8 @@ function klyk_med_psy3_start( obj_id )
     if obj == nil or obj:parent() ~= nil then return end
     timers.start_timer( "klyk_med_psy3", lua_random( 60, 120 ), "sak.klyk_med_psy3_end()" )
     send_tip(
-        "Начато измерение напряжённости пси-поля, до завершения цикла прибор не поднимать!",
-        "Статус измерителя", 2, 10, "pribor", "pda_news", "green"
+        "РќР°С‡Р°С‚Рѕ РёР·РјРµСЂРµРЅРёРµ РЅР°РїСЂСЏР¶С‘РЅРЅРѕСЃС‚Рё РїСЃРё-РїРѕР»СЏ, РґРѕ Р·Р°РІРµСЂС€РµРЅРёСЏ С†РёРєР»Р° РїСЂРёР±РѕСЂ РЅРµ РїРѕРґРЅРёРјР°С‚СЊ!",
+        "РЎС‚Р°С‚СѓСЃ РёР·РјРµСЂРёС‚РµР»СЏ", 2, 10, "pribor", "pda_news", "green"
     )
     statys_psy = 1
     sak_spawn.add_klyk_med3_monsters()
@@ -3485,7 +3615,7 @@ end
 
 function klyk_med_psy3_end()
     if statys_psy == 1 then
-        send_tip( "Цикл измерения завершён", "Статус измерителя", 2, 10, "pribor", "pda_news", "green" )
+        send_tip( "Р¦РёРєР» РёР·РјРµСЂРµРЅРёСЏ Р·Р°РІРµСЂС€С‘РЅ", "РЎС‚Р°С‚СѓСЃ РёР·РјРµСЂРёС‚РµР»СЏ", 2, 10, "pribor", "pda_news", "green" )
         db.actor:give_info_portion( "agr_klyk_3faze" )
         db.actor:give_info_portion( "agr_remove_klyk_med_spot3" )
         statys_psy = 0
@@ -3988,7 +4118,7 @@ function health_handle()
             if params.actor_alcohol_health() > 0.01 then npc.radiation = -0.05 end
         end
         if p_healh < 0.95 then
-            -- восстановление пси-здоровья рядом с костром
+            -- РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ РїСЃРё-Р·РґРѕСЂРѕРІСЊСЏ СЂСЏРґРѕРј СЃ РєРѕСЃС‚СЂРѕРј
             if params.actor_alcohol_health() > 0.05 then params.psy_health_add( 0.12 ) end
             local npos = device().cam_pos
             local cdir = get_actor_obj().orientation
@@ -4007,7 +4137,7 @@ function health_handle()
                         if crouch == 1 or crouch == 2 then
                             params.psy_health_add( 0.12 )
                         else
-                            params.psy_health_add( 0.06 )      -- увеличим в 2 раза на пробу
+                            params.psy_health_add( 0.06 )      -- СѓРІРµР»РёС‡РёРј РІ 2 СЂР°Р·Р° РЅР° РїСЂРѕР±Сѓ
                         end
                     else
                     end
@@ -4024,13 +4154,13 @@ function health_handle()
     end
 end
 
-function breath_poison() -- реализация астмы с учетом противогаза
+function breath_poison() -- СЂРµР°Р»РёР·Р°С†РёСЏ Р°СЃС‚РјС‹ СЃ СѓС‡РµС‚РѕРј РїСЂРѕС‚РёРІРѕРіР°Р·Р°
     --mask_poison = ( 1.1-1.2 )*0.2
     if mask_poison >= 0 then return end
     local npc     = db.actor
     local act_pos = npc:position()
     local cond    = vergas_masks.mask_condition()
-    ------------------ чтобы в х6 на лестнице во время двухнедельного сна не задыхался -------------
+    ------------------ С‡С‚РѕР±С‹ РІ С…6 РЅР° Р»РµСЃС‚РЅРёС†Рµ РІРѕ РІСЂРµРјСЏ РґРІСѓС…РЅРµРґРµР»СЊРЅРѕРіРѕ СЃРЅР° РЅРµ Р·Р°РґС‹С…Р°Р»СЃСЏ -------------
     if
         level.name() == "warlab" 
         and amk.check_npc_in_box(
@@ -4227,13 +4357,13 @@ local outfit_proc = {
 }
 
 local wpn_proc = { 
-    [ "wpn_v"      ] = 0.07, -- вал, винторез
-    [ "wpn_sv"     ] = 0.04, -- свд, сву, св98
+    [ "wpn_v"      ] = 0.07, -- РІР°Р», РІРёРЅС‚РѕСЂРµР·
+    [ "wpn_sv"     ] = 0.04, -- СЃРІРґ, СЃРІСѓ, СЃРІ98
     [ "wpn_awm"    ] = 0.04,
     [ "wpn_abakan" ] = 0.06,
-    [ "wpn_p"      ] = 0.16, -- пм, пб, пп19
+    [ "wpn_p"      ] = 0.16, -- РїРј, РїР±, РїРї19
     [ "wpn_bizon"  ] = 0.16,
-    [ "wpn_fort"   ] = 0.14, -- форт12, форт17
+    [ "wpn_fort"   ] = 0.14, -- С„РѕСЂС‚12, С„РѕСЂС‚17
     [ "wpn_aps"    ] = 0.08,
     [ "wpn_rpk"    ] = 0.07,
     [ "wpn_groza"  ] = 0.07,
@@ -4309,22 +4439,22 @@ function repair_box_repair( obj )
                     snd_obj:play_no_feedback( db.actor, sound_object.s2d, 0, vector(), 1.0 )
                 end
                 send_tip(
-                        "Оружие отремонтировано на %c[255,0,255,0]" .. tostring( math.ceil( rep_percent * 100 ) ) .. "%",
+                        "РћСЂСѓР¶РёРµ РѕС‚СЂРµРјРѕРЅС‚РёСЂРѕРІР°РЅРѕ РЅР° %c[255,0,255,0]" .. tostring( math.ceil( rep_percent * 100 ) ) .. "%",
                         nil, 12, 5, "g_g", "no", "green"
                     )
                 xr_statistic.add_pts( "stalkerkills", game.translate_string( "st_pda_weapon_repairs" ), 1, 0 )
                 timers.start_timer( "time_rep", 13, "sak.restore_weap()" )
             elseif ( slot_1 and slot_1:condition() <0.87 ) or ( slot_2 and slot_2:condition() < 0.87 ) then
-                send_tip( "Слишком сильное повреждение оружия!", nil, 2, 5, "g_g", "no", "red" )
+                send_tip( "РЎР»РёС€РєРѕРј СЃРёР»СЊРЅРѕРµ РїРѕРІСЂРµР¶РґРµРЅРёРµ РѕСЂСѓР¶РёСЏ!", nil, 2, 5, "g_g", "no", "red" )
                 misc.spawn_to( obj:section() .. "_feik", actor )
             else
-                send_tip( "Оружие не нуждается в починке!", nil, 2, 5, "g_g", "no", "green" )
+                send_tip( "РћСЂСѓР¶РёРµ РЅРµ РЅСѓР¶РґР°РµС‚СЃСЏ РІ РїРѕС‡РёРЅРєРµ!", nil, 2, 5, "g_g", "no", "green" )
                 misc.spawn_to( obj:section() .. "_feik", actor )
             end
         elseif obj and obj:section() == "repair_itemoutfit" then
             if armor then
                 if str_in_tab( armor:section(), { "bandit_veteran_", "bandit_master_" } ) then
-                    send_tip( "Для кожаного плаща не подходит!", nil, 2, 5, "g_g", "no", "yellow" )
+                    send_tip( "Р”Р»СЏ РєРѕР¶Р°РЅРѕРіРѕ РїР»Р°С‰Р° РЅРµ РїРѕРґС…РѕРґРёС‚!", nil, 2, 5, "g_g", "no", "yellow" )
                     misc.spawn_to( obj:section().."_feik", actor )
                 else
                     if armor:condition() >= 0.87 and armor:condition() < 0.985 then
@@ -4348,21 +4478,21 @@ function repair_box_repair( obj )
                         snd_obj = xr_sound.get_safe_sound_object( sound )
                         snd_obj:play_no_feedback( db.actor, sound_object.s2d, 0, vector(), 1.0 )
                         send_tip(
-                            "Броня отремонтирована на %c[255,0,255,0]" .. tostring( math.ceil( rep_percent * 100 ) ) .. "%",
+                            "Р‘СЂРѕРЅСЏ РѕС‚СЂРµРјРѕРЅС‚РёСЂРѕРІР°РЅР° РЅР° %c[255,0,255,0]" .. tostring( math.ceil( rep_percent * 100 ) ) .. "%",
                             nil, 12, 5, "g_g", "no", "green"
                         )
                         xr_statistic.add_pts( "stalkerkills", game.translate_string( "st_pda_armor_repairs" ), 1, 0 )
                         schedule.add( "tm_rep", "sak.return_mask()", 12500 )
                     elseif armor:condition() < 0.87 then
-                        send_tip( "Слишком сильное повреждение брони!", nil, 2, 5, "g_g", "no", "red" )
+                        send_tip( "РЎР»РёС€РєРѕРј СЃРёР»СЊРЅРѕРµ РїРѕРІСЂРµР¶РґРµРЅРёРµ Р±СЂРѕРЅРё!", nil, 2, 5, "g_g", "no", "red" )
                         misc.spawn_to( obj:section() .. "_feik", actor )
                     else
-                        send_tip( "Броня не нуждается в починке!", nil, 2, 5, "g_g", "no", "green" )
+                        send_tip( "Р‘СЂРѕРЅСЏ РЅРµ РЅСѓР¶РґР°РµС‚СЃСЏ РІ РїРѕС‡РёРЅРєРµ!", nil, 2, 5, "g_g", "no", "green" )
                         misc.spawn_to( obj:section().."_feik", actor )
                     end
                 end
             else
-                send_tip( "А что же ремонтировать то? Нечего!", nil, 2, 5, "g_g", "no", "yellow" )
+                send_tip( "Рђ С‡С‚Рѕ Р¶Рµ СЂРµРјРѕРЅС‚РёСЂРѕРІР°С‚СЊ С‚Рѕ? РќРµС‡РµРіРѕ!", nil, 2, 5, "g_g", "no", "yellow" )
                 misc.spawn_to( obj:section().."_feik", actor )
             end
         end
@@ -4486,18 +4616,18 @@ function repair_on()
                 "sak.repair_tiski_do("..slot..","..slot_obj..","..r_box_id..","..repiout..","..repiweap..")", 12500
             )
         else
-            send_tip( "Нечего ремонтировать...", nil, 2, 5, "g_g", "no", "sky_blue" )
+            send_tip( "РќРµС‡РµРіРѕ СЂРµРјРѕРЅС‚РёСЂРѕРІР°С‚СЊ...", nil, 2, 5, "g_g", "no", "sky_blue" )
             restore_weap()
         end
         tiski = nil
     else
-        send_tip( "Неудобно работать! Нужно немного отойти...", nil, 2, 5, "g_g", "no", "sky_blue" )
+        send_tip( "РќРµСѓРґРѕР±РЅРѕ СЂР°Р±РѕС‚Р°С‚СЊ! РќСѓР¶РЅРѕ РЅРµРјРЅРѕРіРѕ РѕС‚РѕР№С‚Рё...", nil, 2, 5, "g_g", "no", "sky_blue" )
         restore_weap()
     end
 end
--- была прописана в логике 2х тисков в all.spawn, переписал фиксом их на repair_on()
+-- Р±С‹Р»Р° РїСЂРѕРїРёСЃР°РЅР° РІ Р»РѕРіРёРєРµ 2С… С‚РёСЃРєРѕРІ РІ all.spawn, РїРµСЂРµРїРёСЃР°Р» С„РёРєСЃРѕРј РёС… РЅР° repair_on()
 function repair_2_on()
-    --tiski:position().x + 0.09, -- всё, чем отличалась от repair_on() 
+    --tiski:position().x + 0.09, -- РІСЃС‘, С‡РµРј РѕС‚Р»РёС‡Р°Р»Р°СЃСЊ РѕС‚ repair_on() 
  end
 
 function repair_tiski_do( slot, slot_obj_id, r_box_id, repiout, repiweap )
@@ -4514,16 +4644,16 @@ function repair_tiski_do( slot, slot_obj_id, r_box_id, repiout, repiweap )
                     if rep_point > 1 then rep_point = 1 end
                     slot_obj:set_condition( rep_point )
                     send_tip(
-                        "Оружие отремонтировано на %c[255,0,255,0]".. tostring( math.ceil( rep_percent_tiski * 100 ) ) .. "%...",
+                        "РћСЂСѓР¶РёРµ РѕС‚СЂРµРјРѕРЅС‚РёСЂРѕРІР°РЅРѕ РЅР° %c[255,0,255,0]".. tostring( math.ceil( rep_percent_tiski * 100 ) ) .. "%...",
                         nil, 2, 5, "g_g", "no", "green"
                     )
                     xr_statistic.add_pts( "stalkerkills", game.translate_string( "st_pda_weapon_repairs" ), 1, 0 )
                     repiweap = repiweap - 1
                 else
-                    send_tip( "Оружие слишком повреждено", nil, 2, 5, "g_g", "no", "red" )
+                    send_tip( "РћСЂСѓР¶РёРµ СЃР»РёС€РєРѕРј РїРѕРІСЂРµР¶РґРµРЅРѕ", nil, 2, 5, "g_g", "no", "red" )
                 end
             else
-                send_tip( "Нет комплекта для ремонта оружия", nil, 2, 5, "g_g", "no", "red" )
+                send_tip( "РќРµС‚ РєРѕРјРїР»РµРєС‚Р° РґР»СЏ СЂРµРјРѕРЅС‚Р° РѕСЂСѓР¶РёСЏ", nil, 2, 5, "g_g", "no", "red" )
             end
         elseif slot == 2 then
             if repiweap ~= 0 then
@@ -4535,21 +4665,21 @@ function repair_tiski_do( slot, slot_obj_id, r_box_id, repiout, repiweap )
                     if rep_point > 1 then rep_point = 1 end
                     slot_obj:set_condition( rep_point )
                     send_tip(
-                        "Оружие отремонтировано на %c[255,0,255,0]".. tostring( math.ceil( rep_percent_tiski * 100 ) ) .. "%...",
+                        "РћСЂСѓР¶РёРµ РѕС‚СЂРµРјРѕРЅС‚РёСЂРѕРІР°РЅРѕ РЅР° %c[255,0,255,0]".. tostring( math.ceil( rep_percent_tiski * 100 ) ) .. "%...",
                         nil, 2, 5, "g_g", "no", "green"
                     )
                     xr_statistic.add_pts( "stalkerkills", game.translate_string( "st_pda_weapon_repairs" ), 1, 0 )
                     repiweap = repiweap - 1
                 else
-                    send_tip( "Оружие слишком повреждено", nil, 2, 5, "g_g", "no", "red" )
+                    send_tip( "РћСЂСѓР¶РёРµ СЃР»РёС€РєРѕРј РїРѕРІСЂРµР¶РґРµРЅРѕ", nil, 2, 5, "g_g", "no", "red" )
                 end
             else
-                send_tip( "Нет комплекта для ремонта оружия", nil, 2, 5, "g_g", "no", "red" )
+                send_tip( "РќРµС‚ РєРѕРјРїР»РµРєС‚Р° РґР»СЏ СЂРµРјРѕРЅС‚Р° РѕСЂСѓР¶РёСЏ", nil, 2, 5, "g_g", "no", "red" )
             end
         elseif slot == 6 then
             if repiout ~= 0 then
                 if str_in_tab( slot_obj:section(), { "bandit_veteran_", "bandit_master_" } ) then
-                    send_tip( "Для кожаного плаща не подходит!", nil, 2, 5, "g_g", "no", "yellow" )
+                    send_tip( "Р”Р»СЏ РєРѕР¶Р°РЅРѕРіРѕ РїР»Р°С‰Р° РЅРµ РїРѕРґС…РѕРґРёС‚!", nil, 2, 5, "g_g", "no", "yellow" )
                 else
                     if slot_obj:condition() >= 0.75 then
                         local arm_sect    = slot_obj:section()
@@ -4565,22 +4695,22 @@ function repair_tiski_do( slot, slot_obj_id, r_box_id, repiout, repiweap )
                         if rep_point > 1 then rep_point = 1 end
                         amk_mod.repair_armor( rep_point )
                         send_tip(
-                            "Ну вот, подлатали на %c[255,0,255,0]".. tostring( math.ceil( rep_percent_tiski * 100 ) ) .. "%...",
+                            "РќСѓ РІРѕС‚, РїРѕРґР»Р°С‚Р°Р»Рё РЅР° %c[255,0,255,0]".. tostring( math.ceil( rep_percent_tiski * 100 ) ) .. "%...",
                             nil, 2, 5, "g_g", "no", "green"
                         )
                         xr_statistic.add_pts( "stalkerkills", game.translate_string( "st_pda_armor_repairs" ), 1, 0 )
                         repiout = repiout - 1
                     else
-                        send_tip( "Слишком поврежден костюмчик-то", nil, 2, 5, "g_g", "no", "red" )
+                        send_tip( "РЎР»РёС€РєРѕРј РїРѕРІСЂРµР¶РґРµРЅ РєРѕСЃС‚СЋРјС‡РёРє-С‚Рѕ", nil, 2, 5, "g_g", "no", "red" )
                     end
                 end
             else
-                send_tip( "Нет комплекта для ремонта", nil, 2, 5, "g_g", "no", "red" )
+                send_tip( "РќРµС‚ РєРѕРјРїР»РµРєС‚Р° РґР»СЏ СЂРµРјРѕРЅС‚Р°", nil, 2, 5, "g_g", "no", "red" )
             end
             vergas_masks.set_flag_minimap( true )
         end
     else
-        send_tip( "Вроде все нормально...", nil, 2, 5, "g_g", "no", "sky_blue" )
+        send_tip( "Р’СЂРѕРґРµ РІСЃРµ РЅРѕСЂРјР°Р»СЊРЅРѕ...", nil, 2, 5, "g_g", "no", "sky_blue" )
     end
     local r_box       = alife():object( r_box_id )
     local pk          = get_netpk( r_box, 1 )
@@ -4776,7 +4906,7 @@ koster_sound   = { "scripts\\matches_", "scripts\\matches_no_light_" }
 matches_delays = { 3500, 4000, 4600 }
 
 function scratch_match_sound( sidx )
-    -- воспроизвести звук чирканья спичкой о коробок и вернуть задержку времени зажигания спички
+    -- РІРѕСЃРїСЂРѕРёР·РІРµСЃС‚Рё Р·РІСѓРє С‡РёСЂРєР°РЅСЊСЏ СЃРїРёС‡РєРѕР№ Рѕ РєРѕСЂРѕР±РѕРє Рё РІРµСЂРЅСѓС‚СЊ Р·Р°РґРµСЂР¶РєСѓ РІСЂРµРјРµРЅРё Р·Р°Р¶РёРіР°РЅРёСЏ СЃРїРёС‡РєРё
     if sidx == nil then sidx = lua_random( 1, 3 ) end
     misc.easy_sound( koster_sound[ 1 ] .. sidx )
     return matches_delays[ sidx ]
@@ -4784,7 +4914,7 @@ end
 
 function koster_on()
     local itm = bag_on_belt_use.get_matches() or bag_on_belt_use.load_matches()
-    -- попытка запалить кострище
+    -- РїРѕРїС‹С‚РєР° Р·Р°РїР°Р»РёС‚СЊ РєРѕСЃС‚СЂРёС‰Рµ
     if params.matches_flame > 0 then return end
     if not itm then return end
     wprintf( " matches exists, trying ignite!" )
@@ -4798,7 +4928,7 @@ end
 function koster_yes() end
 
 function candle_on()
-    -- попытка засветить лампаду
+    -- РїРѕРїС‹С‚РєР° Р·Р°СЃРІРµС‚РёС‚СЊ Р»Р°РјРїР°РґСѓ
     if ( params.matches_flame > 0 ) or ( savemgmt.candle_id > 0 ) then return end
     local itm = bag_on_belt_use.get_matches() or bag_on_belt_use.load_matches()
     if not itm then return end
@@ -4945,7 +5075,7 @@ function rad_pribor2_yes()
     restore_weap()
 end
 
--- доспавн зомби при начале замеров, вход в х12
+-- РґРѕСЃРїР°РІРЅ Р·РѕРјР±Рё РїСЂРё РЅР°С‡Р°Р»Рµ Р·Р°РјРµСЂРѕРІ, РІС…РѕРґ РІ С…12
 function rad_pribor3_yes()
     local sobj = level_object_by_sid( 6154 )
     sobj:get_hanging_lamp():turn_on()
@@ -5051,8 +5181,8 @@ function set_community()
         end
         act:give_info_portion( "val_bandit_talk" )
         send_tip(
-            "Короче, если чё - подваливай. Пахан согласен.",
-            "Типку с корявой рожей", 11, 20, "death", "sak", "red"
+            "РљРѕСЂРѕС‡Рµ, РµСЃР»Рё С‡С‘ - РїРѕРґРІР°Р»РёРІР°Р№. РџР°С…Р°РЅ СЃРѕРіР»Р°СЃРµРЅ.",
+            "РўРёРїРєСѓ СЃ РєРѕСЂСЏРІРѕР№ СЂРѕР¶РµР№", 11, 20, "death", "sak", "red"
         )
     end
 end
@@ -5257,8 +5387,8 @@ end
 
 function dead_prizrak_info()
     send_tip(
-        "Это Бармен. Меченный, есть для тебя важное дело. Заходи.",
-        "Сообщение для Меченного", 11, 20, "barman", "sak", "red"
+        "Р­С‚Рѕ Р‘Р°СЂРјРµРЅ. РњРµС‡РµРЅРЅС‹Р№, РµСЃС‚СЊ РґР»СЏ С‚РµР±СЏ РІР°Р¶РЅРѕРµ РґРµР»Рѕ. Р—Р°С…РѕРґРё.",
+        "РЎРѕРѕР±С‰РµРЅРёРµ РґР»СЏ РњРµС‡РµРЅРЅРѕРіРѕ", 11, 20, "barman", "sak", "red"
     )
     db.actor:give_info_portion( "dead_prizrak_barmen_info" )
 end
@@ -5284,7 +5414,7 @@ function compile_rules( rules )
         elseif t == "string" then
             code = "return " .. val .. " end"
         end
-        local f = loadstring( "return function( obj, actor ) "..code )() -- компиляция функции в чанк
+        local f = loadstring( "return function( obj, actor ) "..code )() -- РєРѕРјРїРёР»СЏС†РёСЏ С„СѓРЅРєС†РёРё РІ С‡Р°РЅРє
         result[ key ] = f
     end
     return result
@@ -5306,7 +5436,7 @@ function add_tail()
     local lname         = level.name()
     local tip           = level_trees[ lname ]
     local sname         = amk_vars.level_on_save or ""
-    nlc_vars.prev_level = sname -- для дополнительного детектирования переходов
+    nlc_vars.prev_level = sname -- РґР»СЏ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅРѕРіРѕ РґРµС‚РµРєС‚РёСЂРѕРІР°РЅРёСЏ РїРµСЂРµС…РѕРґРѕРІ
     nlc_vars.curr_level = lname
     if tip ~= 0 then texman.swap_trees( tip ) end
     tip = level_stons[ lname ]
@@ -5451,7 +5581,7 @@ function add_tail()
         local sanek = g_sim:story_object( story_ids.sanek )
         if sanek then misc.release_obj( sanek, 'remove sanek' ) end
     end
-    ----------- установка фоновой освещённости, не восстанавливается при выходе из подземки -------
+    ----------- СѓСЃС‚Р°РЅРѕРІРєР° С„РѕРЅРѕРІРѕР№ РѕСЃРІРµС‰С‘РЅРЅРѕСЃС‚Рё, РЅРµ РІРѕСЃСЃС‚Р°РЅР°РІР»РёРІР°РµС‚СЃСЏ РїСЂРё РІС‹С…РѕРґРµ РёР· РїРѕРґР·РµРјРєРё -------
     local amb_cfg = FindConfigStr( "r2_sun_lumscale_amb" )
     WriteIni( db.stor_ltx, "stor", "lumscale_amb", "\""..amb_cfg.."\"" )
     local amb = ReadIni( db.stor_ltx, "stor", "lumscale_amb" )
@@ -5464,7 +5594,7 @@ function add_tail()
     if const.ground_levels[ lname ] then get_command( amb )
     else get_command( "r2_sun_lumscale_amb 0.1" )
     end
-    ---------------------------  начало обработки левел ченджера ---------------------------------
+    ---------------------------  РЅР°С‡Р°Р»Рѕ РѕР±СЂР°Р±РѕС‚РєРё Р»РµРІРµР» С‡РµРЅРґР¶РµСЂР° ---------------------------------
     if lname ~= sname and sname ~= "" then
         wprintf( "sak.add_tail: level change detected from~C0E %s~C07 to~C0F %s~C07", sname, lname )
         nlc_vars.semeneckyi_done = nil
@@ -5509,7 +5639,7 @@ function add_tail()
             misc.release_obj( tonumber( obj_vis ), 'sak.script:3380')
         end
         loks_count()
-        -- для статистики:
+        -- РґР»СЏ СЃС‚Р°С‚РёСЃС‚РёРєРё:
         xr_statistic.add_pts( "stalkerkills", game.translate_string( "st_pda_lc_used" ), 1, 0 )
         amk_vars.sak_teleport     = nil
         amk_vars.sak_teleport_vis = nil
@@ -5895,7 +6025,7 @@ function add_tail()
         obj = level_object_by_sid( lev_prot[ lname ] )
         if obj then grabb_seif( obj:id(), lname ) end
     end
----------------------------  конец обработки левел ченджера? ---------------------------------
+---------------------------  РєРѕРЅРµС† РѕР±СЂР°Р±РѕС‚РєРё Р»РµРІРµР» С‡РµРЅРґР¶РµСЂР°? ---------------------------------
     if lname == "aver" then
         level.set_time_factor( system_ini():r_float( "alife", "time_factor" ) * 5 )
         t_s_1 = 45150
@@ -5917,8 +6047,8 @@ end
 function sak.actor_bio() params.tiredness_add( 0 ) end
 
 function sak.reset_actor_bio()
-    params.health_v_add( 1, level_difficulty[ level.name() ] ) -- восстановление здоровья во время бодрствования
-    params.satiety_v_add( 1, 1 )  -- нарастание голода по умолчанию
+    params.health_v_add( 1, level_difficulty[ level.name() ] ) -- РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ Р·РґРѕСЂРѕРІСЊСЏ РІРѕ РІСЂРµРјСЏ Р±РѕРґСЂСЃС‚РІРѕРІР°РЅРёСЏ
+    params.satiety_v_add( 1, 1 )  -- РЅР°СЂР°СЃС‚Р°РЅРёРµ РіРѕР»РѕРґР° РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
     actor_bio()
 end
 
@@ -5987,7 +6117,7 @@ function grabb_bar_seif ( obj_id, actor )
         actor:give_info_portion( "bar_seif_prot_out" )
         local name, sname = amk_names_lists.get_strings()
         send_tip(
-            "Слыхали? Сталкера в баре отключили! Спит сутки без просыпу!",
+            "РЎР»С‹С…Р°Р»Рё? РЎС‚Р°Р»РєРµСЂР° РІ Р±Р°СЂРµ РѕС‚РєР»СЋС‡РёР»Рё! РЎРїРёС‚ СЃСѓС‚РєРё Р±РµР· РїСЂРѕСЃС‹РїСѓ!",
             name.." "..sname, 20, 15, "uniq", "news", "gray"
         )
         for n = 1, cnt do
@@ -6007,7 +6137,7 @@ function voronin_seif_out()
         misc.release_obj( id, 'sak.script:3599')
     end
 end
--- наполнение хабаром НПС???
+-- РЅР°РїРѕР»РЅРµРЅРёРµ С…Р°Р±Р°СЂРѕРј РќРџРЎ???
 function habar_by_nps( lid )
     local npc = client_obj( lid )
     local tbl_stuff = { 
@@ -6037,7 +6167,7 @@ function habar_by_nps( lid )
             end
         end
     end
-    -- собственно спавн жратвы и порча её
+    -- СЃРѕР±СЃС‚РІРµРЅРЅРѕ СЃРїР°РІРЅ Р¶СЂР°С‚РІС‹ Рё РїРѕСЂС‡Р° РµС‘
     for k, v in pairs( table_food ) do
         if
         	lua_random() < 0.09
@@ -6051,7 +6181,7 @@ function habar_by_nps( lid )
             end
         end
     end
-    -- спавн всякой полезной мелочи
+    -- СЃРїР°РІРЅ РІСЃСЏРєРѕР№ РїРѕР»РµР·РЅРѕР№ РјРµР»РѕС‡Рё
     if npc:rank() > 500 then
         for _, v in ipairs( tbl_stuff ) do
             if lua_random() < 0.03 then
@@ -6130,8 +6260,8 @@ function add_rem_infos()
     local count = nlc_vars.rem_count or 0
     if count > 8 then return end
     send_tip(
-        "Что-то мелькнуло в голове... Вспомнилось или так, показалось...\\nНадо бы записать, а то вдруг опять забудется.",
-        "Воспоминание", 2, 20, "g_g", "rememb", "yellow"
+        "Р§С‚Рѕ-С‚Рѕ РјРµР»СЊРєРЅСѓР»Рѕ РІ РіРѕР»РѕРІРµ... Р’СЃРїРѕРјРЅРёР»РѕСЃСЊ РёР»Рё С‚Р°Рє, РїРѕРєР°Р·Р°Р»РѕСЃСЊ...\\nРќР°РґРѕ Р±С‹ Р·Р°РїРёСЃР°С‚СЊ, Р° С‚Рѕ РІРґСЂСѓРі РѕРїСЏС‚СЊ Р·Р°Р±СѓРґРµС‚СЃСЏ.",
+        "Р’РѕСЃРїРѕРјРёРЅР°РЅРёРµ", 2, 20, "g_g", "rememb", "yellow"
     )
     nlc_vars.rem_count = count + 1
     local character    = math.floor( ( ( amk_vars.r_task_reward or 1 ) + ( amk_vars.x18_iq_check or 1 ) ) / 2 )
@@ -6418,7 +6548,7 @@ function detectors_fake( flag )
     WriteIni( db.stor_ltx, "stor", "r_task_reward", r_task_rew )
     WriteIni( db.stor_ltx, "stor", "r_treas_items", r_treasur  )
     get_command( "g_game_difficulty "..game_difficulty_by_num[ g_dif ] )
-    ---------------------- обработка левел ченджера ---------------------------
+    ---------------------- РѕР±СЂР°Р±РѕС‚РєР° Р»РµРІРµР» С‡РµРЅРґР¶РµСЂР° ---------------------------
     if lname ~= sname and sname ~= "" then
         if
             sname == "marsh" and lname == "l03_agroprom"
@@ -6427,11 +6557,11 @@ function detectors_fake( flag )
         then
             agr_mil_teleport()
         end
-        -- добавлено mike для info - первое посещение Радара
+        -- РґРѕР±Р°РІР»РµРЅРѕ mike РґР»СЏ info - РїРµСЂРІРѕРµ РїРѕСЃРµС‰РµРЅРёРµ Р Р°РґР°СЂР°
         if lname == "l10_radar" and not npc:has_info( "info_way306a" ) then
             mike.add_spots_mil_rad()
         end
-        -- добавлено mike для спавна мерков
+        -- РґРѕР±Р°РІР»РµРЅРѕ mike РґР»СЏ СЃРїР°РІРЅР° РјРµСЂРєРѕРІ
         if
             lname == "l07_military"
             and npc:has_info( "lim_zub_last_info" )
@@ -6465,7 +6595,7 @@ function detectors_fake( flag )
             mike.spawn_x12_mercs()
             npc:give_info_portion( "x12_mercs_spawned" )
         end
-        -- добавлено mike для Матвеева
+        -- РґРѕР±Р°РІР»РµРЅРѕ mike РґР»СЏ РњР°С‚РІРµРµРІР°
         if
             lname == "l05_bar"
             and npc:has_info( "assistant_go_to_mil" )
@@ -6475,32 +6605,32 @@ function detectors_fake( flag )
             npc:give_info_portion( "assistant_bar" )
             misc.release_by_name( "assistant2" )
         end
-        -- добавлено mike для исправления вкл. насоса
+        -- РґРѕР±Р°РІР»РµРЅРѕ mike РґР»СЏ РёСЃРїСЂР°РІР»РµРЅРёСЏ РІРєР». РЅР°СЃРѕСЃР°
         if lname == "labx8" and npc:has_info( "x12_pump_info3" ) then
             npc:give_info_portion( "x12_pump_off" )
         end
         if lname == "warlab" and npc:has_info( "x12_pump_info3" ) then
             npc:give_info_portion( "x12_pump_off" )
         end
-        ------------------ TODO: выпилить к богине-матери это "поддержание штанов" ----------------
-        -- добавлено mike для спавна в саркофаге
+        ------------------ TODO: РІС‹РїРёР»РёС‚СЊ Рє Р±РѕРіРёРЅРµ-РјР°С‚РµСЂРё СЌС‚Рѕ "РїРѕРґРґРµСЂР¶Р°РЅРёРµ С€С‚Р°РЅРѕРІ" ----------------
+        -- РґРѕР±Р°РІР»РµРЅРѕ mike РґР»СЏ СЃРїР°РІРЅР° РІ СЃР°СЂРєРѕС„Р°РіРµ
         if lname == "l12u_sarcofag" then mike.spawn_in_sarcofag() end
-        -- добавлено mike для спавна в х12
+        -- РґРѕР±Р°РІР»РµРЅРѕ mike РґР»СЏ СЃРїР°РІРЅР° РІ С…12
         if lname == "l10u_bunker" and not npc:has_info( "x12_gift_info" ) then
             mike.spawn_in_x12()
             npc:give_info_portion( "x12_gift_info" )
         end
-        -- добавлено mike для спавна в Тесле
+        -- РґРѕР±Р°РІР»РµРЅРѕ mike РґР»СЏ СЃРїР°РІРЅР° РІ РўРµСЃР»Рµ
         if lname == "generators" and not npc:has_info( "tesla_gift_info" ) then
             test.spawn_jolly_roger( lname )
             npc:give_info_portion( "tesla_gift_info" )
         end
-        -- добавлено mike для спавна в райцентре
+        -- РґРѕР±Р°РІР»РµРЅРѕ mike РґР»СЏ СЃРїР°РІРЅР° РІ СЂР°Р№С†РµРЅС‚СЂРµ
         if lname == "deadcity" and not npc:has_info( "deadcity_gift_info" ) then
             test.spawn_jolly_roger( lname )
             npc:give_info_portion( "deadcity_gift_info" )
         end
-        -- добавлено mike для спавна маятника в ТЧ или Припяти
+        -- РґРѕР±Р°РІР»РµРЅРѕ mike РґР»СЏ СЃРїР°РІРЅР° РјР°СЏС‚РЅРёРєР° РІ РўР§ РёР»Рё РџСЂРёРїСЏС‚Рё
         if
             lname == "aver"
             and npc:has_info( "mayatnik_aver_ready_info" )
@@ -6524,11 +6654,11 @@ function detectors_fake( flag )
         then
             db.actor:give_info_portion( "akk_is_ready" )
         end
-        -- добавлено mike для спавна в Припяти
+        -- РґРѕР±Р°РІР»РµРЅРѕ mike РґР»СЏ СЃРїР°РІРЅР° РІ РџСЂРёРїСЏС‚Рё
         if lname == "l11_pripyat" then
             g_sim:create( "amk_zone_sphere", vector():set( 29.7, 10, 355.8 ), 139177, 2260 )
         end
-        -- добавлено mike для задания Воронина
+        -- РґРѕР±Р°РІР»РµРЅРѕ mike РґР»СЏ Р·Р°РґР°РЅРёСЏ Р’РѕСЂРѕРЅРёРЅР°
         if
             lname == "l08_yantar"
             and npc:has_info( "voronin_killzombi_start" )
@@ -6536,7 +6666,7 @@ function detectors_fake( flag )
         then
             npc:give_info_portion( "voronin_killzombi_info" )
         end
-        -- убираем Искателя и его друга с Теслы
+        -- СѓР±РёСЂР°РµРј РСЃРєР°С‚РµР»СЏ Рё РµРіРѕ РґСЂСѓРіР° СЃ РўРµСЃР»С‹
         if
             lname ~= "generators"
             and npc:has_info( "gen_iskatel_akkum_info" )
@@ -6545,7 +6675,7 @@ function detectors_fake( flag )
             npc:give_info_portion( "gen_iskatel_akkum_done" )
             misc.release_by_name( "gen_iskatel_drug" )
         end
-        -- для спавна ecolog_outfit_m1
+        -- РґР»СЏ СЃРїР°РІРЅР° ecolog_outfit_m1
         if
             lname == "l10_radar"
             and npc:has_info( "barmen_find_item_2_start" )
@@ -6553,7 +6683,7 @@ function detectors_fake( flag )
         then
             sak_dialog.spawn_barmen_find_item()
         end
-        -- для ecolog_apparat_aver
+        -- РґР»СЏ ecolog_apparat_aver
         if
             lname == "aver"
             and npc:has_info( "info_ecolog_apparat_bolota_done" )
@@ -6561,7 +6691,7 @@ function detectors_fake( flag )
         then
             sak_dialog.timer_kruglov_aver()
         end
-        -- для ecolog_apparat_rf
+        -- РґР»СЏ ecolog_apparat_rf
         if
             lname == "red_forest"
             and npc:has_info( "info_ecolog_apparat_aver_done" )
@@ -6569,7 +6699,7 @@ function detectors_fake( flag )
         then
             sak_dialog.timer_kruglov_rf()
         end
-        -- убираем Небова из Лиманска
+        -- СѓР±РёСЂР°РµРј РќРµР±РѕРІР° РёР· Р›РёРјР°РЅСЃРєР°
         if
             lname ~= "limansk"
             and npc:has_info( "gen_iskatel_akkum_done" )
@@ -6577,7 +6707,7 @@ function detectors_fake( flag )
         then
             misc.release_by_name( "ivan" )
         end
-        -- убираем Фраера из ДТ
+        -- СѓР±РёСЂР°РµРј Р¤СЂР°РµСЂР° РёР· Р”Рў
         if
             lname ~= "l06_rostok"
             and npc:has_info( "dt_fraer_dialog_done" )
@@ -6585,7 +6715,7 @@ function detectors_fake( flag )
         then
             npc:give_info_portion( "dt_fraer_pda_know" )
         end
-        -- убираем Кочергу из ДТ
+        -- СѓР±РёСЂР°РµРј РљРѕС‡РµСЂРіСѓ РёР· Р”Рў
         if
             lname ~= "l06_rostok"
             and npc:has_info( "dt_kocherga_secret_done" )
@@ -6593,7 +6723,7 @@ function detectors_fake( flag )
         then
             misc.release_by_name( "td_kocherga" )
         end
-        -- убираем Искателя из Лиманска
+        -- СѓР±РёСЂР°РµРј РСЃРєР°С‚РµР»СЏ РёР· Р›РёРјР°РЅСЃРєР°
         if
             lname == "l05_bar"
             and npc:has_info( "bar_tonnel_info" )
@@ -6601,7 +6731,7 @@ function detectors_fake( flag )
         then
             misc.release_by_name( "gen_iskatel" )
         end
-        -- убираем Фраера из Лиманска
+        -- СѓР±РёСЂР°РµРј Р¤СЂР°РµСЂР° РёР· Р›РёРјР°РЅСЃРєР°
         if
             lname ~= "limansk"
             and npc:has_info( "info_fraer_pripyat_done" )
@@ -6609,7 +6739,7 @@ function detectors_fake( flag )
         then
             misc.release_by_name( "td_stalker_fraer" )
         end
-        -- спавним бромовский Spas-12 при заходе на локацию
+        -- СЃРїР°РІРЅРёРј Р±СЂРѕРјРѕРІСЃРєРёР№ Spas-12 РїСЂРё Р·Р°С…РѕРґРµ РЅР° Р»РѕРєР°С†РёСЋ
         if
             lname == "l07_military"
             and npc:has_info( "drunk_dolg_story_start" )
@@ -6626,7 +6756,7 @@ function detectors_fake( flag )
             if obj then misc.release_obj( obj, 'sak.script:3975') end
         end
         if lname == "l11_pripyat" then mike.fill_food_prip() end
-        -- выдаём поршень для диалога с Фраером в Лиманске
+        -- РІС‹РґР°С‘Рј РїРѕСЂС€РµРЅСЊ РґР»СЏ РґРёР°Р»РѕРіР° СЃ Р¤СЂР°РµСЂРѕРј РІ Р›РёРјР°РЅСЃРєРµ
         if
             lname == "l11_pripyat"
             and npc:has_info( "lim_fraer_gg_know" )
@@ -6827,7 +6957,7 @@ function kolb_baded()
     kolb = true
 end
 
--- обработка всякого при Выбросе, насколько я понял
+-- РѕР±СЂР°Р±РѕС‚РєР° РІСЃСЏРєРѕРіРѕ РїСЂРё Р’С‹Р±СЂРѕСЃРµ, РЅР°СЃРєРѕР»СЊРєРѕ СЏ РїРѕРЅСЏР»
 function off_testobj()
     local h       = hit()
     local lname   = level.name()
@@ -6896,19 +7026,19 @@ function off_testobj()
         db.actor:disable_info_portion( "pda_will_be_broken" )
         return
     end
-    ------ Смотрим, не сломать ли нам пда ----
-    local brock_flag = nlc_vars.brocked_flag or math.random( 10, 35 )   -- первая поломка случайна
+    ------ РЎРјРѕС‚СЂРёРј, РЅРµ СЃР»РѕРјР°С‚СЊ Р»Рё РЅР°Рј РїРґР° ----
+    local brock_flag = nlc_vars.brocked_flag or math.random( 10, 35 )   -- РїРµСЂРІР°СЏ РїРѕР»РѕРјРєР° СЃР»СѓС‡Р°Р№РЅР°
     if
         db.actor:has_info( "agroprom_military_case_have" )
         and not db.actor:has_info( "radar_on" )
-    then -- если закрыли Агро, не раньше
+    then -- РµСЃР»Рё Р·Р°РєСЂС‹Р»Рё РђРіСЂРѕ, РЅРµ СЂР°РЅСЊС€Рµ
         if
             brock_flag > 1
         then
-            nlc_vars.brocked_flag = brock_flag - 1 -- на выброс ближе к поломке
+            nlc_vars.brocked_flag = brock_flag - 1 -- РЅР° РІС‹Р±СЂРѕСЃ Р±Р»РёР¶Рµ Рє РїРѕР»РѕРјРєРµ
         else
             db.actor:give_info_portion( "pda_will_be_broken" )
-            nlc_vars.brocked_flag = 4 + math.random( 10, 35 ) - tonumber( level.get_game_difficulty()) -- следующая как минимум через выброс или больше
+            nlc_vars.brocked_flag = 4 + math.random( 10, 35 ) - tonumber( level.get_game_difficulty()) -- СЃР»РµРґСѓСЋС‰Р°СЏ РєР°Рє РјРёРЅРёРјСѓРј С‡РµСЂРµР· РІС‹Р±СЂРѕСЃ РёР»Рё Р±РѕР»СЊС€Рµ
         end
     end
 end
@@ -7003,7 +7133,7 @@ end
 function first_rem()
     if not has_alife_info( "first_remember" ) then
         db.actor:give_info_portion( "first_remember" )
-        send_tip( "Кажется, я помню как туда попасть!", "Воспоминание", 2, 20, "g_g", "rememb", "yellow" )
+        send_tip( "РљР°Р¶РµС‚СЃСЏ, СЏ РїРѕРјРЅСЋ РєР°Рє С‚СѓРґР° РїРѕРїР°СЃС‚СЊ!", "Р’РѕСЃРїРѕРјРёРЅР°РЅРёРµ", 2, 20, "g_g", "rememb", "yellow" )
     end
     level.add_pp_effector( "blink.ppe", 234, false )
     level.add_pp_effector( "teleport.ppe", 2006, false )
@@ -7028,8 +7158,8 @@ function gar_stalker_info()
     if not has_alife_info( "gar_stalker_info2" ) then
         if db.actor:has_info( "gar_stalker_info" ) then
             send_tip(
-                "Знакомая личность и ствол! Кажется у Борова был умелец, который мог модифицировать оружие...",
-                "Воспоминание", 2, 20, "g_g", "rememb", "yellow"
+                "Р—РЅР°РєРѕРјР°СЏ Р»РёС‡РЅРѕСЃС‚СЊ Рё СЃС‚РІРѕР»! РљР°Р¶РµС‚СЃСЏ Сѓ Р‘РѕСЂРѕРІР° Р±С‹Р» СѓРјРµР»РµС†, РєРѕС‚РѕСЂС‹Р№ РјРѕРі РјРѕРґРёС„РёС†РёСЂРѕРІР°С‚СЊ РѕСЂСѓР¶РёРµ...",
+                "Р’РѕСЃРїРѕРјРёРЅР°РЅРёРµ", 2, 20, "g_g", "rememb", "yellow"
             )
             db.actor:give_info_portion( "gar_stalker_info2" )
         end
@@ -7038,8 +7168,8 @@ end
 
 function lim_podval_news()
     send_tip(
-        "Эту дверь не открыть даже ломом. Взорвать что ли? У Михалыча наверно есть динамит...",
-        "Заклинило что-ли?", 5, 15, "g_g", "sak", "yellow"
+        "Р­С‚Сѓ РґРІРµСЂСЊ РЅРµ РѕС‚РєСЂС‹С‚СЊ РґР°Р¶Рµ Р»РѕРјРѕРј. Р’Р·РѕСЂРІР°С‚СЊ С‡С‚Рѕ Р»Рё? РЈ РњРёС…Р°Р»С‹С‡Р° РЅР°РІРµСЂРЅРѕ РµСЃС‚СЊ РґРёРЅР°РјРёС‚...",
+        "Р—Р°РєР»РёРЅРёР»Рѕ С‡С‚Рѕ-Р»Рё?", 5, 15, "g_g", "sak", "yellow"
     )
 end
 
@@ -7083,7 +7213,7 @@ function gulag_freedom_enemy_actor()
     relation_registry.set_community_goodwill( "freedom", db.actor:id(), -5000 )
     xr_gulag.setGulagRelation( "mil_freedom", game_object.enemy, db.actor )
     db.actor:give_game_news(
-        "%c[255,160,160,160]\"Свобода\"\\n%c[default]Внимание всем нашим! Видели одного сталкера, который убил нашего! Его опознали - Меченный гад! Валите как увидите!",
+        "%c[255,160,160,160]\"РЎРІРѕР±РѕРґР°\"\\n%c[default]Р’РЅРёРјР°РЅРёРµ РІСЃРµРј РЅР°С€РёРј! Р’РёРґРµР»Рё РѕРґРЅРѕРіРѕ СЃС‚Р°Р»РєРµСЂР°, РєРѕС‚РѕСЂС‹Р№ СѓР±РёР» РЅР°С€РµРіРѕ! Р•РіРѕ РѕРїРѕР·РЅР°Р»Рё - РњРµС‡РµРЅРЅС‹Р№ РіР°Рґ! Р’Р°Р»РёС‚Рµ РєР°Рє СѓРІРёРґРёС‚Рµ!",
         "ui\\ui_iconsTotal", Frect():set( 498, 94, 83, 47 ), 3000, 15000
     )
 end
@@ -7145,7 +7275,7 @@ function set_val_gulag_enemy_actor()
 end
 
 function psevdowounded_help()
-    send_tip( "Помогите кто-нибудь, я ранен!", "Получен SOS", 2, 20, "stalker", "sak", "red" )
+    send_tip( "РџРѕРјРѕРіРёС‚Рµ РєС‚Рѕ-РЅРёР±СѓРґСЊ, СЏ СЂР°РЅРµРЅ!", "РџРѕР»СѓС‡РµРЅ SOS", 2, 20, "stalker", "sak", "red" )
 end
 
 function get_inv_name( section )
@@ -7166,7 +7296,7 @@ function relocate_item( actor, type, item, amount, is_ammo_count )
     end
     local task_texture, task_rect = get_texture_info( icon )
     local news_text = msg .. "\\n" .. "%c[default]"
-        ..game.translate_string( get_inv_name( item ) ) .. " - " .. amount .. " шт."
+        ..game.translate_string( get_inv_name( item ) ) .. " - " .. amount .. " С€С‚."
     if actor:is_talking() then
         actor:give_talk_message( news_text, task_texture, task_rect, "iconed_answer_item" )
     else
@@ -7176,31 +7306,31 @@ end
 
 function send_treasure( name )
     local level_name = {}
-    level_name[ "esc"  ] = "Кордон"
-    level_name[ "gar"  ] = "Свалка"
-    level_name[ "agr"  ] = "НИИ Агропром"
-    level_name[ "agru" ] = "Подвалы Агропрома"
-    level_name[ "val"  ] = "Тёмная долина"
-    level_name[ "mil"  ] = "Армейские склады"
-    level_name[ "yan"  ] = "Янтарь"
-    level_name[ "x16"  ] = "Лаборатория Х-16"
-    level_name[ "rad"  ] = "Радар"
-    level_name[ "pri"  ] = "Припять"
-    level_name[ "x18"  ] = "Лаборатория Х-18"
-    level_name[ "bar"  ] = "Территория Долга"
-    level_name[ "ros"  ] = "Дикая территория"
-    level_name[ "mar"  ] = "Болота"
-    level_name[ "lim"  ] = "Лиманск"
-    level_name[ "hos"  ] = "Санаторий"
-    level_name[ "aver" ] = "Туманная чаща"
-    level_name[ "avp"  ] = "Подземелье диггеров"
-    level_name[ "pes"  ] = "Катакомбы"
-    level_name[ "vil"  ] = "Забытый хутор"
-    level_name[ "red"  ] = "Рыжий лес"
-    level_name[ "gen"  ] = "Зона Тесла"
-    level_name[ "puz"  ] = "Тихая роща"
-    level_name[ "dsc"  ] = "Кишка"
-    level_name[ "lost" ] = "Забытый хутор"
+    level_name[ "esc"  ] = "РљРѕСЂРґРѕРЅ"
+    level_name[ "gar"  ] = "РЎРІР°Р»РєР°"
+    level_name[ "agr"  ] = "РќРР РђРіСЂРѕРїСЂРѕРј"
+    level_name[ "agru" ] = "РџРѕРґРІР°Р»С‹ РђРіСЂРѕРїСЂРѕРјР°"
+    level_name[ "val"  ] = "РўС‘РјРЅР°СЏ РґРѕР»РёРЅР°"
+    level_name[ "mil"  ] = "РђСЂРјРµР№СЃРєРёРµ СЃРєР»Р°РґС‹"
+    level_name[ "yan"  ] = "РЇРЅС‚Р°СЂСЊ"
+    level_name[ "x16"  ] = "Р›Р°Р±РѕСЂР°С‚РѕСЂРёСЏ РҐ-16"
+    level_name[ "rad"  ] = "Р Р°РґР°СЂ"
+    level_name[ "pri"  ] = "РџСЂРёРїСЏС‚СЊ"
+    level_name[ "x18"  ] = "Р›Р°Р±РѕСЂР°С‚РѕСЂРёСЏ РҐ-18"
+    level_name[ "bar"  ] = "РўРµСЂСЂРёС‚РѕСЂРёСЏ Р”РѕР»РіР°"
+    level_name[ "ros"  ] = "Р”РёРєР°СЏ С‚РµСЂСЂРёС‚РѕСЂРёСЏ"
+    level_name[ "mar"  ] = "Р‘РѕР»РѕС‚Р°"
+    level_name[ "lim"  ] = "Р›РёРјР°РЅСЃРє"
+    level_name[ "hos"  ] = "РЎР°РЅР°С‚РѕСЂРёР№"
+    level_name[ "aver" ] = "РўСѓРјР°РЅРЅР°СЏ С‡Р°С‰Р°"
+    level_name[ "avp"  ] = "РџРѕРґР·РµРјРµР»СЊРµ РґРёРіРіРµСЂРѕРІ"
+    level_name[ "pes"  ] = "РљР°С‚Р°РєРѕРјР±С‹"
+    level_name[ "vil"  ] = "Р—Р°Р±С‹С‚С‹Р№ С…СѓС‚РѕСЂ"
+    level_name[ "red"  ] = "Р С‹Р¶РёР№ Р»РµСЃ"
+    level_name[ "gen"  ] = "Р—РѕРЅР° РўРµСЃР»Р°"
+    level_name[ "puz"  ] = "РўРёС…Р°СЏ СЂРѕС‰Р°"
+    level_name[ "dsc"  ] = "РљРёС€РєР°"
+    level_name[ "lost" ] = "Р—Р°Р±С‹С‚С‹Р№ С…СѓС‚РѕСЂ"
     amk.pda_news:play( db.actor, 0, sound_object.s2d )
     local task_texture, task_rect = get_texture_info( "ui_iconsTotal_found_thing" )
     local level_key = string.sub( name, 1, strpos( name, "_s", 1, plain ) - 1 )
@@ -7208,13 +7338,13 @@ function send_treasure( name )
     if level_name[ level_key ] ~= nil then
         tmp_str = level_name[ level_key ] .. ": "
     else
-        tmp_str = "Где-то там: "
+        tmp_str = "Р“РґРµ-С‚Рѕ С‚Р°Рј: "
     end
     local news_text = "%c[255,1,255,255]" .. game.translate_string( "st_found_new_treasure" )
         .. "\\n" .. "%c[120,255,120,160]" .. tmp_str 
         .. "%c[170,200,200,200]" .. game.translate_string( name )
     if name == "pda_secret" then
-        news_text = "%c[ 255, 230, 255, 1 ] Неужто наводка на схрон? Не мешало бы проверить..."
+        news_text = "%c[ 255, 230, 255, 1 ] РќРµСѓР¶С‚Рѕ РЅР°РІРѕРґРєР° РЅР° СЃС…СЂРѕРЅ? РќРµ РјРµС€Р°Р»Рѕ Р±С‹ РїСЂРѕРІРµСЂРёС‚СЊ..."
     end
     if db.actor:is_talking() then
         db.actor:give_talk_message( news_text, task_texture, task_rect, "iconed_answer_item" )
@@ -7397,8 +7527,8 @@ end
 function timer_docs_sidor_end()
     if not db.actor:has_info( "escape_lager_volk_document_done" ) then
         send_tip(
-            "Меченный, зайди ко мне, есть дело для тебя!",
-            "Сообщение от Сидоровича", 11, 20, "trader", "sak", "red"
+            "РњРµС‡РµРЅРЅС‹Р№, Р·Р°Р№РґРё РєРѕ РјРЅРµ, РµСЃС‚СЊ РґРµР»Рѕ РґР»СЏ С‚РµР±СЏ!",
+            "РЎРѕРѕР±С‰РµРЅРёРµ РѕС‚ РЎРёРґРѕСЂРѕРІРёС‡Р°", 11, 20, "trader", "sak", "red"
         )
         db.actor:give_info_portion( "escape_lager_volk_document_done" )
     end
@@ -7412,8 +7542,8 @@ end
 
 function timer_return_x18_end()
     send_tip(
-        "Сталкеры, если есть желание рискнуть, но получить достойную награду, заходите!\\nЕсли кто увидит Меченного, его это касается в первую очередь.",
-        "Сообщение от Бармена", 11, 20, "barman", "sak", "green"
+        "РЎС‚Р°Р»РєРµСЂС‹, РµСЃР»Рё РµСЃС‚СЊ Р¶РµР»Р°РЅРёРµ СЂРёСЃРєРЅСѓС‚СЊ, РЅРѕ РїРѕР»СѓС‡РёС‚СЊ РґРѕСЃС‚РѕР№РЅСѓСЋ РЅР°РіСЂР°РґСѓ, Р·Р°С…РѕРґРёС‚Рµ!\\nР•СЃР»Рё РєС‚Рѕ СѓРІРёРґРёС‚ РњРµС‡РµРЅРЅРѕРіРѕ, РµРіРѕ СЌС‚Рѕ РєР°СЃР°РµС‚СЃСЏ РІ РїРµСЂРІСѓСЋ РѕС‡РµСЂРµРґСЊ.",
+        "РЎРѕРѕР±С‰РµРЅРёРµ РѕС‚ Р‘Р°СЂРјРµРЅР°", 11, 20, "barman", "sak", "green"
     )
     db.actor:give_info_portion( "return_x18_info" )
 end
@@ -7424,8 +7554,8 @@ end
 
 function timer_barman_1_end()
     send_tip(
-        "Меченный, зайди ко мне, есть дело для тебя!",
-        "Сообщение от Бармена", 11, 20, "barman", "sak", "green"
+        "РњРµС‡РµРЅРЅС‹Р№, Р·Р°Р№РґРё РєРѕ РјРЅРµ, РµСЃС‚СЊ РґРµР»Рѕ РґР»СЏ С‚РµР±СЏ!",
+        "РЎРѕРѕР±С‰РµРЅРёРµ РѕС‚ Р‘Р°СЂРјРµРЅР°", 11, 20, "barman", "sak", "green"
     )
     db.actor:give_info_portion( "agroprom_military_case_know" )
 end
@@ -7486,15 +7616,15 @@ end
 function max_things_attantion()
     if not has_alife_info( "max_good_start" ) then
         send_tip(
-            "Мужики, если кто собирается на Кордон - подходите, дело есть...",
-            "Макс", 11, 20, "freedom", "sak", "green"
+            "РњСѓР¶РёРєРё, РµСЃР»Рё РєС‚Рѕ СЃРѕР±РёСЂР°РµС‚СЃСЏ РЅР° РљРѕСЂРґРѕРЅ - РїРѕРґС…РѕРґРёС‚Рµ, РґРµР»Рѕ РµСЃС‚СЊ...",
+            "РњР°РєСЃ", 11, 20, "freedom", "sak", "green"
         )
         db.actor:give_info_portion( "max_good_start" )
     end
 end
 
 function ivancov_case_good()
-    send_tip( "Меченный, будешь в Баре - подойди, поговорим!", "Сообщение от Иванцова", 11, 20, "dolg", "sak", "green" )
+    send_tip( "РњРµС‡РµРЅРЅС‹Р№, Р±СѓРґРµС€СЊ РІ Р‘Р°СЂРµ - РїРѕРґРѕР№РґРё, РїРѕРіРѕРІРѕСЂРёРј!", "РЎРѕРѕР±С‰РµРЅРёРµ РѕС‚ РРІР°РЅС†РѕРІР°", 11, 20, "dolg", "sak", "green" )
     if not has_alife_info( "ivancov_good_start" ) then
         db.actor:give_info_portion( "ivancov_good_start" )
     else
@@ -7507,7 +7637,7 @@ function timer_barman_2()
 end
 
 function timer_barman_2_end()
-    send_tip( "Меченный, зайди ко мне, есть дело для тебя!", "Сообщение от Бармена", 11, 20, "barman", "sak", "green" )
+    send_tip( "РњРµС‡РµРЅРЅС‹Р№, Р·Р°Р№РґРё РєРѕ РјРЅРµ, РµСЃС‚СЊ РґРµР»Рѕ РґР»СЏ С‚РµР±СЏ!", "РЎРѕРѕР±С‰РµРЅРёРµ РѕС‚ Р‘Р°СЂРјРµРЅР°", 11, 20, "barman", "sak", "green" )
     db.actor:give_info_portion( "bar_x16_documents_know" )
 end
 
@@ -7516,15 +7646,15 @@ function timer_barman_3()
 end
 
 function timer_barman_3_end()
-    send_tip( "Меченный, зайди ко мне, есть дело для тебя!", "Сообщение от Бармена", 11, 20, "barman", "sak", "green" )
+    send_tip( "РњРµС‡РµРЅРЅС‹Р№, Р·Р°Р№РґРё РєРѕ РјРЅРµ, РµСЃС‚СЊ РґРµР»Рѕ РґР»СЏ С‚РµР±СЏ!", "РЎРѕРѕР±С‰РµРЅРёРµ РѕС‚ Р‘Р°СЂРјРµРЅР°", 11, 20, "barman", "sak", "green" )
     db.actor:give_info_portion( "bar_x18_documents_know" )
 end
 
 function info_borov_11()
     if not has_alife_info( "esc_bridge_pass_fire" ) then
     send_tip(
-        "Меченный, мне сообщили, что тебя видели в Тёмной долине. На меня Сахаров вышел - говорит, там какая-то их экспедиция пропала, а ему нужны результаты той экспедиции. Так что, если найдёшь там что, - тащи Сахарову!",
-        "Сообщение от Сидоровича", 11, 20, "trader", "sak", "red"
+        "РњРµС‡РµРЅРЅС‹Р№, РјРЅРµ СЃРѕРѕР±С‰РёР»Рё, С‡С‚Рѕ С‚РµР±СЏ РІРёРґРµР»Рё РІ РўС‘РјРЅРѕР№ РґРѕР»РёРЅРµ. РќР° РјРµРЅСЏ РЎР°С…Р°СЂРѕРІ РІС‹С€РµР» - РіРѕРІРѕСЂРёС‚, С‚Р°Рј РєР°РєР°СЏ-С‚Рѕ РёС… СЌРєСЃРїРµРґРёС†РёСЏ РїСЂРѕРїР°Р»Р°, Р° РµРјСѓ РЅСѓР¶РЅС‹ СЂРµР·СѓР»СЊС‚Р°С‚С‹ С‚РѕР№ СЌРєСЃРїРµРґРёС†РёРё. РўР°Рє С‡С‚Рѕ, РµСЃР»Рё РЅР°Р№РґС‘С€СЊ С‚Р°Рј С‡С‚Рѕ, - С‚Р°С‰Рё РЎР°С…Р°СЂРѕРІСѓ!",
+        "РЎРѕРѕР±С‰РµРЅРёРµ РѕС‚ РЎРёРґРѕСЂРѕРІРёС‡Р°", 11, 20, "trader", "sak", "red"
     )
     end
     db.actor:give_info_portion( "borov_11_saharov_start" )
@@ -7533,8 +7663,8 @@ end
 function add_sidor_info_kuzn()
     if not has_alife_info( "esc_kuzn_umer" ) then
     send_tip(
-        "Сталкеры! Вояки в Долине рейд проводят - не суйтесь туда. Одним из отрядов в оцеплении командует наш хороший знакомый из-под моста. Просил не нарываться в районе перехода с Долины на Свалку...",
-        "Сообщение от Сидоровича", 11, 20, "trader", "sak", "red"
+        "РЎС‚Р°Р»РєРµСЂС‹! Р’РѕСЏРєРё РІ Р”РѕР»РёРЅРµ СЂРµР№Рґ РїСЂРѕРІРѕРґСЏС‚ - РЅРµ СЃСѓР№С‚РµСЃСЊ С‚СѓРґР°. РћРґРЅРёРј РёР· РѕС‚СЂСЏРґРѕРІ РІ РѕС†РµРїР»РµРЅРёРё РєРѕРјР°РЅРґСѓРµС‚ РЅР°С€ С…РѕСЂРѕС€РёР№ Р·РЅР°РєРѕРјС‹Р№ РёР·-РїРѕРґ РјРѕСЃС‚Р°. РџСЂРѕСЃРёР» РЅРµ РЅР°СЂС‹РІР°С‚СЊСЃСЏ РІ СЂР°Р№РѕРЅРµ РїРµСЂРµС…РѕРґР° СЃ Р”РѕР»РёРЅС‹ РЅР° РЎРІР°Р»РєСѓ...",
+        "РЎРѕРѕР±С‰РµРЅРёРµ РѕС‚ РЎРёРґРѕСЂРѕРІРёС‡Р°", 11, 20, "trader", "sak", "red"
     )
     db.actor:give_info_portion( "sidor_info_kuzn" )
     timers.start_timer( "timer_kuzn", 1, 5, 0, "sak.timer_timer_kuzn_end()" )
@@ -7548,32 +7678,32 @@ end
 
 function info_borov_entres()
     send_tip(
-        "Это Пахан. В общем, сделано всё, можешь двигать...",
-        "Сообщение для Меченного", 11, 20, "death", "sak", "red"
+        "Р­С‚Рѕ РџР°С…Р°РЅ. Р’ РѕР±С‰РµРј, СЃРґРµР»Р°РЅРѕ РІСЃС‘, РјРѕР¶РµС€СЊ РґРІРёРіР°С‚СЊ...",
+        "РЎРѕРѕР±С‰РµРЅРёРµ РґР»СЏ РњРµС‡РµРЅРЅРѕРіРѕ", 11, 20, "death", "sak", "red"
     )
     val_beton_block_off()
 end
 
 function info_barman_entres()
     send_tip(
-        "Здесь Бармен. В общем, сделано всё, можешь двигать...",
-        "Сообщение для Меченного", 11, 20, "barman", "sak", "red"
+        "Р—РґРµСЃСЊ Р‘Р°СЂРјРµРЅ. Р’ РѕР±С‰РµРј, СЃРґРµР»Р°РЅРѕ РІСЃС‘, РјРѕР¶РµС€СЊ РґРІРёРіР°С‚СЊ...",
+        "РЎРѕРѕР±С‰РµРЅРёРµ РґР»СЏ РњРµС‡РµРЅРЅРѕРіРѕ", 11, 20, "barman", "sak", "red"
     )
     val_beton_block_off()
 end
 
 function info_kulinar_entres()
     send_tip(
-        "Это Кулинар. В общем, сделано всё, можешь двигать...",
-        "Сообщение для Меченного", 11, 20, "stalker", "sak", "red"
+        "Р­С‚Рѕ РљСѓР»РёРЅР°СЂ. Р’ РѕР±С‰РµРј, СЃРґРµР»Р°РЅРѕ РІСЃС‘, РјРѕР¶РµС€СЊ РґРІРёРіР°С‚СЊ...",
+        "РЎРѕРѕР±С‰РµРЅРёРµ РґР»СЏ РњРµС‡РµРЅРЅРѕРіРѕ", 11, 20, "stalker", "sak", "red"
     )
     val_beton_block_off()
 end
 
 function info_voron_entres()
     send_tip(
-        "Это Ворон. В общем, сделано всё, можешь двигать...",
-        "Сообщение для Меченного", 11, 20, "stalker", "sak", "red"
+        "Р­С‚Рѕ Р’РѕСЂРѕРЅ. Р’ РѕР±С‰РµРј, СЃРґРµР»Р°РЅРѕ РІСЃС‘, РјРѕР¶РµС€СЊ РґРІРёРіР°С‚СЊ...",
+        "РЎРѕРѕР±С‰РµРЅРёРµ РґР»СЏ РњРµС‡РµРЅРЅРѕРіРѕ", 11, 20, "stalker", "sak", "red"
     )
     val_beton_block_off()
 end
@@ -7622,8 +7752,8 @@ function esc_trader_start_quest()
         and has_alife_info( "helping_fox" )
     then
         send_tip(
-            "Меченный, есть одно дело... Забегай по возможности.",
-            "Сообщение от Сидоровича", 0, 20, "trader", "sak", "red"
+            "РњРµС‡РµРЅРЅС‹Р№, РµСЃС‚СЊ РѕРґРЅРѕ РґРµР»Рѕ... Р—Р°Р±РµРіР°Р№ РїРѕ РІРѕР·РјРѕР¶РЅРѕСЃС‚Рё.",
+            "РЎРѕРѕР±С‰РµРЅРёРµ РѕС‚ РЎРёРґРѕСЂРѕРІРёС‡Р°", 0, 20, "trader", "sak", "red"
         )
     end
     if not has_alife_info( "tutorial_wounded_give_info" ) then
@@ -7839,7 +7969,7 @@ function bar_korovan_3()
     local objt = g_sim:story_object( story_ids.agr_korovan_zone )
     if objt then
         amk.add_spot_on_map(
-            objt.id, "crlc_big_treasure" .. spot, "Место нападения на караван с оружием"
+            objt.id, "crlc_big_treasure" .. spot, "РњРµСЃС‚Рѕ РЅР°РїР°РґРµРЅРёСЏ РЅР° РєР°СЂР°РІР°РЅ СЃ РѕСЂСѓР¶РёРµРј"
         )
     end
 end
@@ -7902,13 +8032,13 @@ function add_gen_mil_items()
 end
 
 local repliks = {
-    "Кто будет лазить по моей нычке - получит в бубен!",
-    "А что за гадёныш в моём хабаре роется?",
-    "Что там за любопытный влез не в своё дело?",
-    "Народ, кто-то там залез в мою нычку, проверьте.",
-    "Что-то маячок сработал на моей нычке - залез что-ли кто?",
-    "Э! А ну харэ в моём схроне крысятничать! В репу засвечу - мало не покажется!",
-    "Вот кто-то сейчас огребёт! Не суй нос в чужой хабар!"
+    "РљС‚Рѕ Р±СѓРґРµС‚ Р»Р°Р·РёС‚СЊ РїРѕ РјРѕРµР№ РЅС‹С‡РєРµ - РїРѕР»СѓС‡РёС‚ РІ Р±СѓР±РµРЅ!",
+    "Рђ С‡С‚Рѕ Р·Р° РіР°РґС‘РЅС‹С€ РІ РјРѕС‘Рј С…Р°Р±Р°СЂРµ СЂРѕРµС‚СЃСЏ?",
+    "Р§С‚Рѕ С‚Р°Рј Р·Р° Р»СЋР±РѕРїС‹С‚РЅС‹Р№ РІР»РµР· РЅРµ РІ СЃРІРѕС‘ РґРµР»Рѕ?",
+    "РќР°СЂРѕРґ, РєС‚Рѕ-С‚Рѕ С‚Р°Рј Р·Р°Р»РµР· РІ РјРѕСЋ РЅС‹С‡РєСѓ, РїСЂРѕРІРµСЂСЊС‚Рµ.",
+    "Р§С‚Рѕ-С‚Рѕ РјР°СЏС‡РѕРє СЃСЂР°Р±РѕС‚Р°Р» РЅР° РјРѕРµР№ РЅС‹С‡РєРµ - Р·Р°Р»РµР· С‡С‚Рѕ-Р»Рё РєС‚Рѕ?",
+    "Р­! Рђ РЅСѓ С…Р°СЂСЌ РІ РјРѕС‘Рј СЃС…СЂРѕРЅРµ РєСЂС‹СЃСЏС‚РЅРёС‡Р°С‚СЊ! Р’ СЂРµРїСѓ Р·Р°СЃРІРµС‡Сѓ - РјР°Р»Рѕ РЅРµ РїРѕРєР°Р¶РµС‚СЃСЏ!",
+    "Р’РѕС‚ РєС‚Рѕ-С‚Рѕ СЃРµР№С‡Р°СЃ РѕРіСЂРµР±С‘С‚! РќРµ СЃСѓР№ РЅРѕСЃ РІ С‡СѓР¶РѕР№ С…Р°Р±Р°СЂ!"
 }
 
 local trs_sound_flag, trs_sound_sid = false, nil
@@ -7941,7 +8071,7 @@ function on_use_obj( obj )
                 local grupp = game.translate_string( owner:community() )
                 local mtext = vname .. ". " .. grupp
                     .. ". " .. news_main.get_level_name( news_main.get_object_levelname( owner ) ) .."."
-                send_tip( "Владелец этой нычки " .. mtext, "Чужой тайник", 1, 10, "default", "task", "red" )
+                send_tip( "Р’Р»Р°РґРµР»РµС† СЌС‚РѕР№ РЅС‹С‡РєРё " .. mtext, "Р§СѓР¶РѕР№ С‚Р°Р№РЅРёРє", 1, 10, "default", "task", "red" )
                 local rnd_tip = lua_random( 1, #repliks )
                 amk.send_tip( repliks[ rnd_tip ], vname, 45, 13, "uniq" )
                 amk_offline_alife.set_box_owner( box_id, BAD_OBJ_ID )
@@ -7950,7 +8080,7 @@ function on_use_obj( obj )
                 )
             else
                 send_tip(
-                    "Владелец этого тайника умер...", vname, 1, 10, "default", "task", "green"
+                    "Р’Р»Р°РґРµР»РµС† СЌС‚РѕРіРѕ С‚Р°Р№РЅРёРєР° СѓРјРµСЂ...", vname, 1, 10, "default", "task", "green"
                 )
                 amk_offline_alife.set_box_owner( box_id, BAD_OBJ_ID )
             end
@@ -8090,8 +8220,8 @@ function add_sak_skelets( lname )
     -- local count = 2
     -- if lname == "hospital" then count = 1 end
     -- local pl = nlc_vars.prev_level or "?"
-    -- if pl == lname then -- на текущем уровне уже спавнилось
-    --     wprintf( "[~T]. #DBG: add_sak_skelets уже вызывалась на локации~C0A %s~C07", lname )
+    -- if pl == lname then -- РЅР° С‚РµРєСѓС‰РµРј СѓСЂРѕРІРЅРµ СѓР¶Рµ СЃРїР°РІРЅРёР»РѕСЃСЊ
+    --     wprintf( "[~T]. #DBG: add_sak_skelets СѓР¶Рµ РІС‹Р·С‹РІР°Р»Р°СЃСЊ РЅР° Р»РѕРєР°С†РёРё~C0A %s~C07", lname )
     --     return
     -- end
     -- while aaa < count do
@@ -8377,7 +8507,7 @@ function speaker_sounds( sid, flag )
     end
 end
 
--- А давай где угодно на уровне спавниться и небольшой шанс редкого арта вдобавок??
+-- Рђ РґР°РІР°Р№ РіРґРµ СѓРіРѕРґРЅРѕ РЅР° СѓСЂРѕРІРЅРµ СЃРїР°РІРЅРёС‚СЊСЃСЏ Рё РЅРµР±РѕР»СЊС€РѕР№ С€Р°РЅСЃ СЂРµРґРєРѕРіРѕ Р°СЂС‚Р° РІРґРѕР±Р°РІРѕРє??
 function spawn_art_semeneckyi()
     local lname = level.name()
     local lvc   = const.level_vertices[ lname ]
@@ -8396,8 +8526,8 @@ function spawn_art_semeneckyi()
                 local section = sak_dialog.rand_semart()
                 local sobj    = amk.spawn_item( section, pos, new_gw, new_lv )
                 if sobj then
-                    nlc_vars.semart_id = sobj.id                    -- для статистики
-                    test.add_art_to_vars( sobj.id )                 -- для статистики
+                    nlc_vars.semart_id = sobj.id                    -- РґР»СЏ СЃС‚Р°С‚РёСЃС‚РёРєРё
+                    test.add_art_to_vars( sobj.id )                 -- РґР»СЏ СЃС‚Р°С‚РёСЃС‚РёРєРё
                     vergas_art.add_in_tbl( sobj )
                 end
                 wprintf( "@------------- eternal art spawned successfully after " .. i .. " tries... PRAISE BE!" )
@@ -8427,8 +8557,8 @@ function empty_banka_fill()
     if
         id
         and dist - radius < -0.5
-        and level.name() == "aver" -- [голосом магистра Йоды] Только в ТЧ холодец набирать должен ты
-        and act_pos:distance_to( v3f( 64.61, -9.53, -182 ) ) < 70     -- в озере большом
+        and level.name() == "aver" -- [РіРѕР»РѕСЃРѕРј РјР°РіРёСЃС‚СЂР° Р™РѕРґС‹] РўРѕР»СЊРєРѕ РІ РўР§ С…РѕР»РѕРґРµС† РЅР°Р±РёСЂР°С‚СЊ РґРѕР»Р¶РµРЅ С‚С‹
+        and act_pos:distance_to( v3f( 64.61, -9.53, -182 ) ) < 70     -- РІ РѕР·РµСЂРµ Р±РѕР»СЊС€РѕРј
     then             
         local anom_sect = client_obj( id ):section()
         if strpos( anom_sect, "_buzz", 1, true ) ~= nil then
@@ -8670,11 +8800,11 @@ function marsh_radiation()
                         sound:play_at_pos( actor, pos_blast, 0 )
                         -------------------------------------------------------------------------------------------
                         local arm = actor:item_in_slot( 6 )
-                        local hit_reduct, pda_brk_chns = 1, 0.07    -- снижение хита, шанс поломки пда на 1 разряд
-                        if arm ~= nil then                          -- Если инвалид в экзе, то хит в 5 раз больше
+                        local hit_reduct, pda_brk_chns = 1, 0.07    -- СЃРЅРёР¶РµРЅРёРµ С…РёС‚Р°, С€Р°РЅСЃ РїРѕР»РѕРјРєРё РїРґР° РЅР° 1 СЂР°Р·СЂСЏРґ
+                        if arm ~= nil then                          -- Р•СЃР»Рё РёРЅРІР°Р»РёРґ РІ СЌРєР·Рµ, С‚Рѕ С…РёС‚ РІ 5 СЂР°Р· Р±РѕР»СЊС€Рµ
                             if strposx ( arm:section(), "exo" ) then hit_reduct = 5 end
                         end
-                        if sak.arts_operate == true then            -- если носим "Изолятор", то меньше шанс поломки ПДА
+                        if sak.arts_operate == true then            -- РµСЃР»Рё РЅРѕСЃРёРј "РР·РѕР»СЏС‚РѕСЂ", С‚Рѕ РјРµРЅСЊС€Рµ С€Р°РЅСЃ РїРѕР»РѕРјРєРё РџР”Рђ
                             if sak_inventory.belt_items[ "af_dummy_dummy_new" ] then
                                 pda_brk_chns = 0.02
                                 arc_arts.discharge_art_on_belt( "af_dummy_dummy_new", 0.004 )
@@ -8687,7 +8817,7 @@ function marsh_radiation()
                         h.impulse   = 0.0
                         h:bone( "bip01_spine" )
                         actor:hit( h )
-                        -- добавим небольшой шанс поломки ПДА при разряде на Тесла
+                        -- РґРѕР±Р°РІРёРј РЅРµР±РѕР»СЊС€РѕР№ С€Р°РЅСЃ РїРѕР»РѕРјРєРё РџР”Рђ РїСЂРё СЂР°Р·СЂСЏРґРµ РЅР° РўРµСЃР»Р°
                         if lua_random() < pda_brk_chns then
                             if not actor:has_info( "pda_will_be_broken" ) then
                                 actor:give_info_portion( "pda_will_be_broken" )
@@ -9053,8 +9183,8 @@ end
 
 function no_benzino_sms()
     send_tip(
-        "Видать закончился здесь бензиныч.",
-        "Да, недолго музыка играла...", 2, 15, "g_g", "sak", "yellow"
+        "Р’РёРґР°С‚СЊ Р·Р°РєРѕРЅС‡РёР»СЃСЏ Р·РґРµСЃСЊ Р±РµРЅР·РёРЅС‹С‡.",
+        "Р”Р°, РЅРµРґРѕР»РіРѕ РјСѓР·С‹РєР° РёРіСЂР°Р»Р°...", 2, 15, "g_g", "sak", "yellow"
     )
 end
 
@@ -9534,7 +9664,7 @@ function start_progress()
         schedule.add( "paused_game", "sak.paused_game()", 500 )
         local rand = lua_random( 1, 4 )
         npc:give_info_portion( mus_bar[ rand ])
-        npc:give_info_portion( "ui_inventory" ) -- может здесь оно сбоить не будет?
+        npc:give_info_portion( "ui_inventory" ) -- РјРѕР¶РµС‚ Р·РґРµСЃСЊ РѕРЅРѕ СЃР±РѕРёС‚СЊ РЅРµ Р±СѓРґРµС‚?
         local obj = level_object_by_sid( lev_prot[ lname ] )
         if obj then
             local list = registry.local_objects( false, nil, 7 ) -- slow update, online only from current level
@@ -9549,7 +9679,7 @@ function start_progress()
                         and ( objg:parent() == nil or objg:parent() == BAD_OBJ_ID )
                         and ( objg:position():distance_to( obj:position() ) < 1.5 ) )
                     then
-                        misc.release_obj( iter, 'sak.script:6109') -- удаление рядом лежащего объекта.. хм
+                        misc.release_obj( iter, 'sak.script:6109') -- СѓРґР°Р»РµРЅРёРµ СЂСЏРґРѕРј Р»РµР¶Р°С‰РµРіРѕ РѕР±СЉРµРєС‚Р°.. С…Рј
                     end
                 end
             end
@@ -9606,12 +9736,12 @@ function paused_game_began()
     game_began = true
 end
 
--- даунгрейд артефактов при выбросе
+-- РґР°СѓРЅРіСЂРµР№Рґ Р°СЂС‚РµС„Р°РєС‚РѕРІ РїСЂРё РІС‹Р±СЂРѕСЃРµ
 function changes_art_class( obj_id )
     if lua_random() > 0.15 then return end
     local obj = sim:object( obj_id )
     if obj then
-        --------- чтобы в платных нычках и в тайниках арты не портились ------------
+        --------- С‡С‚РѕР±С‹ РІ РїР»Р°С‚РЅС‹С… РЅС‹С‡РєР°С… Рё РІ С‚Р°Р№РЅРёРєР°С… Р°СЂС‚С‹ РЅРµ РїРѕСЂС‚РёР»РёСЃСЊ ------------
         if
             obj.parent_id ~= nil
             and obj.parent_id ~= BAD_OBJ_ID
@@ -9619,7 +9749,7 @@ function changes_art_class( obj_id )
         then
             if amk_offline_alife.box_is_protected( g_sim:object( obj.parent_id ) ) then return end
         end
-        --------- чтобы в платных нычках и в тайниках арты не портились ------------
+        --------- С‡С‚РѕР±С‹ РІ РїР»Р°С‚РЅС‹С… РЅС‹С‡РєР°С… Рё РІ С‚Р°Р№РЅРёРєР°С… Р°СЂС‚С‹ РЅРµ РїРѕСЂС‚РёР»РёСЃСЊ ------------
         local section = obj:section_name()
         local new_art
         if strpos( section, "_dyn", -6, true ) and not strpos( section, "capsule", 1, true ) then
@@ -9642,7 +9772,7 @@ function changes_art_class( obj_id )
     end
 end
 
--- апгрейд артефактов при выбросе ( ТЧ )
+-- Р°РїРіСЂРµР№Рґ Р°СЂС‚РµС„Р°РєС‚РѕРІ РїСЂРё РІС‹Р±СЂРѕСЃРµ ( РўР§ )
 function changed_art_class( obj_id )
     if not db.actor:has_info( "marsh_new_theme_done" ) then return end
     if dsh.get_next_random( "sak.changed_art_class" ) > 0.95 then return end 
@@ -9935,7 +10065,7 @@ function cats_near()
     end
     return cats
 end
---++ ?? что это и зачем?
+--++ ?? С‡С‚Рѕ СЌС‚Рѕ Рё Р·Р°С‡РµРј?
 function add_anom_spot()
     local actor   = db.actor
     local dir     = device().cam_dir
@@ -9948,7 +10078,7 @@ function add_anom_spot()
     local robjd   = amk.spawn_item( "dots_item",
         v3f( ( act_pos.x + xdelta ), ( act_pos.y - 1 ), ( act_pos.z + zdelta ) ), gvid, lvid
     )
-    amk.add_spot_on_map( robjd.id, "anomaly_zone_location", "%c[255,255,0,0] аномалия" )
+    amk.add_spot_on_map( robjd.id, "anomaly_zone_location", "%c[255,255,0,0] Р°РЅРѕРјР°Р»РёСЏ" )
 end
 
 function get_command( com ) get_console():execute( com ) end
@@ -9968,31 +10098,31 @@ function sak.late_init()
     AddRegularTask( "sak.actor_bio",       sak.actor_bio,       nil, 0, 5000  )
 end
 
---функция для спавна тайника Волка
+--С„СѓРЅРєС†РёСЏ РґР»СЏ СЃРїР°РІРЅР° С‚Р°Р№РЅРёРєР° Р’РѕР»РєР°
 function add_vil_ranger_treasure()
     if not has_alife_info( "petruha_info_treasure" ) then
         sak_dialog.added_vil_ranger_treasure()
         send_tip(
-            "Ну ищи, щенок, если такой настырный. Может где-то рядом, а может и нет... Главное - внимательнее под ноги смотри.",
-            "Из записки Волка", 5, 15, "g_g", "sak", "yellow"
+            "РќСѓ РёС‰Рё, С‰РµРЅРѕРє, РµСЃР»Рё С‚Р°РєРѕР№ РЅР°СЃС‚С‹СЂРЅС‹Р№. РњРѕР¶РµС‚ РіРґРµ-С‚Рѕ СЂСЏРґРѕРј, Р° РјРѕР¶РµС‚ Рё РЅРµС‚... Р“Р»Р°РІРЅРѕРµ - РІРЅРёРјР°С‚РµР»СЊРЅРµРµ РїРѕРґ РЅРѕРіРё СЃРјРѕС‚СЂРё.",
+            "РР· Р·Р°РїРёСЃРєРё Р’РѕР»РєР°", 5, 15, "g_g", "sak", "yellow"
         )
         db.actor:give_info_portion( "petruha_info_treasure" )
     end
 end
---при взятии содержимого тайника Волка получим смс
+--РїСЂРё РІР·СЏС‚РёРё СЃРѕРґРµСЂР¶РёРјРѕРіРѕ С‚Р°Р№РЅРёРєР° Р’РѕР»РєР° РїРѕР»СѓС‡РёРј СЃРјСЃ
 function info_volk_pda()
     send_tip(
-        "Странный набор, может сборка... Надо обязательно поговорить с Волком",
-        "Надо запомнить", 5, 15, "g_g", "sak", "yellow"
+        "РЎС‚СЂР°РЅРЅС‹Р№ РЅР°Р±РѕСЂ, РјРѕР¶РµС‚ СЃР±РѕСЂРєР°... РќР°РґРѕ РѕР±СЏР·Р°С‚РµР»СЊРЅРѕ РїРѕРіРѕРІРѕСЂРёС‚СЊ СЃ Р’РѕР»РєРѕРј",
+        "РќР°РґРѕ Р·Р°РїРѕРјРЅРёС‚СЊ", 5, 15, "g_g", "sak", "yellow"
     )
 end
---тайник Мюллера 2
+--С‚Р°Р№РЅРёРє РњСЋР»Р»РµСЂР° 2
 function add_muller_treasure2()
     local treases = { 5855, 5854, 5859, 5861, 5863 }
     local sid     = lua_random( 1, #treases )
     local obj     = g_sim:story_object( treases[ sid ] )
     if obj then
-        misc.spawn_to( test.rnd_rec_art_info( test.tbl_arts, 1, 5 ), obj )  -- рандомный арт 1 ур 5 дана
+        misc.spawn_to( test.rnd_rec_art_info( test.tbl_arts, 1, 5 ), obj )  -- СЂР°РЅРґРѕРјРЅС‹Р№ Р°СЂС‚ 1 СѓСЂ 5 РґР°РЅР°
         for a = 1, 2 do misc.spawn_to( "antirad", obj ) end
     end
 end
@@ -10007,8 +10137,8 @@ end
 --slip_mayat
 function info_klyk_remember()
     send_tip(
-        "Кто-то кого-то выносил из опасного места... там был Клык?!",
-        "Воспоминание", 2, 20, "g_g", "rememb", "yellow"
+        "РљС‚Рѕ-С‚Рѕ РєРѕРіРѕ-С‚Рѕ РІС‹РЅРѕСЃРёР» РёР· РѕРїР°СЃРЅРѕРіРѕ РјРµСЃС‚Р°... С‚Р°Рј Р±С‹Р» РљР»С‹Рє?!",
+        "Р’РѕСЃРїРѕРјРёРЅР°РЅРёРµ", 2, 20, "g_g", "rememb", "yellow"
     )
 end
 
@@ -10100,9 +10230,9 @@ function remove_spot_from_logic( actor, obj, p )
     amk.remove_spot_from_map( obj:id(), spot_name )
 end
 
---отпускаем непися в свободное плавание
+--РѕС‚РїСѓСЃРєР°РµРј РЅРµРїРёСЃСЏ РІ СЃРІРѕР±РѕРґРЅРѕРµ РїР»Р°РІР°РЅРёРµ
 function make_any_npc_free()
-    -- ; story_id нужного непися
+    -- ; story_id РЅСѓР¶РЅРѕРіРѕ РЅРµРїРёСЃСЏ
     local i    = story_ids.gar_stalker_flame_quest23
     local sobj = alife():story_object( i )
     if sobj and sobj:alive()  then
@@ -10126,7 +10256,7 @@ function ivancov_x10_time_start()
 end
 
 function time_ivancov_x10()
-    send_tip( "Меченный, подходи в Бар, есть разговор.", "Сообщение от Иванцова", 11, 20, "dolg", "sak", "green" )
+    send_tip( "РњРµС‡РµРЅРЅС‹Р№, РїРѕРґС…РѕРґРё РІ Р‘Р°СЂ, РµСЃС‚СЊ СЂР°Р·РіРѕРІРѕСЂ.", "РЎРѕРѕР±С‰РµРЅРёРµ РѕС‚ РРІР°РЅС†РѕРІР°", 11, 20, "dolg", "sak", "green" )
 end
 
 function ivancov_x10harddisc_time_start()
@@ -10134,7 +10264,7 @@ function ivancov_x10harddisc_time_start()
 end
 
 function time_ivancov_x10harddisc()
-    send_tip( "Меченный, подходи, есть мысли.", "Сообщение от Иванцова", 11, 20, "dolg", "sak", "green" )
+    send_tip( "РњРµС‡РµРЅРЅС‹Р№, РїРѕРґС…РѕРґРё, РµСЃС‚СЊ РјС‹СЃР»Рё.", "РЎРѕРѕР±С‰РµРЅРёРµ РѕС‚ РРІР°РЅС†РѕРІР°", 11, 20, "dolg", "sak", "green" )
     db.actor:give_info_portion( "ivancov_mil_dialog_start" )
 end
 
@@ -10167,8 +10297,8 @@ end
 
 function timer_exo_charge_half_end()
     send_tip(
-        "Подваливай в гости, зарядилась твоя экза.",
-        "Долговязый беспокоит", 11, 20, "ecolog", "sak", "green"
+        "РџРѕРґРІР°Р»РёРІР°Р№ РІ РіРѕСЃС‚Рё, Р·Р°СЂСЏРґРёР»Р°СЃСЊ С‚РІРѕСЏ СЌРєР·Р°.",
+        "Р”РѕР»РіРѕРІСЏР·С‹Р№ Р±РµСЃРїРѕРєРѕРёС‚", 11, 20, "ecolog", "sak", "green"
     )
     if db.actor:has_info( "exo_charge_half_start" ) then
         db.actor:give_info_portion( "exo_charge_half_done" )
@@ -10177,8 +10307,8 @@ end
 
 function timer_exo_charge_full_end()
     send_tip(
-        "Твой экзоскелет заряжен, подходи забирай.",
-        "Это Долговязый", 11, 20, "ecolog", "sak", "green"
+        "РўРІРѕР№ СЌРєР·РѕСЃРєРµР»РµС‚ Р·Р°СЂСЏР¶РµРЅ, РїРѕРґС…РѕРґРё Р·Р°Р±РёСЂР°Р№.",
+        "Р­С‚Рѕ Р”РѕР»РіРѕРІСЏР·С‹Р№", 11, 20, "ecolog", "sak", "green"
     )
     if db.actor:has_info( "exo_charge_full_start" ) then
         db.actor:give_info_portion( "exo_charge_full_done" )
